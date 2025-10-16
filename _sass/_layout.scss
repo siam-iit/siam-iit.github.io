@@ -11,25 +11,27 @@ body {
   h2,
   h3 {
     font-weight: 700;
-    color: $font-color;
     font-family: $heading-font;
     line-height: 1.5;
   }
   h1 {
     font-size: 2em;
+    color: $title-color;
     margin: 0;
     a,
     a:visited,
     a:hover {
       text-decoration: none;
-      color: $font-color;
+      color: $title-color;
     }
   }
   h2 {
     font-size: 1.5em;
+    color: $font-color;
   }
   h3 {
     font-size: 1em;
+    color: $font-color;
   }
   header {
     background: $background;
@@ -43,7 +45,7 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border-bottom: medium solid black;
+    border-bottom: medium solid white;
 
     @media screen and (max-width: 799px) {
       flex-direction: column;
@@ -181,12 +183,12 @@ body {
   }
   
   footer {
-    font-family: $heading-font;
+    font-family: $font-style;
     text-align: baseline;
     margin: 0 15px;
     padding: 10px 0;
     margin-top: auto;
-    border-top: medium solid black;
+    border-top: medium solid white;
 
     a,
     a:visited {

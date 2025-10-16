@@ -5,13 +5,13 @@
     <div class="navbar-container">
         <nav class="navbar">
             <ul class="links">
-                <li><a href="{{ site.url }}">About</a></li>
+                <li><a href="{{ site.url }}">Home</a></li>
+                <li><a href='{{ "/news" | prepend: site.baseurl}}'>News</a></li>
                 {% for page in site.pages %} 
                 {% if page.title %}
                 <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
                 {% endif %} 
                 {% endfor %}
-                <!--<li><a href='{{ "/more" | prepend: site.baseurl}}'>More</a></li> -->
             </ul>
         </nav>
     </div>   
