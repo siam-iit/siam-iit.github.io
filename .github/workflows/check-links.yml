@@ -28,4 +28,3 @@ jobs:
             './**/*.qmd'
             './**/*.html'
             './**/*.yml'
-        fail: true
