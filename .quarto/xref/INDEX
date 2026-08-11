@@ -1,0 +1,26 @@
+{
+  "events.qmd": {
+    "events.html": "21374f54"
+  },
+  "join.qmd": {
+    "join.html": "a3ee3b63"
+  },
+  "siam.qmd": {
+    "siam.html": "3bd6724c"
+  },
+  "archive.qmd": {
+    "archive.html": "c5ea3ad1"
+  },
+  "index.qmd": {
+    "index.html": "2e04b7b4"
+  },
+  "tea/index.qmd": {
+    "index.html": "4feeffb6"
+  },
+  "people.qmd": {
+    "people.html": "1fe13905"
+  },
+  "index backup.qmd": {
+    "index backup.html": "99ccd76c"
+  }
+}

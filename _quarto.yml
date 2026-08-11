@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "SIAM @ IIT"
+  navbar: false
+
+format:
+  html:
+    theme: none
+    css: styles.css
+    toc: false
+    smooth-scroll: true
+
+resources:
+  - fun.js
+  - images/**
+
+execute:
+  freeze: auto
+
+metadata-files:
+  - chapter-links.yml

@@ -1,0 +1,33 @@
+---
+title: ""
+page-layout: full
+---
+
+<div class="site-shell">
+
+<header class="topbar">
+  <a class="wordmark" href="/">SIAM / IIT</a>
+  <nav class="main-nav">
+    <a href="/tea/">DODGSON'S</a>
+    <a href="/events.html">EVENTS</a>
+    <a href="/people.html">PEOPLE</a>
+    <a href="/siam.html">WHAT IS SIAM?</a>
+    <a class="join-link" href="/join.html">JOIN ↗</a>
+  </nav>
+</header>
+
+<section class="rule-section">
+  <div class="fig-label">SERIES / WEEKLY</div>
+  <h1>DODGSON'S<br>TEA PARTY</h1>
+
+  <p class="dek">A weekly gathering for mathematics, puzzles, conversation, and tea.</p>
+  <p class="small-caps">THURSDAYS / 12:45 PM / PS 255</p>
+</section>
+
+<section class="rule-section">
+  <div class="fig-label">ARCHIVE / 2026—27</div>
+  <h2>COMING SOON.</h2>
+  <p class="body-copy">Each week will get a small record: topic, problem, notes, photographs, and whatever ended up on the blackboard.</p>
+</section>
+
+</div>

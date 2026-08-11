@@ -1,0 +1,58 @@
+---
+title: ""
+page-layout: full
+---
+
+<div class="site-shell">
+
+<header class="topbar">
+  <a class="wordmark" href="/">SIAM / IIT</a>
+  <nav class="main-nav">
+    <a href="/tea/">DODGSON'S</a>
+    <a href="/events.html">EVENTS</a>
+    <a href="/people.html">PEOPLE</a>
+    <a href="/siam.html">WHAT IS SIAM?</a>
+    <a class="join-link" href="/join.html">JOIN ↗</a>
+  </nav>
+</header>
+
+<section class="rule-section">
+  <div class="fig-label">FIG. 02 / YOU ARE HERE</div>
+  <h1>SIAM IS<br>BIGGER THAN IIT.</h1>
+  <p class="dek">SIAM IIT is our local chapter of the Society for Industrial and Applied Mathematics — an entry point into a much larger mathematical community.</p>
+</section>
+
+<section class="network-section">
+  <div class="fig-label">FIG. 03</div>
+  <h2>THE SIAM NETWORK</h2>
+
+  <div class="chapter-graph">
+    <div class="chapter-row">
+      <a class="chapter-node" href="#"><span class="dot"></span><span>LOYOLA</span></a>
+      <div class="chapter-node iit-node"><span class="dot"></span><span>IIT</span><small>YOU ARE HERE</small></div>
+      <a class="chapter-node" href="#"><span class="dot"></span><span>NORTHWESTERN</span></a>
+      <a class="chapter-node" href="#"><span class="dot"></span><span>UIUC</span></a>
+    </div>
+    <div class="chapter-line"></div>
+    <div class="siam-drop"></div>
+    <a class="siam-node" href="https://www.siam.org/" target="_blank" rel="noopener">
+      <span class="dot"></span><span>SIAM ↗</span>
+    </a>
+  </div>
+
+  <div class="vertex-count">|V| &gt; 175</div>
+  <div class="vertex-caption">STUDENT CHAPTERS WORLDWIDE</div>
+</section>
+
+<section class="rule-section split">
+  <div>
+    <div class="fig-label">WHY IT MATTERS</div>
+    <h2>SHOWING UP<br>CAN LEAD<br>SOMEWHERE.</h2>
+  </div>
+  <div class="body-copy">
+    <p>Conferences. Research communities. Professional networks. Leadership. People doing mathematics far beyond campus.</p>
+    <a class="text-link" href="https://www.siam.org/get-involved/connect-with-a-community/student-chapters/" target="_blank" rel="noopener">EXPLORE SIAM STUDENT CHAPTERS ↗</a>
+  </div>
+</section>
+
+</div>

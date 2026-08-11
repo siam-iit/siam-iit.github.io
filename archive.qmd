@@ -1,0 +1,16 @@
+---
+title: ""
+page-layout: full
+---
+
+<div class="site-shell">
+<header class="topbar">
+  <a class="wordmark" href="/">SIAM / IIT</a>
+</header>
+
+<section class="rule-section">
+  <div class="fig-label">INDEX / ARCHIVE</div>
+  <h1>THE RECORD.</h1>
+  <p class="dek">Past boards, old sites, event photographs, newsletters, and chapter history will live here.</p>
+</section>
+</div>

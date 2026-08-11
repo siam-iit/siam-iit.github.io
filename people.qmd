@@ -1,0 +1,23 @@
+---
+title: ""
+page-layout: full
+---
+
+<div class="site-shell">
+<header class="topbar">
+  <a class="wordmark" href="/">SIAM / IIT</a>
+  <nav class="main-nav">
+    <a href="/tea/">DODGSON'S</a>
+    <a href="/events.html">EVENTS</a>
+    <a href="/people.html">PEOPLE</a>
+    <a href="/siam.html">WHAT IS SIAM?</a>
+    <a class="join-link" href="/join.html">JOIN ↗</a>
+  </nav>
+</header>
+
+<section class="rule-section">
+  <div class="fig-label">PEOPLE / 2026—27</div>
+  <h1>CURRENT<br>BOARD.</h1>
+  <p class="dek">Names, roles, and an eventual archive of previous boards.</p>
+</section>
+</div>
