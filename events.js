@@ -1,0 +1,358 @@
+/* ==========================================================
+   SIAM IIT EVENT CALENDAR
+
+   Event information lives in:
+   _data/events.json
+
+   This file handles presentation only.
+   Future maintainers should normally NOT need to edit this file.
+   ========================================================== */
+
+document.addEventListener("DOMContentLoaded", async () => {
+
+  const calendar = document.getElementById("events-calendar");
+
+  if (!calendar) return;
+
+
+  /* --------------------------------------------------------
+     LOAD EVENT DATA
+     -------------------------------------------------------- */
+
+  try {
+
+    const response = await fetch("./_data/events.json");
+
+    if (!response.ok) {
+      throw new Error(`Could not load events: ${response.status}`);
+    }
+
+    const data = await response.json();
+
+
+    if (!data.events || data.events.length === 0) {
+      calendar.innerHTML = `
+        <p class="calendar-empty">
+          NO EVENTS CURRENTLY SCHEDULED.
+        </p>
+      `;
+      return;
+    }
+
+
+    /* --------------------------------------------------------
+       SORT EVENTS
+       -------------------------------------------------------- */
+
+    const events = [...data.events].sort(
+      (a, b) => new Date(a.date) - new Date(b.date)
+    );
+
+
+    /* --------------------------------------------------------
+       SEPARATE UPCOMING + PAST EVENTS
+       -------------------------------------------------------- */
+
+    const today = new Date();
+
+    today.setHours(0, 0, 0, 0);
+
+
+    const upcomingEvents = events.filter((event) => {
+
+      const eventDate =
+        new Date(`${event.date}T12:00:00`);
+
+      return eventDate >= today;
+
+    });
+
+
+    const pastEvents = events.filter((event) => {
+
+      const eventDate =
+        new Date(`${event.date}T12:00:00`);
+
+      return eventDate < today;
+
+    });
+
+
+    /*
+      pastEvents is intentionally not rendered on this page.
+
+      It remains available in _data/events.json so that
+      archive.html can display past events automatically.
+    */
+
+
+    /* --------------------------------------------------------
+       NO UPCOMING EVENTS
+       -------------------------------------------------------- */
+
+    if (upcomingEvents.length === 0) {
+
+      calendar.innerHTML = `
+        <p class="calendar-empty">
+          NO UPCOMING EVENTS CURRENTLY SCHEDULED.
+        </p>
+      `;
+
+      return;
+    }
+
+
+    /* --------------------------------------------------------
+       GROUP UPCOMING EVENTS BY MONTH
+       -------------------------------------------------------- */
+
+    const groups = {};
+
+
+    upcomingEvents.forEach((event) => {
+
+      const date =
+        new Date(`${event.date}T12:00:00`);
+
+      const key =
+        `${date.getFullYear()}-${String(
+          date.getMonth() + 1
+        ).padStart(2, "0")}`;
+
+
+      if (!groups[key]) {
+
+        groups[key] = {
+          date,
+          events: []
+        };
+
+      }
+
+
+      groups[key].events.push(event);
+
+    });
+
+
+    /* --------------------------------------------------------
+       BUILD CALENDAR
+       -------------------------------------------------------- */
+
+    calendar.innerHTML = "";
+
+
+    Object.values(groups).forEach((group) => {
+
+      const monthNumber =
+        String(
+          group.date.getMonth() + 1
+        ).padStart(2, "0");
+
+
+      const monthName =
+        group.date
+          .toLocaleString(
+            "en-US",
+            { month: "long" }
+          )
+          .toUpperCase();
+
+
+      /* MONTH */
+
+      const month =
+        document.createElement("section");
+
+      month.className = "event-month";
+
+
+      month.innerHTML = `
+        <div class="month-marker">
+
+          <span class="month-number">
+            ${monthNumber} /
+          </span>
+
+          <span class="month-name">
+            ${monthName}
+          </span>
+
+        </div>
+      `;
+
+
+      /* ------------------------------------------------------
+         EVENTS WITHIN MONTH
+         ------------------------------------------------------ */
+
+      group.events.forEach((event) => {
+
+        const date =
+          new Date(`${event.date}T12:00:00`);
+
+
+        const dayNumber =
+          String(
+            date.getDate()
+          ).padStart(2, "0");
+
+
+        const dayName =
+          event.day ||
+          date
+            .toLocaleString(
+              "en-US",
+              { weekday: "short" }
+            )
+            .toUpperCase();
+
+
+        const article =
+          document.createElement("article");
+
+        article.className = "event-row";
+
+
+        /* OPTIONAL LINK */
+
+        let eventLink = "";
+
+
+        if (
+          event.link &&
+          event.link !== "#"
+        ) {
+
+          eventLink = `
+            <a
+              class="event-link"
+              href="${escapeHTML(event.link)}"
+            >
+              ${escapeHTML(
+                event.link_text || "DETAILS ↗"
+              )}
+            </a>
+          `;
+
+        }
+
+
+        /* EVENT */
+
+        article.innerHTML = `
+
+          <div class="event-date">
+
+            <span class="event-day">
+              ${dayNumber}
+            </span>
+
+            <span class="event-dow">
+              ${escapeHTML(dayName)}
+            </span>
+
+          </div>
+
+
+          <div class="event-main">
+
+            <div class="event-type">
+              ${escapeHTML(
+                event.type || "EVENT"
+              )}
+            </div>
+
+            <h2>
+              ${escapeHTML(event.title)}
+            </h2>
+
+            ${
+              event.description
+                ? `
+                  <p>
+                    ${escapeHTML(event.description)}
+                  </p>
+                `
+                : ""
+            }
+
+          </div>
+
+
+          <div class="event-meta">
+
+            ${
+              event.time
+                ? `
+                  <span>
+                    ${escapeHTML(event.time)}
+                  </span>
+                `
+                : ""
+            }
+
+            ${
+              event.location
+                ? `
+                  <span>
+                    ${escapeHTML(event.location)}
+                  </span>
+                `
+                : ""
+            }
+
+            ${eventLink}
+
+          </div>
+
+        `;
+
+
+        month.appendChild(article);
+
+      });
+
+
+      calendar.appendChild(month);
+
+    });
+
+
+  } catch (error) {
+
+    console.error(error);
+
+    calendar.innerHTML = `
+      <p class="calendar-error">
+        CALENDAR CURRENTLY UNAVAILABLE.
+      </p>
+    `;
+
+  }
+
+});
+
+
+/* ==========================================================
+   BASIC HTML ESCAPING
+   ========================================================== */
+
+function escapeHTML(value) {
+
+  if (
+    value === null ||
+    value === undefined
+  ) {
+    return "";
+  }
+
+
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+
+}
