@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - fun.js
+    - mathematician.js
+    - images/**
 
 website:
   title: "SIAM @ IIT"
@@ -12,10 +16,6 @@ format:
     css: styles.css
     toc: false
     smooth-scroll: true
-
-resources:
-  - fun.js
-  - images/**
 
 execute:
   freeze: auto

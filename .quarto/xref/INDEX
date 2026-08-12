@@ -22,5 +22,14 @@
   },
   "index backup.qmd": {
     "index backup.html": "99ccd76c"
+  },
+  "fig03-network.qmd": {
+    "fig03-network.html": "1d23bfe8"
+  },
+  "includes/fig03-network.qmd": {
+    "fig03-network.html": "5e809b16"
+  },
+  "mathematician.qmd": {
+    "mathematician.html": "3954f351"
   }
 }

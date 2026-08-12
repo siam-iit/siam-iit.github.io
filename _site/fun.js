@@ -464,4 +464,4 @@ function point(x, y, time) {
 
   requestAnimationFrame(animate);
 
-})();
+})()

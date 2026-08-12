@@ -11,6 +11,6 @@ page-layout: full
 <section class="rule-section">
   <div class="fig-label">JOIN / SIAM IIT</div>
   <h1>COME DO<br>MATH WITH US.</h1>
-  <p class="dek">Start with Dodgson's Tea Party. Thursdays at 12:45 PM in PS 255.</p>
+  <p class="dek">Start with Dodgson's Tea Party. Thursdays at 12:45 PM in PS 255 TBA.</p>
 </section>
 </div>

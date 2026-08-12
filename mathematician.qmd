@@ -1,0 +1,185 @@
+---
+title: ""
+page-layout: full
+format:
+  html:
+    css:
+      - styles.css
+      - mathematician.css
+---
+
+```{=html}
+<div class="site-shell">
+
+  <header class="topbar">
+    <a class="wordmark" href="./">SIAM / IIT</a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="./tea/">DODGSON'S</a>
+      <a href="./events.html">EVENTS</a>
+      <a href="./people.html">PEOPLE</a>
+      <a href="./siam.html">WHAT IS SIAM?</a>
+      <a class="join-link" href="./join.html">JOIN ↗</a>
+    </nav>
+  </header>
+
+  <main class="quiz-page">
+
+    <section class="quiz-intro" id="quiz-intro">
+
+      <h1>
+        WHICH FAMOUS<br>
+        MATHEMATICIAN<br>
+        ARE YOU?
+      </h1>
+
+      <div class="quiz-intro-grid">
+
+        <p class="quiz-dek">
+          Twelve highly scientific questions. Eight mathematically
+          questionable personality types. One inevitable result.
+        </p>
+
+      </div>
+
+    <button class="quiz-start" id="quiz-start" type="button">
+      BEGIN CLASSIFICATION ↗
+    </button>
+
+    </section>
+
+
+    <section class="quiz-machine" id="quiz-machine" hidden>
+
+      <div class="quiz-status">
+        <span class="fig-label" id="question-counter">QUESTION 01 / 12</span>
+
+        <div
+          class="quiz-progress"
+          role="progressbar"
+          aria-label="Quiz progress"
+          aria-valuemin="0"
+          aria-valuemax="12"
+          aria-valuenow="1"
+        >
+          <span id="quiz-progress-bar"></span>
+        </div>
+      </div>
+
+      <div class="quiz-question-wrap">
+
+        <h2 id="question-text"></h2>
+
+        <div
+          class="quiz-answers"
+          id="quiz-answers"
+          aria-live="polite"
+        ></div>
+
+      </div>
+
+      <button class="quiz-back" id="quiz-back" type="button">
+        ← PREVIOUS
+      </button>
+
+    </section>
+
+
+    <section class="quiz-result" id="quiz-result" hidden>
+
+      <div class="result-heading">
+
+        <div class="fig-label">
+          FIG. 04A / CLASSIFICATION COMPLETE
+        </div>
+
+        <div class="result-kicker">
+          YOU ARE
+        </div>
+
+        <h2 id="result-name"></h2>
+
+        <div class="result-type" id="result-type"></div>
+
+      </div>
+
+
+      <div class="result-grid">
+
+        <div class="result-copy">
+
+          <p class="result-summary" id="result-summary"></p>
+
+          <dl class="result-facts">
+            <div>
+              <dt>AT A PARTY</dt>
+              <dd id="result-party"></dd>
+            </div>
+
+            <div>
+              <dt>MATHEMATICAL MENACE</dt>
+              <dd id="result-menace"></dd>
+            </div>
+
+            <div>
+              <dt>NATURAL HABITAT</dt>
+              <dd id="result-habitat"></dd>
+            </div>
+
+            <div>
+              <dt>QUIZ MOTTO</dt>
+              <dd id="result-motto"></dd>
+            </div>
+          </dl>
+
+        </div>
+
+
+        <div class="result-profile">
+
+          <div class="profile-title">
+            PERSONALITY VECTOR
+          </div>
+
+          <div class="profile-bars" id="profile-bars"></div>
+
+        </div>
+
+      </div>
+
+
+      <div class="result-footer">
+
+        <div class="result-match">
+          MATCH SCORE /
+          <span id="result-score"></span>
+        </div>
+
+        <button class="quiz-retake" id="quiz-retake" type="button">
+          RECLASSIFY ME ↗
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer class="site-footer">
+
+    <span>
+      SIAM @ IIT / CHICAGO, IL
+    </span>
+
+    <div>
+      <a href="./archive.html">ARCHIVE</a>
+      <a href="./">HOME</a>
+    </div>
+
+  </footer>
+
+</div>
+
+<script src="./mathematician.js?v=1"></script>
+```
