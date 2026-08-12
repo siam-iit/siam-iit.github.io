@@ -1,0 +1,92 @@
+---
+title: ""
+page-layout: full
+---
+
+```{=html}
+<div class="site-shell">
+
+{{< include includes/_header.html >}}
+
+
+  <!-- =====================================================
+       CONTACT / SITE SUPPORT
+       ===================================================== -->
+
+  <section class="rule-section contact-intro">
+
+    <div class="fig-label">
+      CONTACT / SITE SUPPORT
+    </div>
+
+    <h1 class="interior-title">
+      FOUND<br>
+      SOMETHING<br>
+      BROKEN?
+    </h1>
+
+    <p class="dek">
+      Broken link, missing page, strange behavior, or something
+      that just looks wrong? Send it my way.
+    </p>
+
+  </section>
+
+
+  <section class="contact-section">
+
+    <div class="fig-label">
+      WEBSITE / MAINTENANCE
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-copy">
+
+        <h2>
+          REPORT AN ISSUE.
+        </h2>
+
+        <p>
+          This site is maintained by Glory Kellogg for the
+          Illinois Tech SIAM student chapter.
+        </p>
+
+        <p>
+          If you notice a technical issue, outdated link,
+          accessibility problem, or other website error,
+          please include the page and a short description
+          of what happened.
+        </p>
+
+      </div>
+
+
+      <div class="contact-action">
+
+        <div class="contact-label">
+          EMAIL
+        </div>
+
+        <a
+          class="contact-email"
+          href="mailto:gkellogg@hawk.illinoistech.edu?subject=SIAM%20IIT%20Website%20Issue"
+        >
+          gkellogg@hawk.illinoistech.edu ↗
+        </a>
+
+        <div class="contact-note">
+          SUBJECT / SIAM IIT WEBSITE ISSUE
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+{{< include includes/_footer.html >}}
+
+</div>
+```

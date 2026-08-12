@@ -5,6 +5,11 @@ project:
     - fun.js
     - mathematician.js
     - images/**
+    - _data/**
+    - events.js
+    - people.js
+    - archive.js
+    - history.js
 
 website:
   title: "SIAM @ IIT"

@@ -11,23 +11,13 @@ format:
 ```{=html}
 <div class="site-shell">
 
-  <header class="topbar">
-    <a class="wordmark" href="./">SIAM / IIT</a>
-
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="./tea/">DODGSON'S</a>
-      <a href="./events.html">EVENTS</a>
-      <a href="./people.html">PEOPLE</a>
-      <a href="./siam.html">WHAT IS SIAM?</a>
-      <a class="join-link" href="./join.html">JOIN ↗</a>
-    </nav>
-  </header>
+{{< include includes/_header.html >}}
 
   <main class="quiz-page">
 
     <section class="quiz-intro" id="quiz-intro">
 
-      <h1>
+      <h1 class="interior-title">
         WHICH FAMOUS<br>
         MATHEMATICIAN<br>
         ARE YOU?
@@ -166,18 +156,7 @@ format:
   </main>
 
 
-  <footer class="site-footer">
-
-    <span>
-      SIAM @ IIT / CHICAGO, IL
-    </span>
-
-    <div>
-      <a href="./archive.html">ARCHIVE</a>
-      <a href="./">HOME</a>
-    </div>
-
-  </footer>
+{{< include includes/_footer.html >}}
 
 </div>
 

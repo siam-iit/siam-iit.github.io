@@ -1,3 +1,36 @@
+/* ==========================================================
+   SIAM @ IIT — MAIN STYLESHEET
+   ==========================================================
+
+   MAINTAINER NOTES
+
+   This file controls presentation only. Content should normally
+   be updated in the project's data/page files instead:
+
+   - _data/events.json       Event information
+   - _data/people.json       Board + advisor information
+   - chapter-links.yml       Shared external links
+   - images/people/          Board headshots
+   - events.js               Builds the event calendar
+   - people.js               Builds the board directory
+   - archive.js              Builds the past-event archive
+
+   QUARTO RULE:
+   In each .qmd page, keep all page HTML inside ONE `{=html}`
+   raw HTML block. Do not split the page into multiple raw HTML
+   blocks. This prevents Quarto from printing HTML as literal text.
+
+   CSS MAINTENANCE RULES:
+   1. Prefer editing an existing selector over adding a duplicate
+      copy at the bottom of the file.
+   2. Keep page-specific styles grouped under their named section.
+   3. Keep responsive overrides with the component they modify
+      when practical.
+   4. Do not put CSS inside .js files.
+   5. Avoid changing global h1/h2 rules to fix one page; use a
+      page/component class instead.
+   ========================================================== */
+
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap");
 
 
@@ -164,6 +197,17 @@ h2 {
   line-height: 1.25;
 }
 
+.interior-title {
+  font-size: clamp(4rem, 7vw, 6rem);
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+  margin: 0 0 2rem;
+}
+
+.fig-label {
+  font-size: 0.82rem;
+  letter-spacing: 0.14em;
+}
 
 /* =========================================================
    FULL-WIDTH HERO / INTERACTIVE SURFACE
@@ -747,4 +791,966 @@ a.anchorjs-link {
 /* Generic small text */
 small {
   font-size: 0.85rem;
+}
+
+
+/* ==========================================================
+   EVENTS CALENDAR
+   ========================================================== */
+
+.calendar-section {
+  padding: 0 0 110px;
+}
+
+.events-calendar {
+  border-top: 1px solid var(--ink);
+}
+
+
+/* MONTHS */
+
+.event-month {
+  margin: 0;
+}
+
+.month-marker {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 16px;
+
+  padding: 55px 0 20px;
+
+  border-bottom: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.month-number {
+  font-size: 1rem;
+  opacity: 0.55;
+}
+
+.month-name {
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+
+
+/* EVENT ROW */
+
+.event-row {
+  display: grid;
+
+  grid-template-columns:
+    90px
+    minmax(0, 1fr)
+    170px;
+
+  gap: 34px;
+
+  padding: 28px 0 30px;
+
+  border-bottom: 1px solid var(--ink);
+}
+
+
+/* DATE */
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.event-day {
+  font-family: var(--font-sans);
+  font-size: 2.3rem;
+  font-weight: 500;
+
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.event-dow {
+  margin-top: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+
+/* EVENT CONTENT */
+
+.event-type {
+  margin-bottom: 7px;
+
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+}
+
+.event-main h2 {
+  margin: 0 !important;
+
+  font-size: clamp(1.8rem, 2.5vw, 2.9rem) !important;
+  line-height: 1 !important;
+
+  letter-spacing: -0.04em;
+}
+
+.event-main p {
+  max-width: 620px;
+
+  margin: 12px 0 0;
+
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  line-height: 1.35;
+}
+
+
+/* EVENT META */
+
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 6px;
+
+  padding-top: 24px;
+
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+}
+
+.event-link {
+  display: inline-block;
+
+  margin-top: 10px;
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid var(--ink);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .event-row {
+    grid-template-columns: 62px 1fr;
+    gap: 18px;
+  }
+
+  .event-meta {
+    grid-column: 2;
+    padding-top: 4px;
+  }
+
+  .event-day {
+    font-size: 2rem;
+  }
+
+  .event-main h2 {
+    font-size: 2rem !important;
+  }
+
+  .month-name {
+    font-size: 1.2rem;
+  }
+
+}
+
+/* ==========================================================
+   PEOPLE / BOARD
+   ========================================================== */
+
+.people-section,
+.advisor-section {
+  border-top: 1px solid var(--ink);
+}
+
+.board-list,
+.advisor-list {
+  width: 100%;
+}
+
+.person-row,
+.advisor-row {
+  display: grid;
+  grid-template-columns:
+    80px
+    minmax(0, 1fr)
+    180px;
+
+  gap: 34px;
+
+  padding: 26px 0 28px;
+
+  border-bottom: 1px solid var(--ink);
+}
+
+
+/* INDEX */
+
+.person-index {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+
+  opacity: 0.55;
+}
+
+
+/* ROLE */
+
+.person-role {
+  margin-bottom: 8px;
+
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.1em;
+
+  text-transform: uppercase;
+}
+
+
+/* NAME */
+
+.person-main h2 {
+  margin: 0 !important;
+
+  font-size: clamp(2rem, 3vw, 3.2rem) !important;
+  line-height: 0.95 !important;
+  letter-spacing: -0.045em;
+
+  text-transform: uppercase;
+}
+
+
+/* DEGREE / TITLE */
+
+.person-major {
+  margin-top: 10px;
+
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+
+  letter-spacing: 0.06em;
+}
+
+
+/* BIO */
+
+.person-bio {
+  max-width: 620px;
+
+  margin: 18px 0 0;
+
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.4;
+}
+
+
+/* LINKS */
+
+.person-links {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 18px;
+
+  margin-top: 20px;
+}
+
+.person-link {
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+
+  letter-spacing: 0.07em;
+}
+
+
+/* PHOTO */
+
+.person-photo-wrap {
+  width: 180px;
+  aspect-ratio: 4 / 5;
+
+  overflow: hidden;
+}
+
+/* PHOTO IMAGE
+   The authoritative .person-photo rule appears below the
+   compact People intro and includes the grayscale treatment. */
+
+
+/* FACULTY SECTION */
+
+.advisor-section {
+  padding: 70px 0 110px;
+}
+
+.advisor-section > .fig-label {
+  margin-bottom: 30px;
+}
+
+
+/* EMPTY / ERROR STATES */
+
+.people-loading,
+.people-empty,
+.people-error {
+  padding: 55px 0;
+
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+
+  letter-spacing: 0.1em;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  .person-row,
+  .advisor-row {
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+  }
+
+  .person-photo-wrap {
+    grid-column: 2;
+
+    width: 140px;
+    margin-top: 12px;
+  }
+
+  .person-main h2 {
+    font-size: 2rem !important;
+  }
+
+}
+
+/* ==========================================================
+   PEOPLE INTRO — COMPACT
+   ========================================================== */
+
+.people-intro {
+  padding-top: 60px !important;
+  padding-bottom: 60px !important;
+  min-height: 0 !important;
+}
+
+.people-intro .interior-title {
+  margin-bottom: 24px;
+}
+
+.people-intro .dek {
+  margin-bottom: 0;
+}
+
+.person-photo {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  filter: grayscale(100%);
+}
+
+/* ==========================================================
+   ARCHIVE
+   ========================================================== */
+
+.archive-intro {
+  padding-top: 55px !important;
+  padding-bottom: 65px !important;
+}
+
+.archive-section {
+  padding: 55px 0 70px;
+  border-top: 1px solid var(--ink);
+}
+
+.archive-section-head .fig-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.11em;
+}
+
+.archive-section-head h2 {
+  margin-top: 14px;
+
+  font-size: clamp(2.6rem, 4vw, 4.5rem) !important;
+  line-height: 0.92 !important;
+  letter-spacing: -0.045em;
+}
+
+.archive-loading,
+.archive-empty,
+.archive-error,
+.archive-placeholder {
+  margin-top: 20px;
+
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+
+/* Archive year/month/event record styling is centralized in
+   ARCHIVE EVENT INDEX below. Keep one authoritative definition
+   for each archive selector to avoid cascade surprises. */
+
+/* ==========================================================
+   ARCHIVE EVENT INDEX
+   ========================================================== */
+
+.archive-year-marker {
+  margin: 30px 0 38px;
+  text-align: center;
+
+  font-family: var(--font-sans);
+  font-size: 1.7rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.archive-month-marker {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 12px;
+
+  margin: 0 0 28px;
+  padding: 14px 0;
+
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  letter-spacing: 0.1em;
+}
+
+.archive-month-number {
+  font-size: 0.8rem;
+  opacity: 0.55;
+}
+
+.archive-month-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.archive-event-row {
+  padding: 25px 0 28px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.archive-event-heading {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.archive-event-day {
+  flex: 0 0 auto;
+
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.archive-event-dash {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}
+
+.archive-event-heading h3 {
+  margin: 0 !important;
+
+  font-family: var(--font-sans);
+  font-size: 1.35rem !important;
+  font-weight: 500;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em;
+}
+
+.archive-event-main p {
+  margin: 12px 0 0;
+
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.archive-event-meta {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+
+  margin-top: 14px;
+
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+}
+
+/* ==========================================================
+   CONTACT / SITE SUPPORT
+   ========================================================== */
+
+.contact-intro {
+  padding-top: 60px !important;
+  padding-bottom: 70px !important;
+}
+
+.contact-section {
+  padding: 65px 0 100px;
+  border-top: 1px solid var(--ink);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+
+  margin-top: 34px;
+}
+
+.contact-copy {
+  max-width: 620px;
+}
+
+.contact-copy h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 4vw, 4.5rem);
+  line-height: 0.92;
+}
+
+.contact-copy p {
+  margin: 24px 0 0;
+
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.contact-action {
+  align-self: end;
+
+  padding-top: 20px;
+}
+
+.contact-label,
+.contact-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-email {
+  display: inline-block;
+
+  margin-top: 14px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.contact-note {
+  margin-top: 14px;
+  opacity: 0.6;
+}
+
+@media (max-width: 800px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}
+
+/* ==========================================================
+   APPLIED MATH PAGE
+   ========================================================== */
+
+.applied-section {
+  padding-top: 70px;
+  padding-bottom: 85px;
+}
+
+
+/* ----------------------------------------------------------
+   IS IT FOR YOU? / CHECKLIST
+   ---------------------------------------------------------- */
+
+.applied-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: stretch;
+
+  border: 0;
+}
+
+.applied-check {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 18px;
+  align-items: start;
+
+  padding: 20px 0;
+
+  border: 0;
+}
+
+/* Internal dividers only */
+.applied-check + .applied-check {
+  border-top: 1px solid var(--rule);
+}
+
+.applied-check > span {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.applied-check p {
+  margin: 0;
+
+  max-width: 560px;
+
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+/* ----------------------------------------------------------
+   WHERE CAN IT GO?
+   Equal-width responsive grid
+   ---------------------------------------------------------- */
+
+.applied-destinations {
+  display: grid;
+
+  /* 4 equal columns on larger screens */
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-top: 32px;
+  padding-top: 0;
+
+  border-top: none;
+}
+
+.applied-destinations span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  padding: 12px 10px;
+
+  border: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* Final "things we haven't named yet" item */
+.applied-destinations span:last-child {
+  font-style: italic;
+}
+
+.applied-destinations span {
+  display: inline-block;
+
+  padding: 8px 12px;
+
+  border: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+
+/* Make the final phrase a little more distinctive */
+
+.applied-destinations span:last-child {
+  flex-basis: auto;
+  font-style: italic;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .applied-destinations {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .applied-check {
+    grid-template-columns: 26px 1fr;
+    gap: 12px;
+  }
+
+  .applied-check p {
+    font-size: 1.05rem;
+  }
+
+  .applied-destinations {
+    gap: 8px;
+  }
+
+  .applied-destinations span {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .applied-destinations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .applied-destinations {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   APPLIED MATH / WHAT YOU ACTUALLY DO
+   ========================================================== */
+
+.applied-topics {
+  width: 100%;
+  margin-top: 55px;
+  padding-bottom: 85px;
+}
+
+
+/* ----------------------------------------------------------
+   INDIVIDUAL TOPIC
+   ---------------------------------------------------------- */
+
+.applied-topic {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  column-gap: 28px;
+
+  padding: 24px 0 26px;
+
+  border-bottom: 1px solid rgba(17, 17, 15, 0.25);
+}
+
+
+/* No rule above the first item */
+
+.applied-topic:first-child {
+  padding-top: 0;
+}
+
+
+/* Don't trap the list between two rules */
+
+.applied-topic:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   NUMBER
+   ---------------------------------------------------------- */
+
+.applied-topic-number {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  padding-top: 3px;
+
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+
+  opacity: 0.55;
+}
+
+
+/* ----------------------------------------------------------
+   TITLE
+   ---------------------------------------------------------- */
+
+.applied-topic h3 {
+  grid-column: 2;
+
+  margin: 0 !important;
+
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem) !important;
+  font-weight: 600;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em;
+
+  text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------
+   DESCRIPTION
+   ---------------------------------------------------------- */
+
+.applied-topic p {
+  grid-column: 2;
+
+  max-width: 1050px;
+
+  margin: 10px 0 0 !important;
+
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.4;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+  .applied-topics {
+    margin-top: 40px;
+    padding-bottom: 65px;
+  }
+
+  .applied-topic {
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 14px;
+
+    padding: 20px 0 22px;
+  }
+
+  .applied-topic h3 {
+    font-size: 1rem !important;
+  }
+
+  .applied-topic p {
+    margin-top: 8px !important;
+    font-size: 1rem;
+  }
+
+}
+/* Pull topic index closer to the introductory text */
+
+.applied-topics {
+  margin-top: -20px;
+  padding-bottom: 80px;
+}
+
+/* ==========================================================
+   EVENTS → ARCHIVE LINK
+
+   The calendar already ends with a rule, and the footer
+   begins with one. Do not add additional borders here.
+   ========================================================== */
+
+.calendar-section {
+  padding-bottom: 55px;
+}
+
+.calendar-archive-link {
+  padding: 0 0 48px;
+
+  border: 0;
+}
+
+
+/* Larger than the site's normal figure labels */
+
+.calendar-archive-link .fig-label {
+  margin: 0 0 12px;
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+}
+
+
+.calendar-archive-link a {
+  display: inline-block;
+
+  font-family: var(--font-sans);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.02em;
+
+  color: var(--ink);
+  text-decoration: none;
+}
+
+
+.calendar-archive-link a:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+  .calendar-section {
+    padding-bottom: 40px;
+  }
+
+  .calendar-archive-link {
+    padding-bottom: 38px;
+  }
+
+  .calendar-archive-link .fig-label {
+    font-size: 0.88rem;
+  }
+
+  .calendar-archive-link a {
+    font-size: 1.25rem;
+  }
+
 }

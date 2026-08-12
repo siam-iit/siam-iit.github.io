@@ -4,13 +4,14 @@ page-layout: full
 ---
 
 <div class="site-shell">
-<header class="topbar">
-  <a class="wordmark" href="/">SIAM / IIT</a>
-</header>
+{{< include includes/_header.html >}}
 
 <section class="rule-section">
   <div class="fig-label">JOIN / SIAM IIT</div>
-  <h1>COME DO<br>MATH WITH US.</h1>
+  <h1 class="interior-title">COME DO<br>MATH WITH US.</h1>
   <p class="dek">Start with Dodgson's Tea Party. Thursdays at 12:45 PM in PS 255 TBA.</p>
 </section>
+
+{{< include includes/_footer.html >}}
+
 </div>

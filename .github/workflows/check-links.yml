@@ -29,3 +29,4 @@ jobs:
             --exclude-path 'includes/_fig03-network.html'
             './**/*.qmd'
             './chapter-links.yml'
+            './**/*.json'

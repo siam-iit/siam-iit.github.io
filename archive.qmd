@@ -3,14 +3,186 @@ title: ""
 page-layout: full
 ---
 
+```{=html}
 <div class="site-shell">
-<header class="topbar">
-  <a class="wordmark" href="/">SIAM / IIT</a>
-</header>
 
-<section class="rule-section">
-  <div class="fig-label">INDEX / ARCHIVE</div>
-  <h1>THE RECORD.</h1>
-  <p class="dek">Past boards, old sites, event photographs, newsletters, and chapter history will live here.</p>
-</section>
+  {{< include includes/_header.html >}}
+
+
+  <!-- =====================================================
+       ARCHIVE INTRO
+       ===================================================== -->
+
+  <section class="rule-section archive-intro">
+
+    <div class="fig-label">
+      INDEX / ARCHIVE
+    </div>
+
+    <h1 class="interior-title">
+      THE<br>
+      RECORD.
+    </h1>
+
+    <p class="dek">
+      The people, events, programs, photographs,
+      documents, and accumulated history of SIAM
+      at Illinois Tech.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       CHAPTER HISTORY
+
+       Historical records are generated from:
+       _data/history.json
+
+       These are substantial records reconstructed from
+       surviving chapter websites, newsletters, photographs,
+       and other primary sources.
+
+       Do not add individual records directly to this page.
+       ===================================================== -->
+
+  <section class="archive-section history-section">
+
+    <div class="archive-section-head">
+
+      <div class="fig-label">
+        01 / CHAPTER HISTORY
+      </div>
+
+      <h2>
+        THE LONG<br>
+        VERSION.
+      </h2>
+
+    </div>
+
+    <div
+      id="history-records"
+      class="history-records"
+      aria-live="polite"
+    >
+      <p class="archive-loading">
+        LOADING CHAPTER HISTORY...
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       PAST EVENTS
+
+       Past events are generated automatically from:
+       _data/events.json
+
+       Events move here automatically after their date passes.
+       ===================================================== -->
+
+  <section class="archive-section">
+
+    <div class="archive-section-head">
+
+      <div class="fig-label">
+        02 / PAST EVENTS
+      </div>
+
+      <h2>
+        WHERE WE'VE<br>
+        BEEN.
+      </h2>
+
+    </div>
+
+    <div
+      id="archive-events"
+      class="archive-events"
+      aria-live="polite"
+    >
+      <p class="archive-loading">
+        LOADING EVENT ARCHIVE...
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       PAST BOARDS
+       ===================================================== -->
+
+  <section class="archive-section">
+
+    <div class="archive-section-head">
+
+      <div class="fig-label">
+        03 / PAST BOARDS
+      </div>
+
+      <h2>
+        WHO BUILT<br>
+        THIS.
+      </h2>
+
+    </div>
+
+    <div class="archive-placeholder">
+      BOARD ARCHIVE COMING SOON.
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       DOCUMENTS + MEDIA
+       ===================================================== -->
+
+  <section class="archive-section">
+
+    <div class="archive-section-head">
+
+      <div class="fig-label">
+        04 / DOCUMENTS + MEDIA
+      </div>
+
+      <h2>
+        THE PAPER<br>
+        TRAIL.
+      </h2>
+
+    </div>
+
+    <div class="archive-placeholder">
+      NEWSLETTERS, PHOTOGRAPHS, OLD SITES, AND CHAPTER DOCUMENTS COMING SOON.
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       SHARED FOOTER
+       ===================================================== -->
+
+  {{< include includes/_footer.html >}}
+
+
+  <!-- =====================================================
+       ARCHIVE SCRIPTS
+
+       archive.js:
+       Renders expired events from _data/events.json
+
+       history.js:
+       Renders reconstructed historical records from
+       _data/history.json
+       ===================================================== -->
+
+<script src="./history.js?v=1"></script>
+<script src="./archive.js?v=1"></script>
+
 </div>
+```

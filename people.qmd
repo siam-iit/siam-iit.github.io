@@ -3,21 +3,78 @@ title: ""
 page-layout: full
 ---
 
+```{=html}
 <div class="site-shell">
-<header class="topbar">
-  <a class="wordmark" href="/">SIAM / IIT</a>
-  <nav class="main-nav">
-    <a href="/tea/">DODGSON'S</a>
-    <a href="/events.html">EVENTS</a>
-    <a href="/people.html">PEOPLE</a>
-    <a href="/siam.html">WHAT IS SIAM?</a>
-    <a class="join-link" href="/join.html">JOIN ↗</a>
-  </nav>
-</header>
 
-<section class="rule-section">
-  <div class="fig-label">PEOPLE / 2026—27</div>
-  <h1>CURRENT<br>BOARD.</h1>
-  <p class="dek">Names, roles, and an eventual archive of previous boards.</p>
+{{< include includes/_header.html >}}
+
+<!-- =====================================================
+     PEOPLE INTRO
+     ===================================================== -->
+
+<section class="rule-section people-intro">
+
+  <div class="fig-label">
+    PEOPLE / 2026—27
+  </div>
+
+  <h1 class="interior-title">
+    CURRENT<br>
+    BOARD.
+  </h1>
+
+  <p class="dek">
+    Come say hi.
+  </p>
+
 </section>
+
+
+<!-- =====================================================
+     CURRENT BOARD
+
+     Board information is generated automatically from:
+     _data/people.json
+
+     Do not add individual people here.
+     ===================================================== -->
+
+<section class="people-section">
+
+  <div
+    id="board-list"
+    class="board-list"
+    aria-live="polite"
+  >
+    <p class="people-loading">
+      LOADING BOARD...
+    </p>
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FACULTY ADVISORS
+     ===================================================== -->
+
+<section class="advisor-section">
+
+  <div class="fig-label">
+    FACULTY / ADVISORS
+  </div>
+
+  <div
+    id="advisor-list"
+    class="advisor-list"
+    aria-live="polite"
+  ></div>
+
+</section>
+
+{{< include includes/_footer.html >}}
+
 </div>
+
+<script src="./people.js?v=1"></script>
+```

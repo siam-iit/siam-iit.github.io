@@ -1,0 +1,46 @@
+{
+  "year": "2026–27",
+  "board": [
+  {
+    "role": "President",
+    "name": "Leonardo Marciaga Santana",
+    "major": "B.S. Applied Mathematics",
+    "bio": "",
+    "email": "lmarciaga@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/leonardo-marciaga/"
+  },
+  {
+    "role": "Vice President",
+    "name": "Ishaan Goel",
+    "major": "B.S Applied Mathematics, B.S. Artificial Intelligence, M.S. Artificial Intelligence",
+    "bio": "",
+    "email": "igoel@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/igoeldc/"
+
+  },
+  {
+    "role": "Treasurer",
+    "name": "Taran Mellacheruvu",
+    "major": "B.S. Applied Mathematics, B.S Physics",
+    "bio": "",
+    "email": "tmellacheruvu@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/taran-mellacheruvu/"
+  },
+  {
+    "role": "Marketing Executive",
+    "name": "Abigail Kim",
+    "major": "B.S. Mechanical Engineering",
+    "bio": "",
+    "email": "akim47@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/abigail-kim-410347385/"
+  },
+  {
+    "role": "SOCIAL MEDIA MANAGER",
+    "name": "Glory Kellogg",
+    "major": "B.S. Applied Mathematics",
+    "bio": "",
+    "email": "gkellogg@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/glorykellogg/"
+  }
+]
+}

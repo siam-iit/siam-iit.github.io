@@ -3,21 +3,91 @@ title: ""
 page-layout: full
 ---
 
+```{=html}
 <div class="site-shell">
-<header class="topbar">
-  <a class="wordmark" href="/">SIAM / IIT</a>
-  <nav class="main-nav">
-    <a href="/tea/">DODGSON'S</a>
-    <a href="/events.html">EVENTS</a>
-    <a href="/people.html">PEOPLE</a>
-    <a href="/siam.html">WHAT IS SIAM?</a>
-    <a class="join-link" href="/join.html">JOIN ↗</a>
-  </nav>
-</header>
 
-<section class="rule-section">
-  <div class="fig-label">CALENDAR / 2026—27</div>
-  <h1>EVENTS.</h1>
-  <p class="dek">Talks, field trips, workshops, conferences, and other mathematically adjacent activity.</p>
-</section>
+  <!-- =====================================================
+       SHARED HEADER
+       ===================================================== -->
+
+  {{< include includes/_header.html >}}
+
+
+  <!-- =====================================================
+       EVENTS INTRO
+       ===================================================== -->
+
+  <section class="rule-section events-intro">
+
+    <div class="fig-label">
+      CALENDAR / 2026—27
+    </div>
+
+    <h1 class="interior-title">
+      EVENTS.
+    </h1>
+
+    <p class="dek">
+      Talks, field trips, workshops, conferences,
+      and reasons to do math somewhere other than class.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       EVENT CALENDAR
+
+       Event information lives in:
+       _data/events.json
+
+       Do not add individual events to this page.
+       ===================================================== -->
+
+  <section class="calendar-section">
+
+    <div
+      id="events-calendar"
+      class="events-calendar"
+      aria-live="polite"
+    >
+      <p class="calendar-loading">
+        LOADING CALENDAR...
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       CHAPTER ARCHIVE
+       ===================================================== -->
+
+  <section class="calendar-archive-link">
+
+    <div class="fig-label">
+      CHAPTER HISTORY
+    </div>
+
+    <a href="./archive.html">
+      ENTER THE ARCHIVE ↗
+    </a>
+
+  </section>
+
+
+  <!-- =====================================================
+       SHARED FOOTER
+       ===================================================== -->
+
+  {{< include includes/_footer.html >}}
+
+
+  <!-- =====================================================
+       PAGE SCRIPT
+       ===================================================== -->
+
+  <script src="./events.js?v=1"></script>
+
 </div>
+```

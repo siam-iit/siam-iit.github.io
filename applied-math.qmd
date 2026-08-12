@@ -1,0 +1,330 @@
+---
+title: ""
+page-layout: full
+---
+
+```{=html}
+<div class="site-shell">
+
+  {{< include includes/_header.html >}}
+
+
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
+
+  <section class="rule-section applied-intro">
+
+    <div class="fig-label">
+      FIELD GUIDE / APPLIED MATHEMATICS
+    </div>
+
+    <h1 class="interior-title">
+      THINKING<br>
+      ABOUT<br>
+      APPLIED MATH?
+    </h1>
+
+    <p class="dek">
+      If you like patterns, models, computation, proofs,
+      networks, differential equations, or figuring out why
+      complicated systems behave the way they do, you may
+      already be thinking like an applied mathematician.
+    </p>
+
+  </section>
+
+
+  <!-- =====================================================
+       WHAT IS IT?
+       ===================================================== -->
+
+  <section class="rule-section split applied-section">
+
+    <div>
+
+      <div class="fig-label">
+        01 / WHAT IS APPLIED MATH?
+      </div>
+
+      <h2>
+        MATH THAT<br>
+        HAS SOMEWHERE<br>
+        TO GO.
+      </h2>
+
+    </div>
+
+
+    <div class="body-copy">
+
+      <p>
+        Applied mathematics is about using mathematical ideas
+        to understand systems, make predictions, uncover structure,
+        and solve problems.
+      </p>
+
+      <p>
+        Sometimes the problem comes from physics, biology,
+        engineering, computing, economics, or data.
+        Sometimes the mathematics becomes interesting enough
+        that the original application is almost beside the point.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       WHAT DO YOU STUDY?
+       ===================================================== -->
+
+  <div class="applied-topics">
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">01</div>
+    <h3>Modeling</h3>
+    <p>
+      Take a messy real-world system and turn it into mathematics
+      you can analyze, test, and improve.
+    </p>
+  </div>
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">02</div>
+    <h3>Computation</h3>
+    <p>
+      Build numerical methods, simulations, and algorithms for
+      problems that do not have neat closed-form answers.
+    </p>
+  </div>
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">03</div>
+    <h3>Dynamical Systems</h3>
+    <p>
+      Use differential equations to understand systems that evolve:
+      populations, circuits, motion, interacting components, and more.
+    </p>
+  </div>
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">04</div>
+    <h3>Discrete Structures</h3>
+    <p>
+      Study graphs, networks, combinatorics, algorithms, and the
+      mathematics of systems made from connected pieces.
+    </p>
+  </div>
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">05</div>
+    <h3>Randomness + Uncertainty</h3>
+    <p>
+      Work with probability, stochastic systems, uncertainty
+      quantification, and models where the outcome is not predetermined.
+    </p>
+  </div>
+
+  <div class="applied-topic">
+    <div class="applied-topic-number">06</div>
+    <h3>Analysis + Optimization</h3>
+    <p>
+      Ask what solutions exist, how systems behave, and how to find
+      the best possible choice under competing constraints.
+    </p>
+  </div>
+
+</div>
+
+  <!-- =====================================================
+       IS IT FOR YOU?
+       ===================================================== -->
+
+  <section class="rule-section split applied-section">
+
+    <div>
+
+      <div class="fig-label">
+        03 / IS IT FOR YOU?
+      </div>
+
+      <h2>
+        MAYBE,<br>
+        IF THIS<br>
+        SOUNDS FAMILIAR.
+      </h2>
+
+    </div>
+
+
+    <div class="applied-checklist">
+
+      <div class="applied-check">
+        <span>+</span>
+        <p>
+          You like abstraction, but you also want to know
+          what it can explain.
+        </p>
+      </div>
+
+      <div class="applied-check">
+        <span>+</span>
+        <p>
+          You enjoy coding, but you are more interested in
+          models and ideas than software for its own sake.
+        </p>
+      </div>
+
+      <div class="applied-check">
+        <span>+</span>
+        <p>
+          You like science and keep getting distracted
+          by the equations.
+        </p>
+      </div>
+
+      <div class="applied-check">
+        <span>+</span>
+        <p>
+          You want to understand why a system behaves
+          the way it does.
+        </p>
+      </div>
+
+      <div class="applied-check">
+        <span>+</span>
+        <p>
+          You like problems that do not immediately tell you
+          which technique to use.
+        </p>
+      </div>
+
+    </div>
+
+    
+  </section>
+
+
+  <!-- =====================================================
+       WHERE CAN IT GO?
+       ===================================================== -->
+
+  <section class="rule-section applied-section">
+
+    <div class="fig-label">
+      04 / WHERE CAN IT GO?
+    </div>
+
+    <h2>
+      ALMOST<br>
+      ANYWHERE.
+    </h2>
+
+    <div class="applied-destinations">
+
+      <span>RESEARCH</span>
+      <span>DATA</span>
+      <span>ENGINEERING</span>
+      <span>BIOLOGY</span>
+      <span>COMPUTING</span>
+      <span>FINANCE</span>
+      <span>MODELING</span>
+      <span>GRAD SCHOOL</span>
+      <span>NETWORK SCIENCE</span>
+      <span>PHYSICS</span>
+      <span>OPTIMIZATION</span>
+      <span>THINGS WE HAVEN'T NAMED YET</span>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================================
+       IIT / STUDENT EXPERIENCE
+       ===================================================== -->
+
+  <!-- =====================================================
+     IIT / STUDENT EXPERIENCE
+     ===================================================== -->
+
+<section class="rule-section split applied-section">
+
+  <div>
+
+    <div class="fig-label">
+      05 / AT ILLINOIS TECH
+    </div>
+
+    <h2>
+      BUILD YOUR<br>
+      OWN PATH.
+    </h2>
+
+  </div>
+
+
+  <div class="body-copy">
+
+    <p>
+      Applied mathematics can sit between departments,
+      fields, and ways of thinking.
+    </p>
+
+    <p>
+      At Illinois Tech, you get a lot of room to make the degree your own — pick a specialization, add a minor, and follow what interests you.
+    </p>
+
+    <p>
+      SIAM is one place to meet other students,
+      hear about research, find conferences and talks,
+      and see where mathematics can lead beyond coursework.
+    </p>
+
+    <a
+      class="text-link"
+      href="https://www.iit.edu/academics/programs/applied-mathematics-bs"
+      target="_blank"
+      rel="noopener"
+    >
+      SEE HOW THE DEGREE ACTUALLY WORKS ↗
+    </a>
+
+  </div>
+
+</section>
+
+
+  <!-- =====================================================
+       CTA
+       ===================================================== -->
+
+  <section class="rule-section applied-cta">
+
+    <div class="fig-label">
+      06 / STILL WONDERING?
+    </div>
+
+    <h2>
+    CURIOSITY > CERTAINTY.
+    </h2>
+
+    <p class="dek">
+      You don't have to know where you fit to start finding out.
+    </p>
+
+    <div class="applied-cta-links">
+
+     <a class="text-link" href="./tea/">COME TALK MATH WITH US ↗</a>
+
+    </div>
+
+  </section>
+
+
+  {{< include includes/_footer.html >}}
+
+</div>
+```

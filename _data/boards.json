@@ -1,0 +1,160 @@
+{
+  "boards": [
+    {
+      "academic_year": null,
+      "date_display": "2023-2024; TO BE CONFIRMED",
+      "date_precision": "YEAR",
+
+      "status": "HISTORICAL",
+
+      "officers": [
+        {
+          "name": "Mikhail Hall",
+          "role": "PRESIDENT",
+          "academic_description": "Fourth-year B.S. Applied Mathematics student"
+        },
+        {
+          "name": "Ishaan Goel",
+          "role": "VICE PRESIDENT",
+          "academic_description": "Third-year student pursuing a B.S. in Applied Mathematics, B.S. in Artificial Intelligence, and M.S. in Artificial Intelligence",
+          "research": "Research with Dr. Trevor Leslie"
+        },
+        {
+          "name": "Taran Mellacheruvu",
+          "role": "TREASURER",
+          "academic_description": "Third-year student pursuing a B.S. in Applied Mathematics and B.S. in Physics"
+        },
+        {
+          "name": "Leonardo Marciaga",
+          "role": "SECRETARY",
+          "academic_description": "Second-year B.S. Applied Mathematics student"
+        },
+        {
+          "name": "Iqtedar Uddin",
+          "role": "RESEARCH COORDINATOR",
+          "academic_description": "Third-year B.S. Computer Science student"
+        },
+        {
+          "name": "Jacob H. Thomas",
+          "role": "HONORARY CHAIR",
+          "academic_description": "Student pursuing a B.S. in Applied Mathematics and M.S. in Physics",
+          "research": "Research on quantum subspace and variational algorithms"
+        }
+      ],
+
+      "faculty_advisors": [
+        {
+          "name": "Hemanshu Kaul",
+          "title_at_time": "Associate Professor of Applied Mathematics"
+        },
+        {
+          "name": "Shuwang Li",
+          "title_at_time": "Professor of Applied Mathematics"
+        }
+      ],
+
+      "source": {
+        "type": "CHAPTER WEBSITE",
+        "title": "Leadership",
+        "url": "https://sites.google.com/view/siamiit/leadership"
+      },
+
+      "archival_note": "The surviving leadership page does not identify the academic year represented by this board. The date should remain unassigned until corroborated by another contemporary source."
+    }
+  ]
+}
+
+{
+  "academic_year": "2023–24",
+  "date": null,
+  "date_display": "2024",
+  "date_precision": "YEAR",
+
+  "type": "RESOURCE",
+
+  "title": "ILLINOIS TeX",
+
+  "summary": "SIAM IIT and the Student Committee on Research Affairs revived and updated an older Illinois Tech Applied Mathematics resource introducing students to TeX and LaTeX.",
+
+  "history": "The project continued a much older Illinois Tech tradition of maintaining mathematical computing resources for students. A surviving Internet Archive snapshot from June 13, 2015 preserves an earlier 'TeX or LaTeX Introduction' page within the former Illinois Tech Applied Mathematics website. In 2024, SIAM IIT and the Student Committee on Research Affairs returned to that earlier resource and reformulated it for a new generation of students.",
+
+  "contributors": [
+    {
+      "name": "Jacob Thomas",
+      "role": "2024 REFORMULATION"
+    }
+  ],
+
+  "lineage": [
+    {
+      "date": "2015-06-13",
+      "label": "SURVIVING ARCHIVED COPY",
+      "title": "TeX or LaTeX Introduction",
+      "organization": "Illinois Tech Applied Mathematics",
+      "relationship": "PREDECESSOR RESOURCE",
+      "url": "https://web.archive.org/web/20150613073645/http://science.iit.edu/applied-mathematics/resources/computing-resources/tex-or-latex-introduction"
+    },
+    {
+      "date": "2024",
+      "label": "STUDENT REFORMULATION",
+      "title": "Illinois TeX",
+      "organizations": [
+        "SIAM IIT",
+        "Student Committee on Research Affairs"
+      ],
+      "relationship": "UPDATED RESOURCE",
+      "url": "https://sites.google.com/view/sgaiit/committees/research-affairs-committee/newsletter/latex"
+    }
+  ],
+
+  "archival_note": "The June 13, 2015 date identifies a surviving Internet Archive capture and should not be interpreted as the original publication date of the predecessor resource. No evidence currently establishes SIAM IIT involvement in the 2015 page.",
+
+  "tags": [
+    "RESOURCE",
+    "LATEX",
+    "APPLIED MATHEMATICS",
+    "DIGITAL HISTORY",
+    "PRESERVATION",
+    "INSTITUTIONAL MEMORY"
+  ]
+}
+
+"archival_sources": [
+  {
+    "type": "SOCIAL MEDIA",
+    "platform": "INSTAGRAM",
+    "account": "@iitsiam",
+    "organization": "SIAM IIT",
+    "url": "https://www.instagram.com/iitsiam/",
+    "status": "ACTIVE OR SURVIVING ACCOUNT",
+    "archival_use": [
+      "Board identification",
+      "Officer transition dates",
+      "Event reconstruction",
+      "Photographs",
+      "Speaker identification",
+      "Chapter announcements",
+      "Program history"
+    ]
+  }
+]
+
+"archival_sources": [
+  {
+    "type": "SOCIAL MEDIA",
+    "platform": "INSTAGRAM",
+    "account": "@iitsiam",
+    "organization": "SIAM IIT",
+    "url": "https://www.instagram.com/iitsiam/",
+    "status": "ACTIVE OR SURVIVING ACCOUNT",
+    "archival_use": [
+      "Board identification",
+      "Officer transition dates",
+      "Event reconstruction",
+      "Photographs",
+      "Speaker identification",
+      "Chapter announcements",
+      "Program history"
+    ]
+  }
+]
