@@ -25,6 +25,7 @@ jobs:
             --verbose
             --no-progress
             --accept 200,204,206,301,302,303,307,308,403,429
+            --exclude-path '_site'
+            --exclude-path 'includes/_fig03-network.html'
             './**/*.qmd'
-            './**/*.html'
-            './**/*.yml'
+            './chapter-links.yml'
