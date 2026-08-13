@@ -1,0 +1,267 @@
+/* ==========================================================
+   APPLIED MATHEMATICS PAGE
+   ========================================================== */
+
+/* ==========================================================
+   APPLIED MATH PAGE
+   ========================================================== */
+
+.applied-section {
+  padding-top: 70px;
+  padding-bottom: 85px;
+}
+
+
+/* ----------------------------------------------------------
+   IS IT FOR YOU? / CHECKLIST
+   ---------------------------------------------------------- */
+
+.applied-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-self: stretch;
+
+  border: 0;
+}
+
+.applied-check {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 18px;
+  align-items: start;
+
+  padding: 20px 0;
+
+  border: 0;
+}
+
+/* Internal dividers only */
+.applied-check + .applied-check {
+  border-top: 1px solid var(--rule);
+}
+
+.applied-check > span {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.applied-check p {
+  margin: 0;
+
+  max-width: 560px;
+
+  font-family: var(--font-serif);
+  font-size: 1.18rem;
+  line-height: 1.35;
+}
+
+/* ----------------------------------------------------------
+   WHERE CAN IT GO?
+   Equal-width responsive grid
+   ---------------------------------------------------------- */
+
+.applied-destinations {
+  display: grid;
+
+  /* 4 equal columns on larger screens */
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  margin-top: 32px;
+  padding-top: 0;
+
+  border-top: none;
+}
+
+.applied-destinations span {
+  /*
+    Labels inherit their equal column width from .applied-destinations.
+    Keep these visually light: border, compact mono type, no card fill.
+  */
+  display: inline-block;
+  min-width: 0;
+  padding: 8px 12px;
+
+  border: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-align: center;
+}
+
+
+/* The final open-ended destination is intentionally slightly editorial. */
+.applied-destinations span:last-child {
+  flex-basis: auto;
+  font-style: italic;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 1000px) {
+  .applied-destinations {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+
+  .applied-check {
+    grid-template-columns: 26px 1fr;
+    gap: 12px;
+  }
+
+  .applied-check p {
+    font-size: 1.05rem;
+  }
+
+  .applied-destinations {
+    gap: 8px;
+  }
+
+  .applied-destinations span {
+    font-size: 0.75rem;
+  }
+
+}
+
+@media (max-width: 700px) {
+  .applied-destinations {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 420px) {
+  .applied-destinations {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================================
+   APPLIED MATH / WHAT YOU ACTUALLY DO
+   ========================================================== */
+
+.applied-topics {
+  width: 100%;
+
+  /* Pull the topic index toward the introductory copy. */
+  margin-top: -20px;
+  padding-bottom: 80px;
+}
+
+
+/* ----------------------------------------------------------
+   INDIVIDUAL TOPIC
+   ---------------------------------------------------------- */
+
+.applied-topic {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  column-gap: 28px;
+
+  padding: 24px 0 26px;
+
+  border-bottom: 1px solid rgba(17, 17, 15, 0.25);
+}
+
+
+/* No rule above the first item */
+
+.applied-topic:first-child {
+  padding-top: 0;
+}
+
+
+/* Don't trap the list between two rules */
+
+.applied-topic:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+
+/* ----------------------------------------------------------
+   NUMBER
+   ---------------------------------------------------------- */
+
+.applied-topic-number {
+  grid-column: 1;
+  grid-row: 1 / span 2;
+
+  padding-top: 3px;
+
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+
+  opacity: 0.55;
+}
+
+
+/* ----------------------------------------------------------
+   TITLE
+   ---------------------------------------------------------- */
+
+.applied-topic h3 {
+  grid-column: 2;
+
+  margin: 0 !important;
+
+  font-family: var(--font-sans);
+  font-size: clamp(1.05rem, 1.4vw, 1.35rem) !important;
+  font-weight: 600;
+  line-height: 1.1 !important;
+  letter-spacing: -0.025em;
+
+  text-transform: uppercase;
+}
+
+
+/* ----------------------------------------------------------
+   DESCRIPTION
+   ---------------------------------------------------------- */
+
+.applied-topic p {
+  grid-column: 2;
+
+  max-width: 1050px;
+
+  margin: 10px 0 0 !important;
+
+  font-family: var(--font-serif);
+  font-size: clamp(1rem, 1.15vw, 1.15rem);
+  line-height: 1.4;
+}
+
+
+/* ----------------------------------------------------------
+   MOBILE
+   ---------------------------------------------------------- */
+
+@media (max-width: 800px) {
+
+  .applied-topic {
+    grid-template-columns: 42px minmax(0, 1fr);
+    column-gap: 14px;
+
+    padding: 20px 0 22px;
+  }
+
+  .applied-topic h3 {
+    font-size: 1rem !important;
+  }
+
+  .applied-topic p {
+    margin-top: 8px !important;
+    font-size: 1rem;
+  }
+
+}

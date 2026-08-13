@@ -1,84 +1,23 @@
 /* ==========================================================
-   SIAM @ IIT â€” MAIN STYLESHEET
-   ==========================================================
-
-   MAINTAINER NOTES
-
-   This file controls presentation only. Site content and generated
-   records should normally be updated at their source instead of here.
-
-   CONTENT / DATA SOURCES:
-   - _data/events.json       Current and past event information
-   - _data/history.json      Reconstructed chapter-history records
-   - _data/people.json       Board + advisor information
-   - chapter-links.yml       Shared external chapter links
-   - images/people/          Board headshots
-
-   JAVASCRIPT RENDERERS:
-   - events.js               Builds the current event calendar
-   - people.js               Builds the board directory
-   - timeline.js             Combines past events + history for the archive
-
-   QUARTO RULE:
-   In each .qmd page, keep all page HTML inside ONE `{=html}`
-   raw HTML block. Do not split a page across multiple raw HTML
-   blocks; Quarto may otherwise print HTML as literal text.
-
-   CSS MAINTENANCE RULES:
-   1. Prefer editing an existing selector over appending a duplicate.
-      The cascade is easier to reason about when each component has
-      one authoritative rule.
-   2. Keep page-specific styles grouped under the page/component name.
-   3. Keep responsive overrides close to the component they modify.
-   4. Do not put CSS in JavaScript files; renderers should emit classes,
-      and this stylesheet should control their presentation.
-   5. Avoid changing global h1/h2 rules to repair one page. Use a
-      page-specific or component-specific selector instead.
-   6. Before deleting an apparently redundant declaration, check whether
-      it intentionally overrides an earlier global rule.
-   ========================================================== */
-
-
-/* ==========================================================
-   SECTION MAP
-
-   01. Design tokens / global defaults
-   02. Shared shell, navigation, typography, footer
-   03. Homepage hero + SIAM network
-   04. Quiz CTA + global small-type legibility
-   05. Events calendar + archive CTA
-   06. People / board
-   07. Contact
-   08. Applied Mathematics page
-   09. Dodgson's Tea Party
-   10. Join modal
-   11. Archive / unified chapter timeline
-
-   Page-specific sections are intentionally kept together so future
-   changes can be made locally without relying on late cascade patches.
+   SIAM @ IIT — SHARED STYLES
+   Loaded on every page.
    ========================================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap");
 
-
 :root {
   --paper: #eee9da;
   --ink: #11110f;
-
   --blue: #173a78;
   --cyan: #67c9c8;
   --green: #a8c681;
   --red: #c93b32;
-
   --rule: rgba(17, 17, 15, 0.35);
-
   --max: 1500px;
-
   --font-sans: "Inter", Arial, sans-serif;
   --font-serif: "Newsreader", Georgia, serif;
   --font-mono: "DM Mono", monospace;
 }
-
 
 /* =========================================================
    GLOBAL
@@ -88,36 +27,28 @@
   box-sizing: border-box;
 }
 
-
 html {
   background: var(--paper);
   color: var(--ink);
   scroll-behavior: smooth;
 }
 
-
 body {
   margin: 0;
-
   background: var(--paper);
   color: var(--ink);
-
   font-family: var(--font-sans);
 }
-
 
 a {
   color: inherit;
   text-decoration: none;
-
   transition: opacity 150ms ease;
 }
-
 
 a:hover {
   opacity: 0.58;
 }
-
 
 /* =========================================================
    MAIN PAGE SHELL
@@ -125,11 +56,9 @@ a:hover {
 
 .site-shell {
   width: min(100%, var(--max));
-
   margin: 0 auto;
   padding: 0 34px;
 }
-
 
 /* =========================================================
    TOP NAVIGATION
@@ -137,45 +66,32 @@ a:hover {
 
 .topbar {
   min-height: 86px;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   border-bottom: 1px solid var(--ink);
 }
 
-
 .wordmark {
   font-family: var(--font-mono);
-
   font-size: 0.95rem;
   font-weight: 500;
-
   letter-spacing: 0.06em;
 }
-
 
 .main-nav {
   display: flex;
   align-items: center;
-
   gap: clamp(18px, 2.5vw, 42px);
-
   font-family: var(--font-mono);
-
   font-size: 0.72rem;
-
   letter-spacing: 0.07em;
 }
 
-
 .join-link {
   padding: 10px 13px;
-
   border: 1px solid var(--ink);
 }
-
 
 /* =========================================================
    GENERAL TYPOGRAPHY
@@ -186,40 +102,29 @@ a:hover {
 .vertex-caption,
 .moire-caption {
   font-family: var(--font-mono);
-
   font-size: 0.66rem;
   line-height: 1.4;
-
   letter-spacing: 0.12em;
 }
-
 
 h1,
 h2 {
   margin: 0;
-
   font-family: var(--font-sans);
   font-weight: 500;
-
   letter-spacing: -0.055em;
   line-height: 0.9;
 }
 
-
 h2 {
   margin-top: 18px;
-
   font-size: clamp(2.6rem, 5vw, 6rem);
 }
 
-
 .dek {
   max-width: 470px;
-
   margin-top: 34px;
-
   font-family: var(--font-serif);
-
   font-size: clamp(1.15rem, 1.7vw, 1.65rem);
   line-height: 1.25;
 }
@@ -232,129 +137,27 @@ h2 {
 }
 
 .fig-label {
-  font-size: 0.82rem;
+  font-size: 0.9rem;
+  line-height: 1.25;
   letter-spacing: 0.14em;
 }
 
-/* =========================================================
-   FULL-WIDTH HERO / INTERACTIVE SURFACE
-   ========================================================= */
-
-.hero {
-  width: 100vw;
-
-  margin-left: calc(50% - 50vw);
-
-  padding: 0;
+.small-caps {
+  margin-top: 28px;
+  font-size: 0.85rem;
+  line-height: 1.3;
 }
 
-
-.hero-surface,
-.moire-wrap {
-  position: relative;
-
-  width: 100vw;
-
-  height: 50vh;
-  min-height: 400px;
-  max-height: 550px;
-
-  margin-left: calc(50% - 50vw);
-
-  overflow: hidden;
-
-  background: var(--blue);
-
-  border-top: 1px solid var(--ink);
+.text-link {
+  display: inline-block;
+  margin-top: 30px;
+  padding-bottom: 3px;
   border-bottom: 1px solid var(--ink);
-  border-left: 0;
-  border-right: 0;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  line-height: 1.3;
+  letter-spacing: 0.08em;
 }
-
-
-#moire-canvas {
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-  height: 100%;
-
-  display: block;
-}
-
-
-.hero-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  z-index: 2;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  padding:
-    clamp(35px, 4vw, 70px)
-    clamp(35px, 4vw, 75px);
-
-  pointer-events: none;
-}
-
-
-.hero-copy {
-  max-width: 800px;
-
-  margin: 0;
-}
-
-
-.hero .fig-label {
-  color: var(--paper);
-}
-
-
-.hero h1 {
-  max-width: 800px;
-
-  margin: 28px 0 0;
-
-  color: var(--paper);
-
-  font-size: clamp(3.7rem, 6.7vw, 7.5rem);
-  line-height: 0.88;
-
-  letter-spacing: -0.055em;
-}
-
-
-.hero .dek {
-  max-width: 560px;
-
-  margin-top: 34px;
-
-  color: var(--paper);
-
-  font-family: var(--font-serif);
-
-  font-size: clamp(1.1rem, 1.6vw, 1.55rem);
-  line-height: 1.25;
-}
-
-
-.moire-caption {
-  position: static;
-
-  width: 100%;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-
-  color: var(--paper);
-}
-
 
 /* =========================================================
    STANDARD SECTIONS
@@ -362,405 +165,21 @@ h2 {
 
 .rule-section {
   padding: 90px 0 120px;
-
   border-top: 1px solid var(--ink);
 }
-
 
 .split {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 8vw;
 }
 
-
 .body-copy {
   align-self: end;
-
   max-width: 520px;
-
   font-family: var(--font-serif);
-
   font-size: 1.45rem;
   line-height: 1.38;
-}
-
-
-.small-caps {
-  margin-top: 28px;
-}
-
-
-.text-link {
-  display: inline-block;
-
-  margin-top: 30px;
-  padding-bottom: 3px;
-
-  border-bottom: 1px solid var(--ink);
-
-  font-family: var(--font-mono);
-
-  font-size: 0.75rem;
-
-  letter-spacing: 0.08em;
-}
-
-/* =========================================================
-   SIAM NETWORK
-   ========================================================= */
-
-.network-section {
-  padding: 90px 0 120px;
-  border-top: 1px solid var(--ink);
-}
-
-.network-section > .fig-label {
-  text-align: left;
-}
-
-.network-section > h2 {
-  margin-top: 18px;
-  text-align: left;
-}
-
-
-/* =========================================================
-   GRAPH
-   ========================================================= */
-
-.chapter-graph {
-  width: 100%;
-  max-width: 1100px;
-  margin: 35px auto 0;
-}
-
-.network-svg {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-
-/* =========================================================
-   GRAPH EDGES
-   ========================================================= */
-
-.chapter-edges line {
-  stroke: var(--ink);
-  stroke-width: 1.25;
-  vector-effect: non-scaling-stroke;
-}
-
-.siam-edges line {
-  stroke: var(--ink);
-  stroke-width: 1;
-  opacity: 0.22;
-  vector-effect: non-scaling-stroke;
-}
-
-
-/* =========================================================
-   GRAPH NODES
-   ========================================================= */
-
-.network-node circle {
-  fill: var(--ink);
-}
-
-
-.network-node text {
-  fill: var(--ink);
-
-  font-family: var(--font-mono);
-  font-size: 14.5px;
-  font-weight: 400;
-
-  letter-spacing: 0.06em;
-}
-
-.network-node-iit text {
-  font-weight: 500;
-}
-
-.network-sub-label {
-  font-size: 9px !important;
-  letter-spacing: 0.12em;
-}
-
-
-/* =========================================================
-   NETWORK COUNT
-   ========================================================= */
-
-.vertex-count {
-  margin-top: 25px;
-
-  text-align: center;
-
-  font-family: var(--font-serif);
-  font-size: 2.4rem !important;
-  font-weight: 400;
-  line-height: 1;
-
-  letter-spacing: -0.025em;
-}
-
-.vertex-caption {
-  margin-top: 10px;
-
-  text-align: center;
-
-  font-family: var(--font-mono);
-  font-size: 0.58rem;
-
-  letter-spacing: 0.13em;
-}
-
-
-/* =========================================================
-   NETWORK COPY
-   ========================================================= */
-
-.network-copy {
-  max-width: 560px;
-  margin: 48px auto 0;
-
-  text-align: center;
-
-  font-family: var(--font-serif);
-  font-size: 1.35rem;
-  line-height: 1.4;
-}
-
-.network-section .text-link {
-  display: table;
-  margin: 38px auto 0;
-}
-
-
-<div class="site-shell">
-
-  <!-- =====================================================
-       FIG. 03 / SIAM NETWORK
-       ===================================================== -->
-
-  <section class="network-section">
-
-    <div class="fig-label">
-      FIG. 03 / CHAPTER NETWORK
-    </div>
-
-    <h2>
-      THE SIAM NETWORK
-    </h2>
-
-    <div class="chapter-graph">
-
-      <svg
-        class="network-svg"
-        viewBox="0 0 1000 430"
-        xmlns="http://www.w3.org/2000/svg"
-        role="img"
-        aria-label="Illinois Tech, Loyola, Northwestern, and UIUC shown within a larger SIAM student chapter network."
-      >
-
-        <!-- ==================================================
-             EXTENDED NETWORK / FADED CONTEXT
-             ================================================== -->
-
-        <g class="ghost-network">
-
-          <g class="ghost-edges ghost-edges-faint">
-            <line x1="75" y1="120" x2="180" y2="210" />
-            <line x1="75" y1="120" x2="245" y2="85" />
-            <line x1="245" y1="85" x2="455" y2="230" />
-            <line x1="245" y1="85" x2="365" y2="55" />
-            <line x1="365" y1="55" x2="690" y2="115" />
-            <line x1="690" y1="115" x2="835" y2="72" />
-            <line x1="835" y1="72" x2="930" y2="145" />
-            <line x1="930" y1="145" x2="810" y2="255" />
-            <line x1="925" y1="330" x2="810" y2="255" />
-            <line x1="925" y1="330" x2="735" y2="360" />
-            <line x1="735" y1="360" x2="500" y2="370" />
-            <line x1="735" y1="360" x2="625" y2="305" />
-            <line x1="625" y1="305" x2="455" y2="230" />
-            <line x1="500" y1="370" x2="325" y2="350" />
-            <line x1="325" y1="350" x2="180" y2="210" />
-            <line x1="325" y1="350" x2="120" y2="325" />
-            <line x1="120" y1="325" x2="45" y2="265" />
-          </g>
-
-          <g class="ghost-edges ghost-edges-near">
-            <line x1="180" y1="210" x2="300" y2="170" />
-            <line x1="300" y1="170" x2="455" y2="230" />
-            <line x1="455" y1="230" x2="565" y2="165" />
-            <line x1="565" y1="165" x2="690" y2="115" />
-            <line x1="690" y1="115" x2="760" y2="185" />
-            <line x1="760" y1="185" x2="810" y2="255" />
-            <line x1="455" y1="230" x2="590" y2="285" />
-            <line x1="590" y1="285" x2="810" y2="255" />
-            <line x1="590" y1="285" x2="500" y2="370" />
-          </g>
-
-          <g class="ghost-nodes ghost-nodes-faint">
-            <circle cx="75" cy="120" r="4" />
-            <circle cx="245" cy="85" r="4" />
-            <circle cx="365" cy="55" r="3.5" />
-            <circle cx="835" cy="72" r="4" />
-            <circle cx="930" cy="145" r="3.5" />
-            <circle cx="925" cy="330" r="4" />
-            <circle cx="735" cy="360" r="4" />
-            <circle cx="325" cy="350" r="4" />
-            <circle cx="120" cy="325" r="3.5" />
-            <circle cx="45" cy="265" r="3" />
-          </g>
-
-          <g class="ghost-nodes ghost-nodes-near">
-            <circle cx="300" cy="170" r="4.5" />
-            <circle cx="565" cy="165" r="4.5" />
-            <circle cx="760" cy="185" r="4.5" />
-            <circle cx="590" cy="285" r="4.5" />
-            <circle cx="625" cy="305" r="4" />
-          </g>
-
-        </g>
-
-
-        <!-- ==================================================
-             SIAM ORGANIZATIONAL CONNECTIONS
-             ================================================== -->
-
-        <g class="siam-edges">
-          <line x1="180" y1="210" x2="500" y2="370" />
-          <line x1="455" y1="230" x2="500" y2="370" />
-          <line x1="690" y1="115" x2="500" y2="370" />
-          <line x1="810" y1="255" x2="500" y2="370" />
-        </g>
-
-
-        <!-- ==================================================
-             LOCAL CHAPTER CONNECTIONS
-             ================================================== -->
-
-        <g class="chapter-edges">
-          <line x1="180" y1="210" x2="455" y2="230" />
-          <line x1="180" y1="210" x2="690" y2="115" />
-          <line x1="455" y1="230" x2="690" y2="115" />
-          <line x1="455" y1="230" x2="810" y2="255" />
-          <line x1="690" y1="115" x2="810" y2="255" />
-        </g>
-
-
-        <!-- ==================================================
-             NAMED CHAPTERS
-             ================================================== -->
-
-        <!-- Loyola -->
-        <a
-          href="{{< meta loyola >}}"
-          target="_blank"
-          rel="noopener"
-          class="network-node-link"
-          data-chapter="loyola"
-          aria-label="Visit Loyola University Chicago SIAM"
-        >
-          <g class="network-node">
-            <circle cx="180" cy="210" r="7" />
-            <text x="180" y="238" text-anchor="middle">LOYOLA ↗</text>
-          </g>
-        </a>
-
-        <!-- IIT -->
-        <g class="network-node network-node-iit">
-          <circle cx="455" cy="230" r="10" />
-          <text x="455" y="260" text-anchor="middle">IIT</text>
-          <text
-            class="network-sub-label"
-            x="455"
-            y="279"
-            text-anchor="middle"
-          >
-            YOU ARE HERE
-          </text>
-        </g>
-
-        <!-- Northwestern -->
-        <a
-          href="{{< meta northwestern >}}"
-          target="_blank"
-          rel="noopener"
-          class="network-node-link"
-          data-chapter="northwestern"
-          aria-label="Visit Northwestern SIAM"
-        >
-          <g class="network-node">
-            <circle cx="690" cy="115" r="7" />
-            <text x="690" y="91" text-anchor="middle">NORTHWESTERN ↗</text>
-          </g>
-        </a>
-
-        <!-- UIUC -->
-        <a
-          href="{{< meta uiuc >}}"
-          target="_blank"
-          rel="noopener"
-          class="network-node-link"
-          data-chapter="uiuc"
-          aria-label="Visit UIUC SIAM"
-        >
-          <g class="network-node">
-            <circle cx="810" cy="255" r="7" />
-            <text x="810" y="284" text-anchor="middle">UIUC ↗</text>
-          </g>
-        </a>
-
-        <!-- SIAM -->
-        <a
-          href="{{< meta siam >}}"
-          target="_blank"
-          rel="noopener"
-          class="network-node-link"
-          data-chapter="siam"
-          aria-label="Learn about SIAM student membership"
-        >
-          <g class="network-node">
-            <circle cx="500" cy="370" r="8" />
-            <text x="500" y="400" text-anchor="middle">SIAM ↗</text>
-          </g>
-        </a>
-
-      </svg>
-
-    </div>
-
-
-    <!-- ==================================================
-         NETWORK SCALE
-         ================================================== -->
-
-    <div class="vertex-count">
-      |V| &gt; 175
-    </div>
-
-    <div class="vertex-caption">
-      STUDENT CHAPTERS WORLDWIDE
-    </div>
-
-  </section>
-
-</div>
-
-@media (max-width: 900px) {
-
-  .network-node circle {
-    transform-box: fill-box;
-    transform-origin: center;
-    transform: scale(1.25);
-  }
-
 }
 
 /* =========================================================
@@ -775,7 +194,7 @@ h2 {
   gap: 30px;
   border-top: 1px solid var(--ink);
   font-family: var(--font-mono);
-  font-size: 0.66rem;
+  font-size: 0.85rem;
   letter-spacing: 0.08em;
 }
 
@@ -784,1102 +203,20 @@ h2 {
   gap: 25px;
 }
 
-/* =========================================================
-   MOBILE HEADER + CORE MOBILE LAYOUT
-   ========================================================= */
-
-@media (max-width: 900px) {
-
-  .site-shell {
-    padding: 0 20px;
-  }
-
-
-  /* -------------------------------------------------------
-     HEADER
-     ------------------------------------------------------- */
-
-  .topbar {
-    min-height: 0;
-
-    display: grid;
-    grid-template-columns: 72px minmax(0, 1fr);
-    column-gap: 24px;
-
-    align-items: start;
-
-    padding: 30px 0 28px;
-
-    border-bottom: 1px solid var(--ink);
-  }
-
-  .wordmark {
-    margin: 0;
-
-    font-size: 0.82rem;
-    line-height: 1.35;
-    letter-spacing: 0.08em;
-  }
-
-  .main-nav {
-    display: grid;
-
-    grid-template-columns: repeat(3, max-content);
-
-    justify-content: space-between;
-    align-items: center;
-
-    column-gap: 18px;
-    row-gap: 18px;
-
-    margin: 0;
-
-    font-size: 0.72rem;
-    line-height: 1.15;
-  }
-
-  .main-nav a {
-    margin: 0;
-
-    font-size: 0.72rem;
-    line-height: 1.15;
-
-    white-space: nowrap;
-  }
-
-  .join-link {
-    padding: 8px 11px;
-    justify-self: start;
-  }
-
-
-  /* -------------------------------------------------------
-     HERO
-     ------------------------------------------------------- */
-
-  .hero {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    padding: 0;
-  }
-
-  .hero-surface,
-  .moire-wrap {
-    width: 100vw;
-    height: 46vh;
-    min-height: 380px;
-    max-height: 500px;
-    margin-left: calc(50% - 50vw);
-  }
-
-  .hero-overlay {
-    padding: 30px 22px;
-  }
-
-  .hero h1 {
-    max-width: 95%;
-    font-size: clamp(3rem, 13vw, 5.2rem);
-  }
-
-  .hero .dek {
-    max-width: 420px;
-    font-size: 1.15rem;
-  }
-
-
-  /* -------------------------------------------------------
-     GENERAL MOBILE SECTIONS
-     ------------------------------------------------------- */
-
-  .split {
-    grid-template-columns: 1fr;
-  }
-
-  .network-copy {
-    padding: 0 12px;
-  }
-
-  .site-footer {
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 35px 0;
-  }
-
-
-  /* -------------------------------------------------------
-     NETWORK
-     ------------------------------------------------------- */
-
-  .network-section {
-    padding-bottom: 55px;
-  }
-
-  .network-cta {
-    margin-top: 36px;
-    margin-bottom: 55px;
-    text-align: center;
-  }
-
-  .network-cta .text-link {
-    margin-top: 0;
-  }
-
-}
-
-/* =========================================================
-   REDUCED MOTION
-   ========================================================= */
-
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-.network-cta {
-  margin-top: -100px;
-  margin-bottom: 50px;
-  text-align: center;
-}
-
-.network-cta .text-link {
-  margin-top: 0;
-}
-
-/* ---------------------------------------------------------
-   EXTENDED / GHOST NETWORK
-   --------------------------------------------------------- */
-
-.ghost-network {
-  pointer-events: none;
-}
-
-.ghost-edges line {
-  stroke: var(--ink);
-  vector-effect: non-scaling-stroke;
-}
-
-.ghost-edges-faint line {
-  stroke-width: 0.75;
-  opacity: 0.10;
-}
-
-.ghost-edges-near line {
-  stroke-width: 0.85;
-  opacity: 0.16;
-}
-
-.ghost-nodes circle {
-  fill: var(--ink);
-}
-
-.ghost-nodes-faint circle {
-  opacity: 0.14;
-}
-
-.ghost-nodes-near circle {
-  opacity: 0.22;
-}
-
-/* ---------------------------------------------------------
-   CLICKABLE NETWORK NODES
-   --------------------------------------------------------- */
-
-.network-node-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.network-node-link .network-node {
-  cursor: pointer;
-}
-
-.network-node-link circle {
-  transform-box: fill-box;
-  transform-origin: center;
-
-  transition:
-    transform 140ms ease,
-    opacity 140ms ease;
-}
-
-.network-node-link text {
-  transition: opacity 140ms ease;
-}
-
-.network-node-link:hover {
-  opacity: 1;
-}
-
-.network-node-link:hover circle {
-  transform: scale(1.35);
-}
-
-.network-node-link:hover text {
-  opacity: 0.6;
-}
-
-/* ==========================================================
-   Disable Quarto heading hover anchor icons
-   ========================================================== */
-
-.anchorjs-link,
-.header-anchor,
-a.anchorjs-link {
-  display: none !important;
-}
-
-/* IIT "YOU ARE HERE" accent */
-
-.network-sub-label {
-  fill: #0066ff !important;
-  color: #0066ff !important;
-}
-
-/* ==========================================================
-   QUIZ CTA
-   ========================================================== */
-
-.quiz-cta-section {
-  padding: 90px 0 110px;
-  border-top: 1px solid var(--ink);
-}
-
-.quiz-cta-section h2 {
-  margin-top: 18px;
-  max-width: 900px;
-}
-
-.quiz-cta-section .text-link {
-  margin-top: 42px;
-}
-
-/* ==========================================================
-   GLOBAL SMALL TYPE / LINKS â€” LEGIBILITY
-   ========================================================== */
-
-/* Figure labels */
-.fig-label {
-  font-size: 0.9rem;
-  line-height: 1.25;
-}
-
-/* Small caps / metadata */
-.small-caps,
-.vertex-caption {
-  font-size: 0.85rem;
-  line-height: 1.3;
-}
-
-/* Editorial text links */
-.text-link {
-  font-size: 0.95rem;
-  line-height: 1.3;
-}
-
-/* Header navigation */
-.main-nav a,
-.wordmark {
-  font-size: 0.9rem;
-}
-
-/* Footer */
-.site-footer,
 .site-footer a {
   font-size: 0.85rem;
 }
 
-/* Generic small text */
 small {
   font-size: 0.85rem;
 }
 
-
-/* ==========================================================
-   EVENTS CALENDAR
-   ========================================================== */
-
-
-/* ----------------------------------------------------------
-   PAGE INTRO
-   ---------------------------------------------------------- */
-
-.events-intro {
-  /* Intentionally tighter than a generic .rule-section intro. */
-  padding: 60px 0 35px;
-  min-height: 0;
-}
-
-.events-intro .interior-title {
-  margin-top: 10px;
-  margin-bottom: 28px;
-}
-
-.events-intro .dek {
-  max-width: 560px;
-  margin-top: 0;
-}
-
-
-/* ----------------------------------------------------------
-   CALENDAR
-   ---------------------------------------------------------- */
-
-.calendar-section {
-  /* Keep the archive CTA visually close to the final event. */
-  padding: 0 0 10px;
-}
-
-.event-row:last-child {
-  border-bottom: 0;
-}
-
-
-/* ----------------------------------------------------------
-   MONTH
-   ---------------------------------------------------------- */
-
-.event-month {
-  margin: 0;
-}
-
-.month-marker {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-
-  gap: 14px;
-
-  padding: 25px 0 24px;
-
-  font-family: var(--font-mono);
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-
-.month-number {
-  font-size: 0.85rem;
-  opacity: 0.45;
-}
-
-.month-name {
-  font-size: 1.2rem;
-  font-weight: 500;
-  letter-spacing: 0.09em;
-}
-
-
-/* ----------------------------------------------------------
-   EVENT ROW
-   ---------------------------------------------------------- */
-
-.event-row {
-  display: grid;
-
-  grid-template-columns:
-    105px
-    minmax(0, 1fr)
-    180px;
-
-  gap: 34px;
-
-  padding: 24px 0 26px;
-
-  border-bottom: 1px solid var(--ink);
-}
-
-
-/* ----------------------------------------------------------
-   DATE
-   ---------------------------------------------------------- */
-
-.event-date {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.event-day {
-  font-family: var(--font-sans);
-
-  font-size: 2.45rem;
-  font-weight: 500;
-
-  line-height: 0.88;
-  letter-spacing: -0.045em;
-}
-
-.event-dow {
-  margin-top: 9px;
-
-  font-family: var(--font-mono);
-
-  font-size: 0.72rem;
-  line-height: 1.35;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* ----------------------------------------------------------
-   EVENT CONTENT
-   ---------------------------------------------------------- */
-
-.event-type {
-  margin-bottom: 9px;
-
-  font-family: var(--font-mono);
-
-  font-size: 0.68rem;
-
-  letter-spacing: 0.11em;
-  text-transform: uppercase;
-}
-
-.event-main h2 {
-  margin: 0 !important;
-
-  font-size: clamp(1.9rem, 2.45vw, 2.65rem) !important;
-  line-height: 0.95 !important;
-
-  letter-spacing: -0.045em;
-}
-
-.event-main p {
-  max-width: 720px;
-
-  margin: 13px 0 0;
-
-  font-family: var(--font-serif);
-
-  font-size: 1.08rem;
-  line-height: 1.38;
-}
-
-
-/* ----------------------------------------------------------
-   EVENT META
-   ---------------------------------------------------------- */
-
-.event-meta {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-  gap: 7px;
-
-  padding-top: 27px;
-
-  font-family: var(--font-mono);
-
-  font-size: 0.72rem;
-  line-height: 1.35;
-
-  letter-spacing: 0.05em;
-}
-
-.event-link {
-  display: inline-block;
-
-  margin-top: 10px;
-  padding-bottom: 2px;
-
-  border-bottom: 1px solid var(--ink);
-}
-
-
-/* ----------------------------------------------------------
-   MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 800px) {
-
-  .event-row {
-    grid-template-columns: 62px minmax(0, 1fr);
-    gap: 18px;
-
-  }
-
-  .event-meta {
-    grid-column: 2;
-
-    padding-top: 5px;
-  }
-
-  .event-day {
-    font-size: 2rem;
-  }
-
-  .event-main h2 {
-    font-size: 1.9rem !important;
-  }
-
-  .month-name {
-    font-size: 1.05rem;
-  }
-
-}
-/* ==========================================================
-   PEOPLE / BOARD
-   ========================================================== */
-
-.people-section,
-.advisor-section {
-  border-top: 1px solid var(--ink);
-}
-
-.board-list,
-.advisor-list {
-  width: 100%;
-}
-
-.person-row,
-.advisor-row {
-  display: grid;
-  grid-template-columns:
-    80px
-    minmax(0, 1fr)
-    180px;
-
-  gap: 34px;
-
-  padding: 26px 0 28px;
-
-  border-bottom: 1px solid var(--ink);
-}
-
-
-/* INDEX */
-
-.person-index {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-
-  opacity: 0.55;
-}
-
-
-/* ROLE */
-
-.person-role {
-  margin-bottom: 8px;
-
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.1em;
-
-  text-transform: uppercase;
-}
-
-
-/* NAME */
-
-.person-main h2 {
-  margin: 0 !important;
-
-  font-size: clamp(2rem, 3vw, 3.2rem) !important;
-  line-height: 0.95 !important;
-  letter-spacing: -0.045em;
-
-  text-transform: uppercase;
-}
-
-
-/* DEGREE / TITLE */
-
-.person-major {
-  margin-top: 10px;
-
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-
-  letter-spacing: 0.06em;
-}
-
-
-/* BIO */
-
-.person-bio {
-  max-width: 620px;
-
-  margin: 18px 0 0;
-
-  font-family: var(--font-serif);
-  font-size: 1.12rem;
-  line-height: 1.4;
-}
-
-
-/* LINKS */
-
-.person-links {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 18px;
-
-  margin-top: 20px;
-}
-
-.person-link {
-  padding-bottom: 2px;
-
-  border-bottom: 1px solid var(--ink);
-
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-
-  letter-spacing: 0.07em;
-}
-
-
-/* PHOTO */
-
-.person-photo-wrap {
-  width: 180px;
-  aspect-ratio: 4 / 5;
-
-  overflow: hidden;
-}
-
-/* PHOTO IMAGE
-   The authoritative .person-photo rule appears below the
-   compact People intro and includes the grayscale treatment. */
-
-
-/* FACULTY SECTION */
-
-.advisor-section {
-  padding: 70px 0 110px;
-}
-
-.advisor-section > .fig-label {
-  margin-bottom: 30px;
-}
-
-
-/* EMPTY / ERROR STATES */
-
-.people-loading,
-.people-empty,
-.people-error {
-  padding: 55px 0;
-
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-
-  letter-spacing: 0.1em;
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  .person-row,
-  .advisor-row {
-    grid-template-columns: 50px 1fr;
-    gap: 18px;
-  }
-
-  .person-photo-wrap {
-    grid-column: 2;
-
-    width: 140px;
-    margin-top: 12px;
-  }
-
-  .person-main h2 {
-    font-size: 2rem !important;
-  }
-
-}
-
-/* ==========================================================
-   PEOPLE INTRO â€” COMPACT
-   ========================================================== */
-
-.people-intro {
-  padding-top: 60px !important;
-  padding-bottom: 60px !important;
-  min-height: 0 !important;
-}
-
-.people-intro .interior-title {
-  margin-bottom: 24px;
-}
-
-.people-intro .dek {
-  margin-bottom: 0;
-}
-
-.person-photo {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  filter: grayscale(100%);
-}
-
-/* ==========================================================
-   CONTACT / SITE SUPPORT
-   ========================================================== */
-
-.contact-intro {
-  padding-top: 60px !important;
-  padding-bottom: 70px !important;
-}
-
-.contact-section {
-  padding: 65px 0 100px;
-  border-top: 1px solid var(--ink);
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8vw;
-
-  margin-top: 34px;
-}
-
-.contact-copy {
-  max-width: 620px;
-}
-
-.contact-copy h2 {
-  margin: 0;
-
-  font-size: clamp(2.6rem, 4vw, 4.5rem);
-  line-height: 0.92;
-}
-
-.contact-copy p {
-  margin: 24px 0 0;
-
-  font-family: var(--font-serif);
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-.contact-action {
-  align-self: end;
-
-  padding-top: 20px;
-}
-
-.contact-label,
-.contact-note {
-  font-family: var(--font-mono);
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
-}
-
-.contact-email {
-  display: inline-block;
-
-  margin-top: 14px;
-  padding-bottom: 4px;
-
-  border-bottom: 1px solid var(--ink);
-
-  font-family: var(--font-mono);
-  font-size: 1rem;
-}
-
-.contact-note {
-  margin-top: 14px;
-  opacity: 0.6;
-}
-
-@media (max-width: 800px) {
-
-  .contact-grid {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-}
-
-/* ==========================================================
-   APPLIED MATH PAGE
-   ========================================================== */
-
-.applied-section {
-  padding-top: 70px;
-  padding-bottom: 85px;
-}
-
-
-/* ----------------------------------------------------------
-   IS IT FOR YOU? / CHECKLIST
-   ---------------------------------------------------------- */
-
-.applied-checklist {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  align-self: stretch;
-
-  border: 0;
-}
-
-.applied-check {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 18px;
-  align-items: start;
-
-  padding: 20px 0;
-
-  border: 0;
-}
-
-/* Internal dividers only */
-.applied-check + .applied-check {
-  border-top: 1px solid var(--rule);
-}
-
-.applied-check > span {
-  font-family: var(--font-mono);
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.applied-check p {
-  margin: 0;
-
-  max-width: 560px;
-
-  font-family: var(--font-serif);
-  font-size: 1.18rem;
-  line-height: 1.35;
-}
-
-/* ----------------------------------------------------------
-   WHERE CAN IT GO?
-   Equal-width responsive grid
-   ---------------------------------------------------------- */
-
-.applied-destinations {
-  display: grid;
-
-  /* 4 equal columns on larger screens */
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 12px;
-
-  margin-top: 32px;
-  padding-top: 0;
-
-  border-top: none;
-}
-
-.applied-destinations span {
-  /*
-    Labels inherit their equal column width from .applied-destinations.
-    Keep these visually light: border, compact mono type, no card fill.
-  */
-  display: inline-block;
-  min-width: 0;
-  padding: 8px 12px;
-
-  border: 1px solid var(--ink);
-
-  font-family: var(--font-mono);
-  font-size: 0.82rem;
-  letter-spacing: 0.06em;
-  line-height: 1;
-  text-align: center;
-}
-
-
-/* The final open-ended destination is intentionally slightly editorial. */
-.applied-destinations span:last-child {
-  flex-basis: auto;
-  font-style: italic;
-}
-
-
-/* ----------------------------------------------------------
-   MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 1000px) {
-  .applied-destinations {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 800px) {
-
-  .applied-check {
-    grid-template-columns: 26px 1fr;
-    gap: 12px;
-  }
-
-  .applied-check p {
-    font-size: 1.05rem;
-  }
-
-  .applied-destinations {
-    gap: 8px;
-  }
-
-  .applied-destinations span {
-    font-size: 0.75rem;
-  }
-
-}
-
-@media (max-width: 700px) {
-  .applied-destinations {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 420px) {
-  .applied-destinations {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ==========================================================
-   APPLIED MATH / WHAT YOU ACTUALLY DO
-   ========================================================== */
-
-.applied-topics {
-  width: 100%;
-
-  /* Pull the topic index toward the introductory copy. */
-  margin-top: -20px;
-  padding-bottom: 80px;
-}
-
-
-/* ----------------------------------------------------------
-   INDIVIDUAL TOPIC
-   ---------------------------------------------------------- */
-
-.applied-topic {
-  display: grid;
-  grid-template-columns: 70px minmax(0, 1fr);
-  column-gap: 28px;
-
-  padding: 24px 0 26px;
-
-  border-bottom: 1px solid rgba(17, 17, 15, 0.25);
-}
-
-
-/* No rule above the first item */
-
-.applied-topic:first-child {
-  padding-top: 0;
-}
-
-
-/* Don't trap the list between two rules */
-
-.applied-topic:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-
-/* ----------------------------------------------------------
-   NUMBER
-   ---------------------------------------------------------- */
-
-.applied-topic-number {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-
-  padding-top: 3px;
-
-  font-family: var(--font-mono);
-  font-size: 0.76rem;
-  letter-spacing: 0.08em;
-
-  opacity: 0.55;
-}
-
-
-/* ----------------------------------------------------------
-   TITLE
-   ---------------------------------------------------------- */
-
-.applied-topic h3 {
-  grid-column: 2;
-
-  margin: 0 !important;
-
-  font-family: var(--font-sans);
-  font-size: clamp(1.05rem, 1.4vw, 1.35rem) !important;
-  font-weight: 600;
-  line-height: 1.1 !important;
-  letter-spacing: -0.025em;
-
-  text-transform: uppercase;
-}
-
-
-/* ----------------------------------------------------------
-   DESCRIPTION
-   ---------------------------------------------------------- */
-
-.applied-topic p {
-  grid-column: 2;
-
-  max-width: 1050px;
-
-  margin: 10px 0 0 !important;
-
-  font-family: var(--font-serif);
-  font-size: clamp(1rem, 1.15vw, 1.15rem);
-  line-height: 1.4;
-}
-
-
-/* ----------------------------------------------------------
-   MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 800px) {
-
-  .applied-topic {
-    grid-template-columns: 42px minmax(0, 1fr);
-    column-gap: 14px;
-
-    padding: 20px 0 22px;
-  }
-
-  .applied-topic h3 {
-    font-size: 1rem !important;
-  }
-
-  .applied-topic p {
-    margin-top: 8px !important;
-    font-size: 1rem;
-  }
-
-}
-/* ==========================================================
-   EVENTS â†’ ARCHIVE LINK
-
-   The calendar already ends with a rule, and the footer
-   begins with one. Do not add additional borders here.
-   ========================================================== */
+/* =========================================================
+   SHARED ARCHIVE CTA
+   Used on Events and Dodgson's Tea Party.
+   ========================================================= */
 
 .calendar-archive-link {
-  /*
-    Editorial CTA after the calendar. The top rule is the single
-    separator between current events and the historical archive.
-  */
   padding: 70px 0 85px;
   border-top: 1px solid var(--ink);
 }
@@ -1891,7 +228,6 @@ small {
 
 .calendar-archive-link .fig-label {
   margin: 0 0 22px;
-
   font-family: var(--font-mono);
   font-size: 0.9rem;
   font-weight: 500;
@@ -1899,55 +235,9 @@ small {
   letter-spacing: 0.14em;
 }
 
-
-.calendar-archive-link .text-link {
-  margin-top: 0;
-}
-
-
-/* ----------------------------------------------------------
-   MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 800px) {
-
-  .calendar-section {
-    padding-bottom: 40px;
-  }
-
-}
-
-/* ==========================================================
-   DODGSON'S TEA PARTY
-   ========================================================== */
-
-.tea-heading {
-  margin: 0 !important;
-
-  font-family: var(--font-sans);
-  font-size: clamp(4.8rem, 7vw, 7.5rem) !important;
-  font-weight: 500;
-
-  line-height: 0.88 !important;
-  letter-spacing: -0.055em;
-
-  text-transform: uppercase;
-}
-
-@media (max-width: 800px) {
-  .tea-heading {
-    font-size: clamp(3.6rem, 14vw, 5rem) !important;
-  }
-}
-
-/* ----------------------------------------------------------
-   ARCHIVE CTA TYPOGRAPHY
-   ---------------------------------------------------------- */
-
 .archive-cta-title {
   max-width: 950px;
   margin: 0 !important;
-
   font-family: var(--font-sans);
   font-size: clamp(4.8rem, 7vw, 7.5rem) !important;
   font-weight: 500;
@@ -1958,7 +248,6 @@ small {
 .archive-cta-subtitle {
   max-width: 620px;
   margin: 34px 0 0;
-
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 1.6vw, 1.5rem);
   line-height: 1.35;
@@ -1968,162 +257,9 @@ small {
   margin-top: 32px;
 }
 
-/* ==========================================================
-   DODGSON'S TEA PARTY â€” INTRO
-   ========================================================== */
-
-.tea-intro {
-  padding-top: 90px;
-  padding-bottom: 90px;
-}
-
-.tea-intro-grid {
-  display: grid;
-
-  /*
-    Desktop editorial composition: a generous text column with the
-    illustration beginning early enough to feel integrated, not detached.
-  */
-  grid-template-columns: minmax(620px, 1.15fr) minmax(420px, 0.85fr);
-  gap: clamp(20px, 2.5vw, 45px);
-
-  align-items: center;
-  max-width: 1380px;
-}
-
-.tea-intro-copy {
-  min-width: 0;
-}
-
-
-/* TITLE */
-
-.tea-intro .tea-heading {
-  margin-top: 12px;
-
-  font-size: clamp(5rem, 8vw, 8.5rem);
-  line-height: 0.86;
-  letter-spacing: -0.06em;
-}
-
-
-/* DESCRIPTION */
-
-.tea-intro .dek {
-  max-width: 620px;
-  margin-top: 42px;
-}
-
-
-/* TIME + LOCATION */
-
-.tea-intro .small-caps {
-  margin-top: 42px;
-}
-
-
-/* ALICE ART */
-
-.tea-intro-art {
-  margin: 0;
-
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-
-  /* Nudge the illustration into the text composition. */
-  transform: translateX(-150px);
-}
-
-.tea-intro-art img {
-  display: block;
-
-  width: min(100%, 520px);
-  height: auto;
-
-  object-fit: contain;
-}
-
-
-/* ==========================================================
-   MOBILE
-   ========================================================== */
-
-   /* ==========================================================
-   DODGSON'S TEA PARTY — MOBILE
-   ========================================================== */
-
-@media (max-width: 900px) {
-
-  .tea-intro {
-    padding-top: 55px;
-    padding-bottom: 70px;
-  }
-
-  .tea-intro-grid {
-    grid-template-columns: 1fr;
-    gap: 42px;
-    align-items: start;
-  }
-
-  .tea-intro-copy {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .tea-intro .tea-heading {
-    margin-top: 12px;
-    font-size: clamp(3.4rem, 14vw, 5rem) !important;
-    line-height: 0.88;
-  }
-
-  .tea-intro .small-caps {
-    max-width: 100%;
-    margin-top: 30px;
-    font-size: 0.78rem;
-    line-height: 1.45;
-  }
-
-  .tea-intro-art {
-    width: 100%;
-    margin: 0;
-    transform: none;
-
-    display: flex;
-    justify-content: center;
-  }
-
-  .tea-intro-art img {
-    width: min(100%, 390px);
-    height: auto;
-  }
-
-}
-
-@media (max-width: 900px) {
-
-  .dodgson-story {
-    padding-top: 60px;
-    padding-bottom: 75px;
-  }
-
-  .dodgson-story .tea-heading {
-    font-size: clamp(3.2rem, 13vw, 4.5rem) !important;
-  }
-
-  .dodgson-story .body-copy {
-    margin-top: 38px;
-    font-size: 1.2rem;
-    line-height: 1.38;
-  }
-
-}
-
-
-
-/* ==========================================================
+/* =========================================================
    JOIN MODAL
-   ========================================================== */
+   ========================================================= */
 
 .join-modal[hidden] {
   display: none;
@@ -2133,34 +269,28 @@ small {
   position: fixed;
   inset: 0;
   z-index: 1000;
-
   display: grid;
   place-items: center;
-
   padding: 24px;
 }
 
 .join-modal-backdrop {
   position: absolute;
   inset: 0;
-
   background: rgba(17, 17, 15, 0.35);
 }
 
 .join-modal-panel {
   position: relative;
   z-index: 1;
-
   width: min(620px, 100%);
   padding: 42px;
-
   background: var(--paper);
   border: 1px solid var(--ink);
 }
 
 .join-modal-panel h2 {
   margin-top: 18px;
-
   font-size: clamp(2.8rem, 6vw, 5.5rem);
   line-height: 0.9;
 }
@@ -2168,7 +298,6 @@ small {
 .join-modal-panel p {
   max-width: 500px;
   margin: 28px 0 0;
-
   font-family: var(--font-serif);
   font-size: 1.2rem;
   line-height: 1.4;
@@ -2176,12 +305,9 @@ small {
 
 .join-modal-email {
   display: inline-block;
-
   margin-top: 30px;
   padding-bottom: 3px;
-
   border-bottom: 1px solid var(--ink);
-
   font-family: var(--font-mono);
   font-size: 0.95rem;
   letter-spacing: 0.06em;
@@ -2191,24 +317,113 @@ small {
   position: absolute;
   top: 14px;
   right: 18px;
-
   padding: 0;
-
   border: 0;
   background: transparent;
-
   color: var(--ink);
-
   font-family: var(--font-sans);
   font-size: 1.8rem;
   line-height: 1;
-
   cursor: pointer;
 }
 
 body.modal-open {
   overflow: hidden;
 }
+
+/* =========================================================
+   SHARED MOBILE LAYOUT
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .site-shell {
+    padding: 0 20px;
+  }
+
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 35px 0;
+  }
+
+}
+
+/* =========================================================
+   MOBILE HEADER
+   ========================================================= */
+
+.nav-toggle {
+  display: none;
+}
+
+@media (max-width: 900px) {
+
+  .topbar {
+    min-height: 72px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .wordmark {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.15;
+    letter-spacing: 0.08em;
+  }
+
+  .nav-toggle {
+    display: block;
+    padding: 8px 0;
+    border: 0;
+    background: transparent;
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+  }
+
+  .main-nav {
+    grid-column: 1 / -1;
+    display: none;
+    width: 100%;
+    padding: 18px 0 8px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .main-nav.is-open {
+    display: grid;
+  }
+
+  .main-nav a {
+    display: block;
+    margin: 0;
+    padding: 11px 0;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    line-height: 1.2;
+    letter-spacing: 0.07em;
+    white-space: normal;
+  }
+
+  .join-link {
+    width: fit-content;
+    margin-top: 8px;
+    padding: 9px 12px;
+    border: 1px solid var(--ink);
+  }
+
+}
+
 
 @media (max-width: 600px) {
   .join-modal-panel {
@@ -2220,461 +435,25 @@ body.modal-open {
   }
 }
 
-
-/* ==========================================================
-   ARCHIVE / CHAPTER TIMELINE
-
-   Rendered by timeline.js into #timeline-records.
-
-   timeline.js combines expired entries from _data/events.json with
-   reconstructed records from _data/history.json, normalizes them,
-   sorts them chronologically, and emits the .timeline-* classes below.
-
-   The tiles are intentionally borderless. Chronology, typography, and
-   whitespace provide the structure; the section rule separates the
-   archive from the page introduction.
-   ========================================================== */
-
-
-/* ----------------------------------------------------------
-   INTRO
-   ---------------------------------------------------------- */
-
-.archive-intro {
-  padding: 55px 0 55px !important;
-  min-height: 0;
-}
-
-.archive-intro .interior-title {
-  margin-top: 10px;
-  margin-bottom: 28px;
-}
-
-.archive-intro .dek {
-  max-width: 560px;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-
-/* ----------------------------------------------------------
-   TIMELINE SECTION
-   ---------------------------------------------------------- */
-
-.archive-section {
-  padding: 55px 0 85px;
-  border-top: 1px solid var(--ink);
-}
-
-
-/* ----------------------------------------------------------
-   TIMELINE GRID
-   ---------------------------------------------------------- */
-
-.timeline-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  column-gap: clamp(40px, 4.5vw, 70px);
-  row-gap: 65px;
-
-  width: 100%;
-}
-
-
-/* ----------------------------------------------------------
-   RECORD
-   ---------------------------------------------------------- */
-
-.timeline-record {
-  display: flex;
-  flex-direction: column;
-
-  min-width: 0;
-  padding: 0;
-
-  border: 0;
-}
-
-
-/* ----------------------------------------------------------
-   INDEX
-   ---------------------------------------------------------- */
-
-.timeline-index {
-  margin-bottom: 16px;
-
-  font-family: var(--font-mono);
-  font-size: 0.72rem;
-  line-height: 1;
-
-  letter-spacing: 0.1em;
-
-  opacity: 0.45;
-}
-
-
-/* ----------------------------------------------------------
-   DATE / TYPE
-   ---------------------------------------------------------- */
-
-.timeline-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-
-  gap: 7px;
-
-  margin-bottom: 14px;
-
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  line-height: 1.3;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.timeline-type::before {
-  content: "/";
-  margin-right: 7px;
-
-  opacity: 0.45;
-}
-
-
-/* ----------------------------------------------------------
-   TITLE
-   ---------------------------------------------------------- */
-
-.timeline-title {
-  max-width: 420px;
-
-  margin: 0 !important;
-
-  font-family: var(--font-sans);
-  font-size: clamp(1.55rem, 1.8vw, 2.1rem) !important;
-  font-weight: 500;
-
-  line-height: 1 !important;
-  letter-spacing: -0.04em;
-}
-
-
-/* ----------------------------------------------------------
-   SUMMARY
-   ---------------------------------------------------------- */
-
-.timeline-summary {
-  max-width: 420px;
-
-  margin: 18px 0 0;
-
-  font-family: var(--font-serif);
-  font-size: 1.05rem;
-  line-height: 1.42;
-}
-
-
-/* ----------------------------------------------------------
-   LINKS
-   ---------------------------------------------------------- */
-
-.timeline-links {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 8px 16px;
-
-  margin-top: 22px;
-}
-
-.timeline-source-link {
-  display: inline-block;
-
-  padding-bottom: 2px;
-
-  border-bottom: 1px solid var(--ink);
-
-  font-family: var(--font-mono);
-  font-size: 0.7rem;
-  line-height: 1.3;
-
-  letter-spacing: 0.05em;
-}
-
-
-/* ----------------------------------------------------------
-   EMPTY / ERROR
-   ---------------------------------------------------------- */
-
-.archive-empty,
-.archive-error {
-  grid-column: 1 / -1;
-
-  margin: 0;
-
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  line-height: 1.4;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* ----------------------------------------------------------
-   TABLET
-   ---------------------------------------------------------- */
-
-@media (max-width: 1050px) {
-
-  .timeline-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-
-    column-gap: 45px;
-    row-gap: 60px;
+@media (min-width: 901px) {
+  .main-nav a,
+  .wordmark {
+    font-size: 0.9rem;
   }
-
 }
 
+/* =========================================================
+   ACCESSIBILITY / QUARTO CLEANUP
+   ========================================================= */
 
-/* ----------------------------------------------------------
-   MOBILE
-   ---------------------------------------------------------- */
-
-@media (max-width: 700px) {
-
-  .archive-intro {
-    padding: 45px 0 45px !important;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
-
-  .archive-section {
-    padding: 45px 0 65px;
-  }
-
-  .timeline-grid {
-    grid-template-columns: 1fr;
-    row-gap: 50px;
-  }
-
-  .timeline-title {
-    font-size: 1.7rem !important;
-  }
-
-  .timeline-summary {
-    font-size: 1rem;
-  }
-
-}
-/* ==========================================================
-   TIMELINE IMAGE TILES
-   ========================================================== */
-
-.timeline-record {
-  position: relative;
-
-  min-width: 0;
-  aspect-ratio: 4 / 5;
-
-  overflow: hidden;
-
-  background: var(--ink);
 }
 
-
-/* ----------------------------------------------------------
-   IMAGE
-
-   Images completely fill each tile. object-fit: cover keeps
-   varying source dimensions visually consistent.
-   ---------------------------------------------------------- */
-
-.timeline-image {
-  display: block;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  
-  filter: grayscale(100%) contrast(1.08);
-  
-  transition:
-    transform 300ms ease,
-    opacity 220ms ease;
-}
-
-.timeline-image-placeholder {
-  background: var(--blue);
-}
-
-
-/* ----------------------------------------------------------
-   HOVER OVERLAY
-
-   Hidden by default on pointer devices. The dark wash makes
-   text readable without requiring every archival photograph
-   to have the same brightness or contrast.
-   ---------------------------------------------------------- */
-
-.timeline-overlay {
-  position: absolute;
-  inset: 0;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  padding: 28px;
-
-  color: var(--paper);
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(17, 17, 15, 0.96) 0%,
-      rgba(17, 17, 15, 0.76) 52%,
-      rgba(17, 17, 15, 0.14) 100%
-    );
-
-  opacity: 0;
-
-  transition: opacity 220ms ease;
-}
-
-
-/* Show archival information on pointer hover or keyboard focus. */
-
-.timeline-record:hover .timeline-overlay,
-.timeline-record:focus-within .timeline-overlay {
-  opacity: 1;
-}
-
-.timeline-record:hover .timeline-image,
-.timeline-record:focus-within .timeline-image {
-  transform: scale(1.025);
-  opacity: 0.72;
-}
-
-
-/* ----------------------------------------------------------
-   INDEX
-   ---------------------------------------------------------- */
-
-.timeline-index {
-  margin-bottom: 12px;
-
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  line-height: 1;
-
-  letter-spacing: 0.1em;
-
-  opacity: 0.7;
-}
-
-
-/* ----------------------------------------------------------
-   DATE / TYPE
-   ---------------------------------------------------------- */
-
-.timeline-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-
-  gap: 7px;
-
-  margin-bottom: 12px;
-
-  font-family: var(--font-mono);
-  font-size: 0.68rem;
-  line-height: 1.3;
-
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.timeline-type::before {
-  content: "/";
-  margin-right: 7px;
-
-  opacity: 0.6;
-}
-
-
-/* ----------------------------------------------------------
-   TITLE
-   ---------------------------------------------------------- */
-
-.timeline-title {
-  margin: 0 !important;
-
-  font-family: var(--font-sans);
-  font-size: clamp(1.45rem, 1.8vw, 2.05rem) !important;
-  font-weight: 500;
-
-  line-height: 0.98 !important;
-  letter-spacing: -0.04em;
-}
-
-
-/* ----------------------------------------------------------
-   SUMMARY
-   ---------------------------------------------------------- */
-
-.timeline-summary {
-  margin: 15px 0 0;
-
-  font-family: var(--font-serif);
-  font-size: 1rem;
-  line-height: 1.38;
-}
-
-
-/* ----------------------------------------------------------
-   LINKS
-   ---------------------------------------------------------- */
-
-.timeline-links {
-  display: flex;
-  flex-wrap: wrap;
-
-  gap: 7px 14px;
-
-  margin-top: 18px;
-}
-
-.timeline-source-link {
-  display: inline-block;
-
-  padding-bottom: 2px;
-
-  border-bottom: 1px solid currentColor;
-
-  font-family: var(--font-mono);
-  font-size: 0.67rem;
-  line-height: 1.3;
-
-  letter-spacing: 0.04em;
-}
-
-
-/* ----------------------------------------------------------
-   TOUCH DEVICES
-
-   Phones and tablets cannot reliably hover, so the overlay
-   remains visible there instead of hiding the information.
-   ---------------------------------------------------------- */
-
-@media (hover: none) {
-
-  .timeline-overlay {
-    opacity: 1;
-  }
-
-  .timeline-image {
-    opacity: 0.68;
-  }
-
+.anchorjs-link,
+.header-anchor,
+a.anchorjs-link {
+  display: none !important;
 }

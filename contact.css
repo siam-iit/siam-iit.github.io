@@ -1,0 +1,83 @@
+/* ==========================================================
+   CONTACT PAGE
+   ========================================================== */
+
+/* ==========================================================
+   CONTACT / SITE SUPPORT
+   ========================================================== */
+
+.contact-intro {
+  padding-top: 60px !important;
+  padding-bottom: 70px !important;
+}
+
+.contact-section {
+  padding: 65px 0 100px;
+  border-top: 1px solid var(--ink);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+
+  margin-top: 34px;
+}
+
+.contact-copy {
+  max-width: 620px;
+}
+
+.contact-copy h2 {
+  margin: 0;
+
+  font-size: clamp(2.6rem, 4vw, 4.5rem);
+  line-height: 0.92;
+}
+
+.contact-copy p {
+  margin: 24px 0 0;
+
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+.contact-action {
+  align-self: end;
+
+  padding-top: 20px;
+}
+
+.contact-label,
+.contact-note {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.contact-email {
+  display: inline-block;
+
+  margin-top: 14px;
+  padding-bottom: 4px;
+
+  border-bottom: 1px solid var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 1rem;
+}
+
+.contact-note {
+  margin-top: 14px;
+  opacity: 0.6;
+}
+
+@media (max-width: 800px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+}

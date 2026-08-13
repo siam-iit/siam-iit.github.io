@@ -1,0 +1,177 @@
+/* ==========================================================
+   DODGSON'S TEA PARTY
+   ========================================================== */
+
+/* ==========================================================
+   DODGSON'S TEA PARTY
+   ========================================================== */
+
+.tea-heading {
+  margin: 0 !important;
+
+  font-family: var(--font-sans);
+  font-size: clamp(4.8rem, 7vw, 7.5rem) !important;
+  font-weight: 500;
+
+  line-height: 0.88 !important;
+  letter-spacing: -0.055em;
+
+  text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .tea-heading {
+    font-size: clamp(3.6rem, 14vw, 5rem) !important;
+  }
+}
+
+/* ==========================================================
+   DODGSON'S TEA PARTY â€” INTRO
+   ========================================================== */
+
+.tea-intro {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.tea-intro-grid {
+  display: grid;
+
+  /*
+    Desktop editorial composition: a generous text column with the
+    illustration beginning early enough to feel integrated, not detached.
+  */
+  grid-template-columns: minmax(620px, 1.15fr) minmax(420px, 0.85fr);
+  gap: clamp(20px, 2.5vw, 45px);
+
+  align-items: center;
+  max-width: 1380px;
+}
+
+.tea-intro-copy {
+  min-width: 0;
+}
+
+
+/* TITLE */
+
+.tea-intro .tea-heading {
+  margin-top: 12px;
+
+  font-size: clamp(5rem, 8vw, 8.5rem);
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+}
+
+
+/* DESCRIPTION */
+
+.tea-intro .dek {
+  max-width: 620px;
+  margin-top: 42px;
+}
+
+
+/* TIME + LOCATION */
+
+.tea-intro .small-caps {
+  margin-top: 42px;
+}
+
+
+/* ALICE ART */
+
+.tea-intro-art {
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  /* Nudge the illustration into the text composition. */
+  transform: translateX(-150px);
+}
+
+.tea-intro-art img {
+  display: block;
+
+  width: min(100%, 520px);
+  height: auto;
+
+  object-fit: contain;
+}
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+   /* ==========================================================
+   DODGSON'S TEA PARTY — MOBILE
+   ========================================================== */
+
+@media (max-width: 900px) {
+
+  .tea-intro {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .tea-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    align-items: start;
+  }
+
+  .tea-intro-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tea-intro .tea-heading {
+    margin-top: 12px;
+    font-size: clamp(3.4rem, 14vw, 5rem) !important;
+    line-height: 0.88;
+  }
+
+  .tea-intro .small-caps {
+    max-width: 100%;
+    margin-top: 30px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .tea-intro-art {
+    width: 100%;
+    margin: 0;
+    transform: none;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .tea-intro-art img {
+    width: min(100%, 390px);
+    height: auto;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .dodgson-story {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  .dodgson-story .tea-heading {
+    font-size: clamp(3.2rem, 13vw, 4.5rem) !important;
+  }
+
+  .dodgson-story .body-copy {
+    margin-top: 38px;
+    font-size: 1.2rem;
+    line-height: 1.38;
+  }
+
+}

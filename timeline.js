@@ -243,6 +243,42 @@ document.addEventListener("DOMContentLoaded", async () => {
       article.className =
         "timeline-record";
 
+        /* --------------------------------------------------------
+   MOBILE TAP-TO-REVEAL
+
+   Desktop keeps its hover behavior.
+   On touch-sized screens, tapping a tile reveals its
+   archival information without permanently obscuring
+   the underlying poster or photograph.
+   -------------------------------------------------------- */
+
+article.addEventListener("click", (event) => {
+
+  /* Let source/detail links behave normally. */
+  if (event.target.closest("a")) {
+    return;
+  }
+
+  if (
+    window.matchMedia("(max-width: 900px)").matches
+  ) {
+
+    /* Close any other open archive tile. */
+    document
+      .querySelectorAll(".timeline-record.is-open")
+      .forEach((openRecord) => {
+
+        if (openRecord !== article) {
+          openRecord.classList.remove("is-open");
+        }
+
+      });
+
+    article.classList.toggle("is-open");
+
+  }
+
+});
 
       /* SOURCE / DETAIL LINKS */
 

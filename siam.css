@@ -1,0 +1,50 @@
+/* ==========================================================
+   WHAT IS SIAM? PAGE
+
+   This page currently relies almost entirely on shared site styles
+   from styles.css. Keep future SIAM-page-specific rules here rather
+   than adding them back to the global stylesheet.
+   ========================================================== */
+
+
+/* ==========================================================
+   PAGE INTRO
+   ========================================================== */
+
+/*
+   Add SIAM-page-only intro overrides here if needed.
+
+   Example selectors:
+   .siam-intro { ... }
+   .siam-intro .interior-title { ... }
+   .siam-intro .dek { ... }
+*/
+
+
+/* ==========================================================
+   PAGE SECTIONS
+   ========================================================== */
+
+/*
+   Keep section-specific rules scoped to SIAM page classes.
+
+   Example selectors:
+   .siam-section { ... }
+   .siam-benefits { ... }
+   .siam-membership { ... }
+*/
+
+
+/* ==========================================================
+   MOBILE
+   ========================================================== */
+
+@media (max-width: 800px) {
+
+  /*
+     Add SIAM-page-only mobile adjustments here.
+     Shared header, shell, typography, footer, and general
+     one-column behavior remain in styles.css.
+  */
+
+}
