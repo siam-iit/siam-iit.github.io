@@ -51,38 +51,261 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+
 <div class="site-shell">
+
+<!--
+TEA PAGE COPY OF GLOBAL HEADER
+
+This file exists because tea/index.qmd is nested one directory deeper.
+If the main navigation changes, also update:
+../includes/_header.html
+-->
+
 <header class="topbar">
-<a class="wordmark" href="../">SIAM / IIT</a>
-<nav class="main-nav">
-<a href="../tea/">DODGSON’S</a> <a href="../events.html">EVENTS</a> <a href="../people.html">PEOPLE</a> <a href="../siam.html">WHAT IS SIAM?</a> <a class="join-link" href="../join.html">JOIN ↗</a>
-</nav>
+
+  <a class="wordmark" href="../">
+    SIAM / IIT
+  </a>
+
+  <nav class="main-nav" aria-label="Main navigation">
+
+    <a href="../tea/">
+      DODGSON'S
+    </a>
+
+    <a href="../events.html">
+      EVENTS
+    </a>
+
+    <a href="../people.html">
+      PEOPLE
+    </a>
+
+    <a href="../mathematician.html">
+      QUIZ
+    </a>
+
+    <a href="../applied-math.html">
+      WHY APPLIED MATH?
+    </a>
+
+    <a href="../siam.html">
+      WHAT IS SIAM?
+    </a>
+
+    <a class="join-link" href="#join" data-join-open="">
+      JOIN ↗
+    </a>
+  </nav>
+
 </header>
-<section class="rule-section">
-<div class="fig-label">
-SERIES / WEEKLY
+
+<div class="join-modal" data-join-modal="" hidden="">
+  <div class="join-modal-backdrop" data-join-close=""></div>
+
+  <div class="join-modal-panel" role="dialog" aria-modal="true" aria-labelledby="join-modal-title">
+    <button class="join-modal-close" type="button" aria-label="Close" data-join-close="">
+      ×
+    </button>
+
+    <div class="fig-label">JOIN / SIAM IIT</div>
+
+    <h2 id="join-modal-title" class="anchored">
+      COME DO MATH WITH US.
+    </h2>
+
+    <p>
+      Start with Dodgson's Tea Party, or send us an email to get involved.
+    </p>
+
+    <a class="join-modal-email" href="mailto:siamiitchapter@gmail.com">
+      SHOOT US AN EMAIL ↗
+    </a>
+  </div>
 </div>
-<h1>
-DODGSON’S<br>TEA PARTY
-</h1>
-<p class="dek">
-A weekly gathering for mathematics, puzzles, conversation, and tea.
-</p>
-<p class="small-caps">
-THURSDAYS / 12:45 PM / PS 255
-</p>
+
+<script>
+  const joinModal = document.querySelector("[data-join-modal]");
+  const joinOpen = document.querySelector("[data-join-open]");
+  const joinClose = document.querySelectorAll("[data-join-close]");
+
+  joinOpen?.addEventListener("click", (event) => {
+    event.preventDefault();
+    joinModal.hidden = false;
+    document.body.classList.add("modal-open");
+  });
+
+  joinClose.forEach((button) => {
+    button.addEventListener("click", () => {
+      joinModal.hidden = true;
+      document.body.classList.remove("modal-open");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !joinModal.hidden) {
+      joinModal.hidden = true;
+      document.body.classList.remove("modal-open");
+    }
+  });
+</script>
+
+
+
+<!-- =====================================================
+     SERIES INTRO
+     ===================================================== -->
+
+<!-- =====================================================
+     SERIES INTRO
+     ===================================================== -->
+
+<section class="rule-section tea-intro">
+
+  <div class="tea-intro-grid">
+
+    <div class="tea-intro-copy">
+
+      <div class="fig-label">
+        SERIES / WEEKLY
+      </div>
+
+      <h1 class="tea-heading">
+        DODGSON'S<br>
+        TEA PARTY
+      </h1>
+
+      <p class="small-caps">
+        BEGINNING THE SECOND WEEK OF THE FALL SEMESTER <br>
+        LOCATION AND TIME TBD
+      </p>
+
+    </div>
+
+
+    <figure class="tea-intro-art">
+      <img src="./alice.png" alt="Through the Looking Glass and What IIT Found There">
+    </figure>
+
+  </div>
+
 </section>
-<section class="rule-section">
-<div class="fig-label">
-ARCHIVE / 2026—27
-</div>
-<h2 class="anchored">
-COMING SOON.
-</h2>
-<p class="body-copy">
-Each week will get a small record: topic, problem, notes, photographs, and whatever ended up on the blackboard.
-</p>
+
+
+<!-- =====================================================
+     WHY "DODGSON'S"?
+     ===================================================== -->
+
+<section class="rule-section split dodgson-story">
+
+  <div>
+
+    <div class="fig-label">
+      01 / WHY "DODGSON'S"?
+    </div>
+
+    <h2 class="tea-heading anchored">
+      ASK<br>
+      LEWIS<br>
+      CARROLL.
+    </h2>
+
+  </div>
+
+
+  <div class="body-copy">
+
+    <p>
+      Before Lewis Carroll sent Alice to a very strange tea party,
+      he was Charles Lutwidge Dodgson: a mathematician, logician,
+      puzzle-maker, and lecturer in mathematics at Oxford.
+    </p>
+
+    <p>
+      So when SIAM IIT needed a name for a weekly gathering built
+      around math, puzzles, conversation, and tea, we borrowed his.
+    </p>
+
+    <p>
+      <em>Dodgson's Tea Party</em> is our small nod to the fact that
+      mathematics has always had room for curiosity, play, and a
+      little nonsense.
+    </p>
+
+    <a class="text-link" href="https://en.wikipedia.org/wiki/Lewis_Carroll" target="_blank" rel="noopener noreferrer">
+      WHO WAS CHARLES DODGSON? ↗
+    </a>
+
+  </div>
+
 </section>
+
+
+<!-- =====================================================
+     FIG. 02 / CHAPTER ARCHIVE
+     ===================================================== -->
+
+<section class="calendar-archive-link">
+
+  <div class="fig-label">
+    FIG. 02 / CHAPTER HISTORY
+  </div>
+
+  <h2 class="archive-cta-title anchored">
+    CURIOUS WHAT<br>
+    WE'VE GOTTEN<br>
+    INTO BEFORE?
+  </h2>
+
+  <p class="archive-cta-subtitle">
+    Talks, field trips, conferences, old newsletters,
+    past boards, and other evidence of SIAM IIT activity.
+  </p>
+
+  <a class="text-link" href="../archive.html">
+    ENTER THE ARCHIVE ↗
+  </a>
+
+</section>
+
+  <!-- =====================================================
+       SHARED FOOTER
+       ===================================================== -->
+
+<!--
+TEA PAGE COPY OF GLOBAL FOOTER
+
+This file exists because tea/index.qmd is nested one directory deeper.
+If the main navigation changes, also update:
+../includes/_footer.html
+-->
+
+<footer class="site-footer">
+
+  <span>
+    SIAM @ IIT / CHICAGO, IL
+  </span>
+
+  <div>
+
+    <a href="../contact.html">
+      SITE SUPPORT
+    </a>
+
+    <a href="https://www.instagram.com/iitsiam/" target="_blank" rel="noopener">
+      INSTAGRAM ↗
+    </a>
+
+    <a href="https://www.linkedin.com/company/siamiit/posts/?feedView=all" target="_blank" rel="noopener">
+      LINKEDIN ↗
+    </a>
+
+  </div>
+
+</footer>
+
+
 </div>
 
 

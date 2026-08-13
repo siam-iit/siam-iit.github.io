@@ -7,66 +7,13 @@
     {
       "academic_year": "2023–24",
       "date": null,
-      "date_display": "DOCUMENTED 2023–24",
-      "date_precision": "ACADEMIC YEAR",
-      "type": "PROGRAM",
-      "title": "SIAM IIT MENTORSHIP PROGRAM",
-      "summary": "A chapter-run mentorship network connecting newer students with upperclassmen and alumni for guidance on academics, research, professional development, and finding their place at Illinois Tech.",
-      "history": "The program was created around the idea that students should not be expected to arrive knowing how to navigate college, mathematics, research, or professional opportunities on their own. It aimed to build continuity across generations of Illinois Tech students by connecting alumni with current students and older students with newer students.",
-      "participants": {
-        "mentees": "Primarily first-year, second-year, and transfer students in applied mathematics, statistics, and data science.",
-        "mentors": "Primarily third-year and more advanced Applied Mathematics students, with alumni also participating in the broader network."
-      },
-      "documented_mentors": [
-        {
-          "name": "Amelia Marengo",
-          "area": "Computational Mathematics"
-        },
-        {
-          "name": "Jacob H. Thomas",
-          "area": "Mathematical Physics + Quantum Computing"
-        }
-      ],
-      "activities": [
-        "Curriculum planning",
-        "Research and professional-development guidance",
-        "Application and CV peer review",
-        "REU guidance",
-        "Programming and computational skill advice",
-        "Finding opportunities at Illinois Tech",
-        "Building connections with faculty and the Chicago applied mathematics community",
-        "Social and community guidance"
-      ],
-      "tags": [
-        "MENTORSHIP",
-        "COMMUNITY",
-        "ACADEMIC SUPPORT",
-        "RESEARCH",
-        "PROFESSIONAL DEVELOPMENT",
-        "TRADITION"
-      ],
-      "sources": [
-        {
-          "type": "CHAPTER WEBSITE",
-          "title": "Mentorship",
-          "url": "https://sites.google.com/view/siamiit/resources/mentorship"
-        },
-        {
-          "type": "CHAPTER WEBSITE",
-          "title": "Our Mentors",
-          "url": "https://sites.google.com/view/siamiit/resources/mentorship/our-mentors"
-        }
-      ]
-    },
-    {
-      "academic_year": "2023–24",
-      "date": null,
       "date_display": "2024",
       "date_precision": "YEAR",
       "type": "CONFERENCE",
       "title": "CHICAGO AREA SIAM STUDENT CONFERENCE",
       "short_title": "CASSC 2024",
-      "summary": "A two-day regional gathering bringing students and researchers together for national-laboratory visits, talks, scientific discussion, new connections, and a little bowling and symphony along the way.",
+      "image": "images/conference-2024.jpeg",
+      "summary": "A two-day regional gathering bringing students and researchers together for national-laboratory visits, talks, scientific discussion, new connections, and a little bowling and symphony.",
       "history": "The 2024 Chicago Area SIAM Student Conference was held jointly with the SPS Zone 9 Meeting and brought together students from more than ten universities. Day 1 sent attendees to Fermilab and Argonne National Laboratory before everyone reconvened for dinner and an evening at The Bog. Day 2 continued at Illinois Tech with talks and discussion spanning applied mathematics, physics, machine learning, uncertainty quantification, and scientific computing, before concluding at the Chicago Symphony Orchestra.",
       "days": [
         {
@@ -208,7 +155,7 @@
         "documented": true,
         "credits_preserved_in_sources": true
       },
-      "sources": [
+         "sources": [
         {
           "type": "CHAPTER NEWSLETTER",
           "title": "Chicago Area SIAM Student Conference Day 1",
@@ -220,50 +167,6 @@
           "url": "https://sites.google.com/view/siamiit/newsletter/cassc-day-2"
         }
       ]
-    },
-    {
-      "academic_year": "2024–25",
-      "date": null,
-      "date_display": "WELCOME WEEK",
-      "date_precision": "ACADEMIC YEAR",
-      "type": "CHAPTER LIFE",
-      "title": "WELCOME WEEK",
-      "summary": "SIAM IIT's Welcome Week programming introduced students to the chapter, research, applied mathematics, and opportunities to get involved in the wider Illinois Tech scientific community.",
-      "history": "A surviving SIAM IIT Welcome Week page documents a planned chapter event that was ultimately cancelled and postponed because chapter executives were away conducting research and the selected representative had a family issue. The page also looks back on the previous year's Welcome Week gathering, describing roughly 80 attendees—many of them students outside mathematics—staying after a research discussion for the SIAM IIT event. Alongside its own programming, the chapter used the page as a guide to other Welcome Week opportunities, including the College of Computing Reception, Summer Research Expo, and Student Involvement Fair.",
-      "status": "CANCELLED / POSTPONED",
-      "highlights": [
-        "Planned SIAM IIT Welcome Week event",
-        "Previous Welcome Week gathering described as drawing roughly 80 attendees",
-        "Research discussion",
-        "Outreach beyond mathematics students",
-        "College of Computing Reception promoted to students",
-        "Summer Research Expo promoted to students",
-        "Student Involvement Fair promoted to students"
-      ],
-      "related_events": [
-        "College of Computing Reception",
-        "Summer Research Expo",
-        "Student Involvement Fair"
-      ],
-      "themes": [
-        "WELCOME WEEK",
-        "RESEARCH",
-        "STUDENT COMMUNITY",
-        "OUTREACH",
-        "CAMPUS LIFE"
-      ],
-      "tags": [
-        "WELCOME WEEK",
-        "CHAPTER LIFE",
-        "RECRUITMENT",
-        "RESEARCH",
-        "COMMUNITY"
-      ],
-      "source": {
-        "type": "CHAPTER WEBSITE",
-        "title": "Welcome Week",
-        "url": "https://sites.google.com/view/siamiit/calendar/welcome-week"
-      }
     }
   ]
 }

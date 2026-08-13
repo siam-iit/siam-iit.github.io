@@ -63,7 +63,7 @@ ul.task-list li input[type="checkbox"] {
      Shared across the SIAM IIT website.
 
      TO EDIT NAVIGATION:
-     Edit this file only.
+     Edit this file only. Update the tea party copy.
      Do not copy the header manually into individual pages.
      ===================================================== -->
 
@@ -99,13 +99,62 @@ ul.task-list li input[type="checkbox"] {
       WHAT IS SIAM?
     </a>
 
-    <a class="join-link" href="./join.html">
+    <a class="join-link" href="#join" data-join-open="">
       JOIN ↗
     </a>
-
   </nav>
 
 </header>
+
+<div class="join-modal" data-join-modal="" hidden="">
+  <div class="join-modal-backdrop" data-join-close=""></div>
+
+  <div class="join-modal-panel" role="dialog" aria-modal="true" aria-labelledby="join-modal-title">
+    <button class="join-modal-close" type="button" aria-label="Close" data-join-close="">
+      ×
+    </button>
+
+    <div class="fig-label">JOIN / SIAM IIT</div>
+
+    <h2 id="join-modal-title" class="anchored">
+      COME DO MATH WITH US.
+    </h2>
+
+    <p>
+      Start with Dodgson's Tea Party, or send us an email to get involved.
+    </p>
+
+    <a class="join-modal-email" href="mailto:siamiitchapter@gmail.com">
+      SHOOT US AN EMAIL ↗
+    </a>
+  </div>
+</div>
+
+<script>
+  const joinModal = document.querySelector("[data-join-modal]");
+  const joinOpen = document.querySelector("[data-join-open]");
+  const joinClose = document.querySelectorAll("[data-join-close]");
+
+  joinOpen?.addEventListener("click", (event) => {
+    event.preventDefault();
+    joinModal.hidden = false;
+    document.body.classList.add("modal-open");
+  });
+
+  joinClose.forEach((button) => {
+    button.addEventListener("click", () => {
+      joinModal.hidden = true;
+      document.body.classList.remove("modal-open");
+    });
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !joinModal.hidden) {
+      joinModal.hidden = true;
+      document.body.classList.remove("modal-open");
+    }
+  });
+</script>
 
 
 
@@ -178,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
      This footer is shared across the SIAM IIT website.
 
      TO EDIT THE FOOTER:
-     Edit this file only. Do not copy the footer manually
+     Edit this file only. Update the tea party copy. Do not copy the footer manually
      into individual .qmd pages.
      ===================================================== -->
 

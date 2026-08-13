@@ -6,9 +6,9 @@
 
    This file:
    - loads reconstructed chapter history
-   - displays one archival record per entry
+   - renders a compact archival index
    - preserves source links
-   - keeps detailed data in history.json rather than HTML
+   - keeps detailed historical data in history.json
 
    Future maintainers should normally NOT need to edit this file.
    ========================================================== */
@@ -36,10 +36,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       );
     }
 
-    const data = await response.json();
+    const data =
+      await response.json();
 
     if (
-      !data.records ||
+      !Array.isArray(data.records) ||
       data.records.length === 0
     ) {
 
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 
     /* --------------------------------------------------------
-       BUILD HISTORY
+       BUILD HISTORY GRID
        -------------------------------------------------------- */
 
     historyContainer.innerHTML = "";
@@ -65,140 +66,40 @@ document.addEventListener("DOMContentLoaded", async () => {
       const article =
         document.createElement("article");
 
-      article.className = "history-record";
+      article.className =
+        "history-record";
 
 
       /* ------------------------------------------------------
          SOURCE LINKS
          ------------------------------------------------------ */
 
-      let sourcesHTML = "";
-
       const sources =
-        record.sources ||
-        (record.source ? [record.source] : []);
+        Array.isArray(record.sources)
+          ? record.sources
+          : record.source
+            ? [record.source]
+            : [];
 
 
-      if (sources.length > 0) {
-
-        const links = sources
-          .filter((source) => source.url)
-          .map((source) => {
-
-            return `
-              <a
-                class="history-source-link"
-                href="${escapeHTML(source.url)}"
-                target="_blank"
-                rel="noopener"
-              >
-                ${escapeHTML(
-                  source.title ||
-                  source.type ||
-                  "SOURCE"
-                )} ↗
-              </a>
-            `;
-
-          })
+      const sourcesHTML =
+        sources
+          .filter((source) => source?.url)
+          .map((source) => `
+            <a
+              class="history-source-link"
+              href="${escapeHTML(source.url)}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              ${escapeHTML(
+                source.title ||
+                source.type ||
+                "SOURCE"
+              )} ↗
+            </a>
+          `)
           .join("");
-
-
-        if (links) {
-
-          sourcesHTML = `
-            <div class="history-sources">
-              <span class="history-meta-label">
-                SOURCE${sources.length > 1 ? "S" : ""}
-              </span>
-
-              <div class="history-source-links">
-                ${links}
-              </div>
-            </div>
-          `;
-
-        }
-
-      }
-
-
-      /* ------------------------------------------------------
-         OPTIONAL SUBRECORDS / DAYS
-         ------------------------------------------------------ */
-
-      let daysHTML = "";
-
-      if (
-        Array.isArray(record.days) &&
-        record.days.length > 0
-      ) {
-
-        daysHTML = `
-          <div class="history-days">
-
-            ${record.days.map((day) => `
-              <div class="history-day">
-
-                <span class="history-day-label">
-                  ${escapeHTML(day.label || "")}
-                </span>
-
-                <span class="history-day-title">
-                  ${escapeHTML(day.title || "")}
-                </span>
-
-              </div>
-            `).join("")}
-
-          </div>
-        `;
-
-      }
-
-
-      /* ------------------------------------------------------
-         OPTIONAL MENTORS
-         ------------------------------------------------------ */
-
-      let mentorsHTML = "";
-
-      if (
-        Array.isArray(record.documented_mentors) &&
-        record.documented_mentors.length > 0
-      ) {
-
-        mentorsHTML = `
-          <div class="history-people">
-
-            <span class="history-meta-label">
-              DOCUMENTED MENTORS
-            </span>
-
-            ${record.documented_mentors.map((mentor) => `
-              <div class="history-person">
-
-                <span class="history-person-name">
-                  ${escapeHTML(mentor.name)}
-                </span>
-
-                ${
-                  mentor.area
-                    ? `
-                      <span class="history-person-detail">
-                        ${escapeHTML(mentor.area)}
-                      </span>
-                    `
-                    : ""
-                }
-
-              </div>
-            `).join("")}
-
-          </div>
-        `;
-
-      }
 
 
       /* ------------------------------------------------------
@@ -210,7 +111,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         <div class="history-record-index">
           ${String(index + 1).padStart(2, "0")}
         </div>
-
 
         <div class="history-record-main">
 
@@ -224,7 +124,7 @@ document.addEventListener("DOMContentLoaded", async () => {
               )}
             </span>
 
-            <span>
+            <span class="history-record-type">
               ${escapeHTML(
                 record.type || "RECORD"
               )}
@@ -232,11 +132,9 @@ document.addEventListener("DOMContentLoaded", async () => {
 
           </div>
 
-
           <h3>
             ${escapeHTML(record.title)}
           </h3>
-
 
           ${
             record.summary
@@ -248,12 +146,15 @@ document.addEventListener("DOMContentLoaded", async () => {
               : ""
           }
 
-
-          ${daysHTML}
-
-          ${mentorsHTML}
-
-          ${sourcesHTML}
+          ${
+            sourcesHTML
+              ? `
+                <div class="history-sources">
+                  ${sourcesHTML}
+                </div>
+              `
+              : ""
+          }
 
         </div>
 

@@ -2,70 +2,24 @@
   "year": "2026\u201327",
   "events": [
     {
-      "date": "2025-09-03",
-      "day": "THU",
-      "time": "12:45 PM",
+      "date": "2026-09-24",
+      "day": "TBD- Will begin the week of the 24th",
+      "time": "TBD",
       "type": "WEEKLY / SOCIAL",
       "title": "DODGSON'S TEA PARTY",
-      "location": "PS 255",
-      "description": "Mathematics, puzzles, conversation, and tea.",
-      "link_text": "RECURRING \u2197",
-      "link": "./tea/"
-    },
-    {
-      "date": "2026-09-10",
-      "day": "THU",
-      "time": "4:00 PM",
-      "type": "TALK",
-      "title": "GRAPHS IN THE WILD",
-      "location": "SB 111",
-      "description": "A guest talk on networks, structure, and graph theory outside the classroom.",
-      "link_text": "DETAILS \u2197",
-      "link": "#"
-    },
-    {
-      "date": "2026-09-18",
-      "day": "FRI",
-      "time": "1:30 PM",
-      "type": "FIELD TRIP",
-      "title": "NITMB AFTERNOON",
-      "location": "NORTHWESTERN",
-      "description": "Seminar, institute visit, and an afternoon with mathematical biology.",
-      "link_text": "RSVP \u2197",
-      "link": "#"
-    },
-    {
-      "date": "2026-10-08",
-      "day": "THU",
-      "time": "5:00 PM",
-      "type": "WORKSHOP",
-      "title": "LATEX WITHOUT FEAR",
-      "location": "PS 255",
-      "description": "A hands-on workshop for cleaner homework, reports, posters, and mathematical documents.",
-      "link_text": "BRING A LAPTOP \u2197",
-      "link": "#"
-    },
-    {
-      "date": "2026-10-17",
-      "day": "SAT",
-      "time": "11:00 AM",
-      "type": "SOCIAL",
-      "title": "MATH + MUSEUM DAY",
-      "location": "CHICAGO",
-      "description": "A Saturday outing for exhibits, lunch, and whatever mathematical arguments happen naturally.",
-      "link_text": "JOIN US \u2197",
-      "link": "#"
-    },
-    {
-      "date": "2026-11-06",
-      "day": "FRI",
-      "time": "ALL DAY",
-      "type": "CONFERENCE",
-      "title": "CHICAGO APPLIED MATH DAY",
       "location": "TBD",
-      "description": "Talks, student research, and a full day of applied mathematics with students and researchers from across the region.",
-      "link_text": "REGISTER \u2197",
-      "link": "#"
+      "description": "A space to have some snacks while chatting about math (and many other things). Everyone is welcome to attend!",
+      "link_text": "RECURRING \u2197",
+      "link": "/tea/"
+    },
+    {
+      "date": "2026-09-26",
+      "day": "WED",
+      "time": "12:45 PM",
+      "type": "EVENT",
+      "title": "WELCOME PICNIC",
+      "location": "MAN ON THE BENCH PARK",
+      "description": "Whether you're an old-timer or a newcomer, we want to provide a space for students and faculty to get to know each other and foster our community. We hope to see you there!"
     }
   ]
 }
