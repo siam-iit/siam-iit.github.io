@@ -101,7 +101,6 @@
 
 .quiz-answers {
   margin-top: 62px;
-  border-top: 1px solid var(--ink);
 }
 
 .quiz-answer {
@@ -111,12 +110,22 @@
   gap: 15px;
   align-items: start;
   padding: 20px 8px;
-  border-bottom: 1px solid rgba(17, 17, 15, 0.35);
+
+  border: 0;
+  background: transparent;
+  color: var(--ink);
+
   text-align: left;
   cursor: pointer;
+
   transition:
     padding-left 140ms ease,
     background 140ms ease;
+}
+
+/* Lines only BETWEEN answers */
+.quiz-answer + .quiz-answer {
+  border-top: 1px solid rgba(17, 17, 15, 0.35);
 }
 
 .quiz-answer:hover,

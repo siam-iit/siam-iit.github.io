@@ -470,6 +470,7 @@ h2 {
   fill: var(--ink);
 }
 
+
 .network-node text {
   fill: var(--ink);
 
@@ -540,27 +541,226 @@ h2 {
 }
 
 
-/* =========================================================
-   NETWORK MOBILE
-   ========================================================= */
+<div class="site-shell">
+
+  <!-- =====================================================
+       FIG. 03 / SIAM NETWORK
+       ===================================================== -->
+
+  <section class="network-section">
+
+    <div class="fig-label">
+      FIG. 03 / CHAPTER NETWORK
+    </div>
+
+    <h2>
+      THE SIAM NETWORK
+    </h2>
+
+    <div class="chapter-graph">
+
+      <svg
+        class="network-svg"
+        viewBox="0 0 1000 430"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-label="Illinois Tech, Loyola, Northwestern, and UIUC shown within a larger SIAM student chapter network."
+      >
+
+        <!-- ==================================================
+             EXTENDED NETWORK / FADED CONTEXT
+             ================================================== -->
+
+        <g class="ghost-network">
+
+          <g class="ghost-edges ghost-edges-faint">
+            <line x1="75" y1="120" x2="180" y2="210" />
+            <line x1="75" y1="120" x2="245" y2="85" />
+            <line x1="245" y1="85" x2="455" y2="230" />
+            <line x1="245" y1="85" x2="365" y2="55" />
+            <line x1="365" y1="55" x2="690" y2="115" />
+            <line x1="690" y1="115" x2="835" y2="72" />
+            <line x1="835" y1="72" x2="930" y2="145" />
+            <line x1="930" y1="145" x2="810" y2="255" />
+            <line x1="925" y1="330" x2="810" y2="255" />
+            <line x1="925" y1="330" x2="735" y2="360" />
+            <line x1="735" y1="360" x2="500" y2="370" />
+            <line x1="735" y1="360" x2="625" y2="305" />
+            <line x1="625" y1="305" x2="455" y2="230" />
+            <line x1="500" y1="370" x2="325" y2="350" />
+            <line x1="325" y1="350" x2="180" y2="210" />
+            <line x1="325" y1="350" x2="120" y2="325" />
+            <line x1="120" y1="325" x2="45" y2="265" />
+          </g>
+
+          <g class="ghost-edges ghost-edges-near">
+            <line x1="180" y1="210" x2="300" y2="170" />
+            <line x1="300" y1="170" x2="455" y2="230" />
+            <line x1="455" y1="230" x2="565" y2="165" />
+            <line x1="565" y1="165" x2="690" y2="115" />
+            <line x1="690" y1="115" x2="760" y2="185" />
+            <line x1="760" y1="185" x2="810" y2="255" />
+            <line x1="455" y1="230" x2="590" y2="285" />
+            <line x1="590" y1="285" x2="810" y2="255" />
+            <line x1="590" y1="285" x2="500" y2="370" />
+          </g>
+
+          <g class="ghost-nodes ghost-nodes-faint">
+            <circle cx="75" cy="120" r="4" />
+            <circle cx="245" cy="85" r="4" />
+            <circle cx="365" cy="55" r="3.5" />
+            <circle cx="835" cy="72" r="4" />
+            <circle cx="930" cy="145" r="3.5" />
+            <circle cx="925" cy="330" r="4" />
+            <circle cx="735" cy="360" r="4" />
+            <circle cx="325" cy="350" r="4" />
+            <circle cx="120" cy="325" r="3.5" />
+            <circle cx="45" cy="265" r="3" />
+          </g>
+
+          <g class="ghost-nodes ghost-nodes-near">
+            <circle cx="300" cy="170" r="4.5" />
+            <circle cx="565" cy="165" r="4.5" />
+            <circle cx="760" cy="185" r="4.5" />
+            <circle cx="590" cy="285" r="4.5" />
+            <circle cx="625" cy="305" r="4" />
+          </g>
+
+        </g>
+
+
+        <!-- ==================================================
+             SIAM ORGANIZATIONAL CONNECTIONS
+             ================================================== -->
+
+        <g class="siam-edges">
+          <line x1="180" y1="210" x2="500" y2="370" />
+          <line x1="455" y1="230" x2="500" y2="370" />
+          <line x1="690" y1="115" x2="500" y2="370" />
+          <line x1="810" y1="255" x2="500" y2="370" />
+        </g>
+
+
+        <!-- ==================================================
+             LOCAL CHAPTER CONNECTIONS
+             ================================================== -->
+
+        <g class="chapter-edges">
+          <line x1="180" y1="210" x2="455" y2="230" />
+          <line x1="180" y1="210" x2="690" y2="115" />
+          <line x1="455" y1="230" x2="690" y2="115" />
+          <line x1="455" y1="230" x2="810" y2="255" />
+          <line x1="690" y1="115" x2="810" y2="255" />
+        </g>
+
+
+        <!-- ==================================================
+             NAMED CHAPTERS
+             ================================================== -->
+
+        <!-- Loyola -->
+        <a
+          href="{{< meta loyola >}}"
+          target="_blank"
+          rel="noopener"
+          class="network-node-link"
+          data-chapter="loyola"
+          aria-label="Visit Loyola University Chicago SIAM"
+        >
+          <g class="network-node">
+            <circle cx="180" cy="210" r="7" />
+            <text x="180" y="238" text-anchor="middle">LOYOLA ↗</text>
+          </g>
+        </a>
+
+        <!-- IIT -->
+        <g class="network-node network-node-iit">
+          <circle cx="455" cy="230" r="10" />
+          <text x="455" y="260" text-anchor="middle">IIT</text>
+          <text
+            class="network-sub-label"
+            x="455"
+            y="279"
+            text-anchor="middle"
+          >
+            YOU ARE HERE
+          </text>
+        </g>
+
+        <!-- Northwestern -->
+        <a
+          href="{{< meta northwestern >}}"
+          target="_blank"
+          rel="noopener"
+          class="network-node-link"
+          data-chapter="northwestern"
+          aria-label="Visit Northwestern SIAM"
+        >
+          <g class="network-node">
+            <circle cx="690" cy="115" r="7" />
+            <text x="690" y="91" text-anchor="middle">NORTHWESTERN ↗</text>
+          </g>
+        </a>
+
+        <!-- UIUC -->
+        <a
+          href="{{< meta uiuc >}}"
+          target="_blank"
+          rel="noopener"
+          class="network-node-link"
+          data-chapter="uiuc"
+          aria-label="Visit UIUC SIAM"
+        >
+          <g class="network-node">
+            <circle cx="810" cy="255" r="7" />
+            <text x="810" y="284" text-anchor="middle">UIUC ↗</text>
+          </g>
+        </a>
+
+        <!-- SIAM -->
+        <a
+          href="{{< meta siam >}}"
+          target="_blank"
+          rel="noopener"
+          class="network-node-link"
+          data-chapter="siam"
+          aria-label="Learn about SIAM student membership"
+        >
+          <g class="network-node">
+            <circle cx="500" cy="370" r="8" />
+            <text x="500" y="400" text-anchor="middle">SIAM ↗</text>
+          </g>
+        </a>
+
+      </svg>
+
+    </div>
+
+
+    <!-- ==================================================
+         NETWORK SCALE
+         ================================================== -->
+
+    <div class="vertex-count">
+      |V| &gt; 175
+    </div>
+
+    <div class="vertex-caption">
+      STUDENT CHAPTERS WORLDWIDE
+    </div>
+
+  </section>
+
+</div>
 
 @media (max-width: 900px) {
 
-  .network-section {
-    padding: 70px 0 90px;
+  .network-node circle {
+    transform-box: fill-box;
+    transform-origin: center;
+    transform: scale(1.25);
   }
 
-  .chapter-graph {
-    margin-top: 28px;
-  }
-
-  .vertex-count {
-    font-size: 2rem !important;
-  }
-
-  .network-copy {
-    padding: 0 12px;
-  }
 }
 
 /* =========================================================
@@ -584,27 +784,78 @@ h2 {
   gap: 25px;
 }
 
-
 /* =========================================================
-   MOBILE
+   MOBILE HEADER + CORE MOBILE LAYOUT
    ========================================================= */
 
 @media (max-width: 900px) {
+
   .site-shell {
     padding: 0 20px;
   }
 
+
+  /* -------------------------------------------------------
+     HEADER
+     ------------------------------------------------------- */
+
   .topbar {
-    align-items: flex-start;
-    gap: 25px;
-    padding: 24px 0;
+    min-height: 0;
+
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    column-gap: 24px;
+
+    align-items: start;
+
+    padding: 30px 0 28px;
+
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .wordmark {
+    margin: 0;
+
+    font-size: 0.82rem;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
   }
 
   .main-nav {
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: 13px 20px;
+    display: grid;
+
+    grid-template-columns: repeat(3, max-content);
+
+    justify-content: space-between;
+    align-items: center;
+
+    column-gap: 18px;
+    row-gap: 18px;
+
+    margin: 0;
+
+    font-size: 0.72rem;
+    line-height: 1.15;
   }
+
+  .main-nav a {
+    margin: 0;
+
+    font-size: 0.72rem;
+    line-height: 1.15;
+
+    white-space: nowrap;
+  }
+
+  .join-link {
+    padding: 8px 11px;
+    justify-self: start;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+     ------------------------------------------------------- */
 
   .hero {
     width: 100vw;
@@ -635,6 +886,11 @@ h2 {
     font-size: 1.15rem;
   }
 
+
+  /* -------------------------------------------------------
+     GENERAL MOBILE SECTIONS
+     ------------------------------------------------------- */
+
   .split {
     grid-template-columns: 1fr;
   }
@@ -648,8 +904,27 @@ h2 {
     flex-direction: column;
     padding: 35px 0;
   }
-}
 
+
+  /* -------------------------------------------------------
+     NETWORK
+     ------------------------------------------------------- */
+
+  .network-section {
+    padding-bottom: 55px;
+  }
+
+  .network-cta {
+    margin-top: 36px;
+    margin-bottom: 55px;
+    text-align: center;
+  }
+
+  .network-cta .text-link {
+    margin-top: 0;
+  }
+
+}
 
 /* =========================================================
    REDUCED MOTION
@@ -791,8 +1066,7 @@ a.anchorjs-link {
 
 /* Small caps / metadata */
 .small-caps,
-.vertex-caption,
-.network-sub-label {
+.vertex-caption {
   font-size: 0.85rem;
   line-height: 1.3;
 }
@@ -1775,10 +2049,72 @@ small {
    MOBILE
    ========================================================== */
 
+   /* ==========================================================
+   DODGSON'S TEA PARTY — MOBILE
+   ========================================================== */
+
 @media (max-width: 900px) {
 
+  .tea-intro {
+    padding-top: 55px;
+    padding-bottom: 70px;
+  }
+
+  .tea-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    align-items: start;
+  }
+
+  .tea-intro-copy {
+    width: 100%;
+    min-width: 0;
+  }
+
   .tea-intro .tea-heading {
-    font-size: clamp(4rem, 16vw, 7rem);
+    margin-top: 12px;
+    font-size: clamp(3.4rem, 14vw, 5rem) !important;
+    line-height: 0.88;
+  }
+
+  .tea-intro .small-caps {
+    max-width: 100%;
+    margin-top: 30px;
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .tea-intro-art {
+    width: 100%;
+    margin: 0;
+    transform: none;
+
+    display: flex;
+    justify-content: center;
+  }
+
+  .tea-intro-art img {
+    width: min(100%, 390px);
+    height: auto;
+  }
+
+}
+
+@media (max-width: 900px) {
+
+  .dodgson-story {
+    padding-top: 60px;
+    padding-bottom: 75px;
+  }
+
+  .dodgson-story .tea-heading {
+    font-size: clamp(3.2rem, 13vw, 4.5rem) !important;
+  }
+
+  .dodgson-story .body-copy {
+    margin-top: 38px;
+    font-size: 1.2rem;
+    line-height: 1.38;
   }
 
 }
