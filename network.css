@@ -183,27 +183,18 @@
   opacity: 0.6;
 }
 
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
 @media (max-width: 900px) {
 
-  .network-section {
-    padding: 70px 0 55px;
-  }
-
-
-  /* -------------------------------------------------------
-     GRAPH
-     ------------------------------------------------------- */
-
   .chapter-graph {
+    width: calc(100% + 80px);
+    margin-left: -40px;
     margin-top: 40px;
   }
 
-
-  /* Larger labels on mobile */
+  .network-svg {
+    width: 100%;
+    height: auto;
+  }
 
   .network-node text {
     font-size: 30px;
@@ -213,55 +204,11 @@
     font-size: 25px !important;
   }
 
-
-  /* Slightly larger visible nodes */
-
   .network-node circle {
     transform-box: fill-box;
     transform-origin: center;
     transform: scale(1.2);
   }
-
-
-  /* -------------------------------------------------------
-     SPREAD NAMED NODES APART
-     Mobile only
-     ------------------------------------------------------- */
-
-  /* Loyola — farther left */
-
-  .network-node-link[data-chapter="loyola"] .network-node {
-    transform: translate(-45px, 0);
-  }
-
-
-  /* Northwestern — farther right + slightly higher */
-
-  .network-node-link[data-chapter="northwestern"] .network-node {
-    transform: translate(45px, -10px);
-  }
-
-
-  /* UIUC — farther right */
-
-  .network-node-link[data-chapter="uiuc"] .network-node {
-    transform: translate(45px, 0);
-  }
-
-
-  /* SIAM — slightly lower */
-
-  .network-node-link[data-chapter="siam"] .network-node {
-    transform: translate(0, 15px);
-  }
-
-
-  /* IIT stays centered */
-
-
-  /* -------------------------------------------------------
-     NETWORK COUNT
-     ------------------------------------------------------- */
 
   .vertex-count {
     margin-top: 36px;
