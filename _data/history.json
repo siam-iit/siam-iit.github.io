@@ -155,7 +155,7 @@
         "documented": true,
         "credits_preserved_in_sources": true
       },
-         "sources": [
+      "sources": [
         {
           "type": "CHAPTER NEWSLETTER",
           "title": "Chicago Area SIAM Student Conference Day 1",
@@ -166,6 +166,690 @@
           "title": "Chicago Area SIAM Student Conference Day 2",
           "url": "https://sites.google.com/view/siamiit/newsletter/cassc-day-2"
         }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": null,
+      "date_display": "JAN 2026",
+      "date_precision": "MONTH",
+      "type": "OUTREACH",
+      "title": "INVOLVEMENT FAIR",
+      "short_title": "INVOLVEMENT FAIR",
+      "image": "images/fair-26.png",
+      "summary": "The chapter welcomed students at Illinois Tech's Winter Involvement Fair and shared ways to get involved with SIAM.",
+      "history": "In January 2026, the Illinois Tech SIAM student chapter participated in the Winter Involvement Fair, meeting students and sharing information about the chapter and its upcoming activities. Chapter president Leonardo and marketing team member Abigail were documented representing SIAM at the chapter table.",
+      "people": [
+        "Leonardo",
+        "Abigail"
+      ],
+      "places": [
+        "Illinois Tech"
+      ],
+      "themes": [
+        "STUDENT COMMUNITY",
+        "OUTREACH",
+        "CHAPTER RECRUITMENT"
+      ],
+      "tags": [
+        "INVOLVEMENT FAIR",
+        "OUTREACH",
+        "STUDENT ORGANIZATION"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Winter Involvement Fair",
+          "date": "2026-01-23"
+        }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": "2026-02-07",
+      "date_display": "FEB 07",
+      "date_precision": "DAY",
+      "type": "COMPETITION",
+      "title": "ILLINOIS TECH'S FIRST INTEGRATION BEE",
+      "short_title": "INTEGRATION BEE",
+      "image": "images/integration-bee.png",
+      "summary": "Illinois Tech's first Integration Bee invited students to put their calculus skills to the test in an MIT-inspired integration competition.",
+      "history": "On February 7, 2026, the Illinois Tech SIAM student chapter hosted the university's first Integration Bee. Students were invited to compete—or come to spectate—in a calculus competition inspired by MIT's Integration Bee, with prizes for the winners.",
+      "schedule": {
+        "time": "11:00 AM",
+        "location": "PS 129"
+      },
+      "places": [
+        "Illinois Tech",
+        "PS 129"
+      ],
+      "themes": [
+        "CALCULUS",
+        "MATHEMATICS",
+        "STUDENT COMMUNITY"
+      ],
+      "tags": [
+        "INTEGRATION BEE",
+        "COMPETITION",
+        "CALCULUS"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Illinois Tech's First Integration Bee",
+          "date": "2026-01-23"
+        }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": null,
+      "date_display": "SPRING 2026",
+      "date_precision": "SEMESTER",
+      "type": "RECURRING",
+      "title": "DODGSON'S TEA PARTY",
+      "short_title": "TEA PARTY",
+      "image": "images/tea-party.png",
+      "summary": "Dodgson's Tea Party returned as a weekly Monday gathering for snacks, drinks, mathematics, and conversation.",
+      "history": "During the Spring 2026 semester, the Illinois Tech SIAM student chapter hosted Dodgson's Tea Party on Mondays from 12:45–1:45 PM in PS 121. The recurring gathering invited students to stop by during lunch for snacks, drinks, and conversation.",
+      "schedule": {
+        "day": "MONDAYS",
+        "time": "12:45–1:45 PM",
+        "location": "PS 121"
+      },
+      "places": [
+        "Illinois Tech",
+        "PS 121"
+      ],
+      "themes": [
+        "MATHEMATICS",
+        "STUDENT COMMUNITY",
+        "INFORMAL MATHEMATICS"
+      ],
+      "tags": [
+        "DODGSON'S TEA PARTY",
+        "RECURRING",
+        "SOCIAL"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Dodgson's Tea Party — Spring 2026",
+          "date": "2026-02-11"
+        }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": "2026-03-09",
+      "date_display": "MAR 09",
+      "date_precision": "DAY",
+      "type": "SOCIAL",
+      "title": "PI DAY TRIVIA EVENT",
+      "short_title": "PI DAY",
+      "image": "images/pi-day.png",
+      "summary": "A special edition of Dodgson's Tea Party celebrating Pi Day with trivia, pie, food, and prizes.",
+      "history": "On March 9, 2026, the chapter held a special edition of Dodgson's Tea Party in honor of Pi Day. Students gathered in PS 121 for a lunchtime trivia competition with food, pie, and prizes.",
+      "schedule": {
+        "time": "12:45–1:45 PM",
+        "location": "PS 121"
+      },
+      "places": [
+        "Illinois Tech",
+        "PS 121"
+      ],
+      "themes": [
+        "MATHEMATICS",
+        "STUDENT COMMUNITY"
+      ],
+      "tags": [
+        "DODGSON'S TEA PARTY",
+        "PI DAY",
+        "TRIVIA",
+        "SOCIAL"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Pi Day Trivia Event",
+          "date": "2026-03-03"
+        }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": "2026-03-24",
+      "date_display": "MAR 24 + 31",
+      "date_precision": "DAY",
+      "type": "COMMUNITY",
+      "title": "LUNCH WITH A PROFESSOR",
+      "short_title": "FACULTY LUNCH",
+      "image": "images/lunch-with-prof.png",
+      "summary": "A two-part lunch series inviting students to meet Illinois Tech mathematics professors outside the classroom.",
+      "history": "In March 2026, the Illinois Tech SIAM student chapter hosted two Lunch With a Professor gatherings. The lunchtime series gave students an informal opportunity to meet mathematics faculty outside the classroom, with Professor Lane featured on March 24 and Professor Bielecki on March 31.",
+      "sessions": [
+        {
+          "date": "2026-03-24",
+          "date_display": "MAR 24",
+          "time": "12:30–1:30 PM",
+          "guest": "Professor Lane"
+        },
+        {
+          "date": "2026-03-31",
+          "date_display": "MAR 31",
+          "time": null,
+          "guest": "Professor Bielecki"
+        }
+      ],
+      "people": [
+        "Professor Lane",
+        "Professor Bielecki"
+      ],
+      "places": [
+        "Illinois Tech"
+      ],
+      "themes": [
+        "MATHEMATICS",
+        "FACULTY",
+        "STUDENT COMMUNITY",
+        "MENTORSHIP"
+      ],
+      "tags": [
+        "FACULTY LUNCH",
+        "COMMUNITY",
+        "FACULTY",
+        "STUDENT-FACULTY CONNECTIONS"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Lunch With a Professor",
+          "date": "2026-03-11"
+        }
+      ]
+    },
+    {
+      "academic_year": "2025–26",
+      "date": "2026-03-31",
+      "date_display": "MAR 31",
+      "date_precision": "DAY",
+      "type": "SOCIAL",
+      "title": "SOCIAL NIGHT",
+      "short_title": "SOCIAL NIGHT",
+      "image": "images/social-night.png",
+      "summary": "An evening chapter social bringing students together for food, games, and conversation.",
+      "history": "On March 31, 2026, the Illinois Tech SIAM student chapter hosted a Social Night in the Pritzker Club. The evening gathering offered students a chance to spend time together outside the chapter's regular daytime activities, with food and games from 5–8 PM.",
+      "schedule": {
+        "time": "5:00–8:00 PM",
+        "location": "MTCC 605 / Pritzker Club"
+      },
+      "places": [
+        "Illinois Tech",
+        "McCormick Tribune Campus Center",
+        "Pritzker Club"
+      ],
+      "themes": [
+        "STUDENT COMMUNITY",
+        "SOCIAL"
+      ],
+      "tags": [
+        "SOCIAL NIGHT",
+        "SOCIAL",
+        "GAMES",
+        "FOOD"
+      ],
+      "photos": {
+        "documented": true,
+        "credits_preserved_in_sources": true
+      },
+      "sources": [
+        {
+          "type": "CHAPTER INSTAGRAM",
+          "title": "Social Night",
+          "date": "2026-03-12"
+        }
+      ]
+    },
+      {
+        "academic_year": "2024–25",
+        "date": "2025-04-24",
+        "date_display": "APR 24, 2025",
+        "date_precision": "DAY",
+        "type": "TALK",
+        "title": "PUTNAM INFORMATION SESSION",
+        "short_title": "PUTNAM INFO SESSION",
+        "image": "images/putnam-2025.png",
+        "summary": "An introduction to the William Lowell Putnam Mathematical Competition led by Illinois Tech student Leonardo Marciaga, who shared his experience placing in the top 500 and discussed strategies for approaching the notoriously difficult exam.",
+        "history": "Illinois Tech SIAM hosted a Putnam information session for students interested in competitive mathematics. Leonardo Marciaga, an Illinois Tech student who had placed among the top 500 Putnam competitors, introduced the competition and discussed his experience preparing for and taking the exam. The lunchtime session combined practical advice about the Putnam with an informal opportunity for students to meet one another over food.",
+        "people": [
+          "Leonardo Marciaga"
+        ],
+        "places": [
+          "Illinois Tech",
+          "RE 102"
+        ],
+        "themes": [
+          "COMPETITIVE MATHEMATICS",
+          "PROBLEM SOLVING",
+          "PUTNAM COMPETITION",
+          "STUDENT COMMUNITY"
+        ],
+        "tags": [
+          "TALK",
+          "PUTNAM",
+          "COMPETITION",
+          "STUDENT-LED"
+        ],
+        "photos": {
+          "documented": true,
+          "credits_preserved_in_sources": true
+        },
+        "sources": [
+          {
+            "type": "CHAPTER INSTAGRAM",
+            "title": "Putnam Information Session",
+            "date": "2025-04-23"
+          }
+        ]
+      },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-02-01",
+      "date_display": "FEB 1, 2024",
+      "date_precision": "DAY",
+      "type": "SOCIAL",
+      "title": "SOCIAL NIGHT",
+      "short_title": "SOCIAL NIGHT",
+      "image": "images/social.png",
+      "summary": "A joint SIAM IIT and SPS IIT social night with games, food, music, and activities at the MTCC Pritzker Club.",
+      "history": "SIAM IIT and the Society of Physics Students opened the semester with a joint social night at the MTCC Pritzker Club. Students gathered for games including poker, Monopoly, Mario Kart, Cards Against Humanity, Catan, Trivial Pursuit, and Minecraft, with ramen provided for dinner.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "MTCC Pritzker Club"
+      ],
+      "themes": [
+        "STUDENT COMMUNITY",
+        "SOCIAL",
+        "INTERORGANIZATIONAL COLLABORATION"
+      ],
+      "tags": [
+        "SOCIAL",
+        "SPS IIT",
+        "GAMES",
+        "FOOD"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-02-14",
+      "date_display": "FEB 14, 2024",
+      "date_precision": "DAY",
+      "type": "COMMUNITY",
+      "title": "LUNCH WITH A PROFESSOR: IGOR CIALENCO",
+      "short_title": "LUNCH WITH IGOR CIALENCO",
+      "image": "images/igor.png",
+      "summary": "An informal lunch with Professor Igor Cialenco giving students an opportunity to talk about mathematics, research, and academic life outside the classroom.",
+      "history": "SIAM IIT hosted Professor Igor Cialenco for the semester's first Lunch with a Professor. The series was designed to give students an informal setting to speak with faculty outside the classroom about mathematics, research, and academic life.",
+      "people": [
+        "Igor Cialenco"
+      ],
+      "places": [
+        "Illinois Tech",
+        "Kaplan Institute"
+      ],
+      "themes": [
+        "FACULTY ENGAGEMENT",
+        "STUDENT COMMUNITY",
+        "MENTORSHIP"
+      ],
+      "tags": [
+        "LUNCH WITH A PROFESSOR",
+        "FACULTY",
+        "COMMUNITY"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-02-22",
+      "date_display": "FEB 22, 2024",
+      "date_precision": "DAY",
+      "type": "TALK",
+      "title": "MACHINE LEARNING IN FINANCE",
+      "short_title": "ML IN FINANCE",
+      "image": "images/ml-finance.png",
+      "summary": "A joint ML@IIT and SIAM IIT event featuring Professor Benjamin Van Vliet on applications of machine learning to finance.",
+      "history": "SIAM IIT collaborated with ML@IIT for a talk by Professor Benjamin Van Vliet of the Stuart School of Business. The event explored the intersection of machine learning and finance, with an emphasis on prediction and the use of computational methods in financial applications.",
+      "people": [
+        "Benjamin Van Vliet"
+      ],
+      "places": [
+        "Illinois Tech",
+        "Siegel Hall 118"
+      ],
+      "themes": [
+        "MACHINE LEARNING",
+        "FINANCE",
+        "APPLIED MATHEMATICS",
+        "INTERDISCIPLINARY MATHEMATICS"
+      ],
+      "tags": [
+        "TALK",
+        "MACHINE LEARNING",
+        "FINANCE",
+        "ML@IIT"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-03-07",
+      "date_display": "MAR 7, 2024",
+      "date_precision": "DAY",
+      "type": "TALK",
+      "title": "LET'S COLOR!",
+      "short_title": "LET'S COLOR!",
+      "image": "images/lets color.png",
+      "summary": "Illinois Tech alumnus Professor Jeff Mudrock presented an undergraduate-accessible talk on the history, applications, and current research of graph coloring.",
+      "history": "SIAM IIT welcomed Illinois Tech alumnus Jeff Mudrock, then an assistant professor at the University of South Alabama, for a talk on graph coloring. Mudrock discussed the development of graph coloring since the nineteenth century, applications in computer science, scheduling, networks, and resource allocation, and contemporary questions in list coloring.",
+      "people": [
+        "Jeff Mudrock"
+      ],
+      "places": [
+        "Illinois Tech",
+        "Perlstein 131"
+      ],
+      "themes": [
+        "GRAPH THEORY",
+        "GRAPH COLORING",
+        "COMBINATORICS",
+        "ALUMNI"
+      ],
+      "tags": [
+        "TALK",
+        "GRAPH THEORY",
+        "ALUMNI",
+        "RESEARCH"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-03-27",
+      "date_display": "MAR 27, 2024",
+      "date_precision": "DAY",
+      "type": "COMMUNITY",
+      "title": "LUNCH WITH A PROFESSOR: KIAH WAH ONG",
+      "short_title": "LUNCH WITH KIAH WAH ONG",
+      "image": "images/kiah ong.png",
+      "summary": "The second Lunch with a Professor of the semester featured Professor Kiah Wah Ong for an informal conversation with students.",
+      "history": "Following the first Lunch with a Professor earlier in the semester, SIAM IIT continued the series with Professor Kiah Wah Ong of Illinois Tech's Department of Applied Mathematics. Students met with Ong over lunch in an informal setting outside the classroom.",
+      "people": [
+        "Kiah Wah Ong"
+      ],
+      "places": [
+        "Illinois Tech",
+        "Kaplan Institute"
+      ],
+      "themes": [
+        "FACULTY ENGAGEMENT",
+        "MENTORSHIP",
+        "STUDENT COMMUNITY"
+      ],
+      "tags": [
+        "LUNCH WITH A PROFESSOR",
+        "FACULTY",
+        "COMMUNITY"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-04-02",
+      "date_display": "APR 2, 2024",
+      "date_precision": "DAY",
+      "type": "MENTORSHIP",
+      "title": "MENTORSHIP SCHEDULING SESSION",
+      "short_title": "SCHEDULING SESSION",
+      "image": "images/mentor sess.png",
+      "summary": "A peer mentorship session helping mathematics, statistics, and data science students plan their summer and fall course schedules.",
+      "history": "During course registration, SIAM IIT hosted a peer scheduling session for students in mathematics, statistics, and data science. Students could ask questions about electives, workload, course selection, and planning their upcoming summer and fall schedules with fellow students.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "PS 255"
+      ],
+      "themes": [
+        "PEER MENTORSHIP",
+        "ACADEMIC PLANNING",
+        "STUDENT SUPPORT"
+      ],
+      "tags": [
+        "MENTORSHIP",
+        "REGISTRATION",
+        "ACADEMIC SUPPORT"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-04-08",
+      "date_display": "APR 8, 2024",
+      "date_precision": "DAY",
+      "type": "PANEL",
+      "title": "MENGER DAY UNDERGRADUATE CAREER PANEL",
+      "short_title": "MENGER DAY CAREER PANEL",
+      "image": "images/menger.png",
+      "summary": "An undergraduate career panel on transferable skills for mathematicians, statisticians, and data scientists, held as part of the 14th Annual Menger Day Celebration.",
+      "history": "SIAM IIT and ML@IIT hosted an undergraduate career panel during Illinois Tech's 14th Annual Menger Day Celebration. Students heard from peers, faculty, Ph.D. students, organization leaders, and Menger Lecturer George Karniadakis about research experience, campus involvement, STEM careers, and communicating mathematical skills beyond the classroom.",
+      "people": [
+        "George Karniadakis"
+      ],
+      "places": [
+        "Illinois Tech"
+      ],
+      "themes": [
+        "CAREERS",
+        "MATHEMATICS",
+        "STATISTICS",
+        "DATA SCIENCE",
+        "PROFESSIONAL DEVELOPMENT"
+      ],
+      "tags": [
+        "MENGER DAY",
+        "PANEL",
+        "CAREERS",
+        "ML@IIT"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-04-12",
+      "date_display": "APR 12–14, 2024",
+      "date_precision": "RANGE",
+      "type": "CONFERENCE",
+      "title": "MIDWEST PHYSICS & MATH CONFERENCE",
+      "short_title": "MIDWEST PHYSICS & MATH",
+      "image": "images/phys conference.png",
+      "summary": "A three-day regional physics and mathematics conference at Illinois Tech organized by SIAM IIT and SPS IIT.",
+      "history": "SIAM IIT and SPS IIT organized the Midwest Physics & Math Conference at Illinois Tech from April 12–14, bringing together the SPS Zone 9 Meeting and the Chicago Area SIAM Student Conference. The joint event connected students across mathematics and physics and included opportunities to visit major national research laboratories in the Chicago area.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "Chicago"
+      ],
+      "themes": [
+        "MATHEMATICS",
+        "PHYSICS",
+        "REGIONAL COMMUNITY",
+        "STUDENT RESEARCH",
+        "INTERDISCIPLINARY SCIENCE"
+      ],
+      "tags": [
+        "CONFERENCE",
+        "SPS IIT",
+        "SIAM",
+        "ZONE 9"
+      ]
+    },
+    {
+      "academic_year": "2023–24",
+      "date": "2024-04-12",
+      "date_display": "APR 12, 2024",
+      "date_precision": "DAY",
+      "type": "FIELD TRIP",
+      "title": "NATIONAL LABORATORY TOURS",
+      "short_title": "FERMILAB & ARGONNE TOURS",
+      "image": "images/fermi.png",
+      "summary": "Conference participants visited Fermilab and Argonne National Laboratory as part of the joint SPS Zone 9 Meeting and Chicago Area SIAM Student Conference.",
+      "history": "As part of the Midwest Physics & Math Conference, participants were invited to tour Fermilab and Argonne National Laboratory. The trips exposed students to major research facilities spanning particle physics, accelerator science, computing, engineering, materials science, biology, artificial intelligence, and other areas of scientific research.",
+      "people": [],
+      "places": [
+        "Fermilab",
+        "Argonne National Laboratory"
+      ],
+      "themes": [
+        "NATIONAL LABORATORIES",
+        "RESEARCH",
+        "COMPUTATIONAL SCIENCE",
+        "PHYSICS",
+        "APPLIED MATHEMATICS"
+      ],
+      "tags": [
+        "FIELD TRIP",
+        "FERMILAB",
+        "ARGONNE",
+        "CONFERENCE"
+      ]
+    },
+    {
+      "academic_year": "2024–25",
+      "date": "2024-09-11",
+      "date_display": "SEP 11, 2024",
+      "date_precision": "DAY",
+      "type": "WORKSHOP",
+      "title": "LATEX GRAPHICS WORKSHOP",
+      "short_title": "LATEX GRAPHICS",
+      "image": "images/latex.png",
+      "summary": "The second workshop in SIAM IIT's LaTeX series taught students how to create and incorporate graphics, tables, graphs, and charts into mathematical documents.",
+      "history": "SIAM IIT continued its LaTeX workshop series with a session devoted to graphics. Students learned techniques for adding and creating graphics, tables, graphs, and charts for mathematical and technical documents, with the workshop designed so students could participate even if they had missed the first session.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "PS 111"
+      ],
+      "themes": [
+        "LATEX",
+        "MATHEMATICAL COMMUNICATION",
+        "TECHNICAL WRITING",
+        "STUDENT SKILLS"
+      ],
+      "tags": [
+        "WORKSHOP",
+        "LATEX",
+        "GRAPHICS"
+      ]
+    },
+    {
+      "academic_year": "2024–25",
+      "date": "2024-10-09",
+      "date_display": "OCT 9, 2024",
+      "date_precision": "DAY",
+      "type": "TALK",
+      "title": "MY FAVORITE THEOREM: APPLICATIONS OF FOURIER SERIES",
+      "short_title": "APPLICATIONS OF FOURIER SERIES",
+      "image": "images/my fav theorum.png",
+      "summary": "SIAM IIT president Mikhail Hall presented the first My Favorite Theorem talk of the fall semester on the history, theory, controversy, and applications of Fourier series.",
+      "history": "SIAM IIT launched its fall My Favorite Theorem series with a student-led lecture by chapter president Mikhail Hall. The presentation traced Fourier series from their historical origins through the heat equation and mathematical controversy surrounding the theory to modern applications.",
+      "people": [
+        "Mikhail Hall"
+      ],
+      "places": [
+        "Illinois Tech",
+        "Siegel Hall 118"
+      ],
+      "themes": [
+        "FOURIER ANALYSIS",
+        "MATHEMATICAL HISTORY",
+        "DIFFERENTIAL EQUATIONS",
+        "STUDENT-LED MATHEMATICS"
+      ],
+      "tags": [
+        "MY FAVORITE THEOREM",
+        "TALK",
+        "FOURIER SERIES",
+        "STUDENT-LED"
+      ]
+    },
+    {
+      "academic_year": "2024–25",
+      "date": "2024-10-11",
+      "date_display": "OCT 11, 2024",
+      "date_precision": "DAY",
+      "type": "SOCIAL",
+      "title": "SOCIAL NIGHT",
+      "short_title": "SOCIAL NIGHT",
+      "image": "images/social night 10-11.png",
+      "summary": "A joint SIAM IIT and SPS IIT social night with food, board games, and music.",
+      "history": "SIAM IIT and SPS IIT held their first joint social night of the fall semester at the MTCC Pritzker Club. The evening brought students together for food, board games, music, and informal conversation.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "MTCC Pritzker Club"
+      ],
+      "themes": [
+        "STUDENT COMMUNITY",
+        "SOCIAL",
+        "INTERORGANIZATIONAL COLLABORATION"
+      ],
+      "tags": [
+        "SOCIAL",
+        "SPS IIT",
+        "GAMES"
+      ]
+    },
+    {
+      "academic_year": "2024–25",
+      "date": "2024-10-31",
+      "date_display": "OCT 31, 2024",
+      "date_precision": "DAY",
+      "type": "MENTORSHIP",
+      "title": "MENTORSHIP SESSION",
+      "short_title": "COURSE SCHEDULING",
+      "image": "images/mentorship.png",
+      "summary": "A Dodgson's Tea Party session devoted to peer advising and course scheduling for mathematics, statistics, and data science students.",
+      "history": "SIAM IIT used its weekly Dodgson's Tea Party as a peer mentorship session during registration season. Students in mathematics, statistics, and data science could discuss upcoming courses and build their schedules with fellow students.",
+      "people": [],
+      "places": [
+        "Illinois Tech",
+        "PS 255"
+      ],
+      "themes": [
+        "PEER MENTORSHIP",
+        "ACADEMIC PLANNING",
+        "STUDENT SUPPORT",
+        "DODGSON'S TEA PARTY"
+      ],
+      "tags": [
+        "MENTORSHIP",
+        "TEA PARTY",
+        "REGISTRATION"
       ]
     }
   ]

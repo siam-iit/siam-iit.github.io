@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
       summary:
         "You look at apparent chaos and assume it is secretly made of simpler pieces. You are drawn to hidden frequencies, decompositions, repeating structure, and the possibility that a complicated phenomenon becomes legible after the right change of representation.",
       party:
-        "You notice the playlist has a suspiciously periodic structure and cannot stop thinking about it.",
+        "You notice the playlist has a weirdly periodic structure and cannot stop thinking about it.",
       menace:
-        "Transforming things that absolutely did not ask to be transformed.",
+        "Taking apart the toaster when it stops behaving. It can be decomposed.",
       habitat:
         "Analysis, differential equations, mathematical physics, signal processing, dynamical systems.",
       motto:
@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
       habitat:
         "Analysis, number theory, graph theory, mechanics, geometry, combinatorics.",
       motto:
-        "Surely this also works over here."
+        "Wait, we literally just did this in another class."
     },
 
     noether: {
@@ -71,13 +71,13 @@ document.addEventListener("DOMContentLoaded", () => {
       summary:
         "Concrete examples are only the beginning for you. You want the structure that explains all of them at once: the symmetry, invariant, equivalence, or algebraic object that turns a pile of observations into one idea.",
       party:
-        "You somehow turn gossip into an equivalence relation.",
+        "You listen to twenty minutes of gossip and go: Wait, so there are really only three cases.",
       menace:
         "Generalizing a perfectly understandable problem until everyone realizes the generalization was the real problem.",
       habitat:
         "Abstract algebra, geometry, topology, symmetry, theoretical physics.",
       motto:
-        "What is the structure that makes this inevitable?"
+        "I feel like we're proving the same thing six different ways."
     },
 
     gauss: {
@@ -94,18 +94,18 @@ document.addEventListener("DOMContentLoaded", () => {
       summary:
         "Correct is not enough. You want the argument to feel inevitable, compressed, and almost offensively elegant. You would rather sit with a result longer than release something that still has visible scaffolding.",
       party:
-        "You say little, notice everything, and later produce the definitive account of what happened.",
+        "You take twelve photos, delete eleven, and post the perfect one.",
       menace:
         "Finding a two-line proof after someone has presented twenty slides.",
       habitat:
         "Number theory, geometry, analysis, probability, astronomy.",
       motto:
-        "There is a cleaner way."
+        "This works, but I hate it."
     },
 
     ramanujan: {
       name: "SRINIVASA RAMANUJAN",
-      type: "THE INTUITIVE MYSTIC",
+      type: "THE CONJECTURER",
       vector: {
         abstraction: 7,
         intuition: 10,
@@ -115,15 +115,15 @@ document.addEventListener("DOMContentLoaded", () => {
         application: 3
       },
       summary:
-        "You trust pattern recognition before you trust exposition. Sometimes the relationship arrives first and the proof has to catch up later.",
+        "You see the pattern before you know why it works. The relationship comes first; the explanation can catch up later.",
       party:
-        "You make one startling observation, refuse to elaborate, and turn out to be right.",
+        "You make one startling observation, drop the mic, and turn out to be right.",
       menace:
-        "Writing down an identity that looks fabricated and forcing everyone else to figure out why it works.",
+        "Getting the right answer and having no idea how you're supposed to show your work.",
       habitat:
         "Number theory, infinite series, partitions, special functions.",
       motto:
-        "I cannot explain it yet, but look."
+        "Hear me out."
     },
 
     vonneumann: {
@@ -138,15 +138,15 @@ document.addEventListener("DOMContentLoaded", () => {
         application: 10
       },
       summary:
-        "You treat mathematics as a universal instrument. If a system exists, you want to formalize it, compute it, optimize it, simulate it, or turn it into a strategic game.",
+        "You look at the world and see systems waiting to be understood. A problem is never just theoretical or practical—you want to model it, compute it, and then see what happens when you start changing the parameters.",
       party:
-        "Someone mentions a practical problem and you have designed a model before they finish the sentence.",
+        "Someone says, 'There should be an app for that,' and you stop listening because you're already building it.",
       menace:
-        "Turning every human activity into a mathematical system with state variables.",
+        "Spending three hours automating something that takes five minutes.",
       habitat:
         "Computation, physics, game theory, economics, numerical analysis, complex systems.",
       motto:
-        "We can model that."
+        "There has to be a way to optimize this."
     },
 
     mirzakhani: {
@@ -161,15 +161,15 @@ document.addEventListener("DOMContentLoaded", () => {
         application: 4
       },
       summary:
-        "You think by wandering. A difficult problem becomes a landscape: you sketch, explore, redraw, connect distant regions, and let the geometry reveal what a linear attack would miss.",
+        "You rarely take the shortest route through a problem, and that's usually the point. You sketch, wander, double back, and keep exploring until you can see the shape of what's going on.",
       party:
-        "You disappear into a corner with a napkin and return with an unexpectedly beautiful diagram.",
+        "You say, 'Wait, let me draw it,' and commandeer the nearest napkin.",
       menace:
-        "Using the whole table as scratch paper.",
+        "Running out of paper before running out of problem.",
       habitat:
         "Geometry, topology, dynamical systems, moduli spaces.",
       motto:
-        "Let me draw what the problem is doing."
+        "Let's take the long way around."
     },
 
     erdos: {
@@ -184,15 +184,15 @@ document.addEventListener("DOMContentLoaded", () => {
         application: 3
       },
       summary:
-        "For you mathematics is fundamentally social: conjectures passed across tables, problems carried between cities, and ideas made sharper by collision with other minds.",
+        "You collect problems the way other people collect hobbies. The best part of mathematics is finding someone else who wants to obsess over the same one.",
       party:
-        "You ask everyone what they are working on and leave with three new collaborations.",
+        "You came for the free food and left with a collaborator.",
       menace:
-        "Turning casual conversation into a research problem.",
+        "Accidentally making homework out of a conversation.",
       habitat:
         "Combinatorics, graph theory, number theory, probability.",
       motto:
-        "Do you know a good problem?"
+        "Congratulations, this is our problem now."
     }
   };
 
@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
 
     {
-      text: "CHOOSE A SENTENCE THAT FEELS DANGEROUSLY LIKE YOU.",
+      text: "BE HONEST. WHICH ONE HAVE YOU SAID?",
       answers: [
         ["There has to be a simpler representation.", { abstraction: 2, intuition: 2 }],
         ["I wonder if this works in another field.", { generalism: 3 }],
@@ -341,6 +341,25 @@ document.addEventListener("DOMContentLoaded", () => {
       ]
     }
   ];
+
+  function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+
+  return array;
+}
+
+const finalQuestion = questions.pop();
+
+shuffleArray(questions);
+
+questions.push(finalQuestion);
+
+questions.forEach((question) => {
+  shuffleArray(question.answers);
+});
 
   const intro = document.getElementById("quiz-intro");
   const machine = document.getElementById("quiz-machine");
