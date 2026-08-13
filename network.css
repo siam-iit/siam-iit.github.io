@@ -231,16 +231,21 @@
   transform: translateY(8px);
 }
 
-/* IIT + "YOU ARE HERE" */
+/* IIT */
 .network-node-iit text {
   transform: translateY(8px);
 }
 
+/* YOU ARE HERE — lower than IIT */
+.network-node-iit .network-sub-label {
+  transform: translateY(16px);
+}
 /* SIAM label */
 .network-node-link[data-chapter="siam"] text {
   transform: translateY(8px);
 }
 
+/* UIUC label */
 .network-node-link[data-chapter="uiuc"] text {
   transform: translateY(8px);
 }
