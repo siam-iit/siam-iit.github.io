@@ -221,3 +221,22 @@
   }
 
 }
+
+/* -------------------------------------------------------
+   MOBILE NODE LABEL POSITIONING
+   ------------------------------------------------------- */
+
+/* Loyola label */
+.network-node-link[data-chapter="loyola"] text {
+  transform: translateY(8px);
+}
+
+/* IIT + "YOU ARE HERE" */
+.network-node-iit text {
+  transform: translateY(8px);
+}
+
+/* SIAM label */
+.network-node-link[data-chapter="siam"] text {
+  transform: translateY(8px);
+}
