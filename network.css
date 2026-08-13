@@ -240,3 +240,7 @@
 .network-node-link[data-chapter="siam"] text {
   transform: translateY(8px);
 }
+
+.network-node-link[data-chapter="uiuc"] text {
+  transform: translateY(8px);
+}
