@@ -199,11 +199,11 @@
   }
 
   .network-node text {
-    font-size: 22px;
+    font-size: 25px;
   }
 
   .network-sub-label {
-    font-size: 14px !important;
+    font-size: 20px !important;
   }
 
   .network-node circle {
