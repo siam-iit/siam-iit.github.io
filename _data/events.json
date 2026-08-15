@@ -8,7 +8,7 @@
       "type": "OUTREACH / COMMUNITY",
       "title": "INVOLVEMENT FAIR",
       "location": "Man-On-A-Bench Park, 3201 South State Street",
-      "description": "Come find SIAM at the involvement fair. Meet some of the chapter, hear what we have planned for the semester, and find out how to get involved. No mathematics required.",
+      "description": "Leonardo played 100 games of chess. We spread the word about SIAM. New faces stopped by, old friends said hello, and we kicked off another semester of mathematics at Illinois Tech.",
       "image": "./images/involvement-fair.jpeg",
       "image_alt": "SIAM IIT table at the student involvement fair: Glory, Anders, and Leonardo"    },
     {
@@ -27,9 +27,11 @@
       "day": "WED",
       "time": "12:45 PM",
       "type": "EVENT",
-      "title": "WELCOME PICNIC",
+      "title": "PICNIC IN THE PARK",
       "location": "Man-On-A-Bench Park, 3201 South State Street",
-      "description": "New to Illinois Tech? Been here forever? Come eat with us. Meet students and faculty, catch up with familiar faces, and start the semester with the mathematics community."
+      "description": "New to Illinois Tech? Been here forever? Come eat with us. Meet students and faculty, catch up with familiar faces, and start the semester with the mathematics community.",
+      "image": "./images/picnic flyer.png",
+      "image_alt": "Flyer for the Welcome Picnic"
     }
   ]
 }
