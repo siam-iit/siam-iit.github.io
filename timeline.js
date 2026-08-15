@@ -61,154 +61,172 @@ document.addEventListener("DOMContentLoaded", async () => {
     today.setHours(0, 0, 0, 0);
 
 
-    /* --------------------------------------------------------
-       NORMALIZE PAST EVENTS
-       -------------------------------------------------------- */
+  /* --------------------------------------------------------
+   NORMALIZE PAST EVENTS
+   -------------------------------------------------------- */
 
-    const events =
-      (eventsData.events || [])
+const events =
+  (eventsData.events || [])
 
-        .filter((event) => {
+    .filter((event) => {
 
-          if (!event.date) return false;
+      if (!event.date) return false;
 
-          const date =
-            new Date(`${event.date}T12:00:00`);
+      if (
+        !event.image ||
+        typeof event.image !== "string" ||
+        event.image.trim() === ""
+      ) {
+        return false;
+      }
 
-          return date < today;
+      const date =
+        new Date(`${event.date}T12:00:00`);
 
-        })
+      return date < today;
 
-        .map((event) => {
+    })
 
-          return {
+    .map((event) => {
 
-            sourceType: "event",
+      return {
 
-            sortDate:
-              new Date(`${event.date}T12:00:00`),
+        sourceType: "event",
 
-            dateDisplay:
-              formatEventDate(event.date),
+        sortDate:
+          new Date(`${event.date}T12:00:00`),
 
-            type:
-              event.type || "EVENT",
+        dateDisplay:
+          formatEventDate(event.date),
 
-            title:
-              event.title,
+        type:
+          event.type || "EVENT",
 
-            summary:
-              event.description || "",
+        title:
+          event.title,
 
-            image:
-              event.image || "",
+        summary:
+          event.description || "",
 
-            links:
-              event.link &&
-              event.link !== "#"
-                ? [{
-                    title:
-                      event.link_text ||
-                      "DETAILS",
+        image:
+          event.image,
 
-                    url:
-                      event.link
-                  }]
-                : []
+        links:
+          event.link &&
+          event.link !== "#"
+            ? [{
+                title:
+                  event.link_text ||
+                  "DETAILS",
 
-          };
+                url:
+                  event.link
+              }]
+            : []
 
-        });
+      };
 
-
-    /* --------------------------------------------------------
-       NORMALIZE HISTORY RECORDS
-       -------------------------------------------------------- */
-
-    const history =
-      (historyData.records || [])
-        .map((record) => {
-
-          const links = [];
+    });
 
 
-          /* Multiple sources */
+/* --------------------------------------------------------
+   NORMALIZE HISTORY RECORDS
+   -------------------------------------------------------- */
 
-          if (Array.isArray(record.sources)) {
+const history =
+  (historyData.records || [])
 
-            record.sources.forEach((source) => {
+    .filter((record) => {
 
-              if (source?.url) {
+      return (
+        record.image &&
+        typeof record.image === "string" &&
+        record.image.trim() !== ""
+      );
 
-                links.push({
+    })
 
-                  title:
-                    source.title ||
-                    source.type ||
-                    "SOURCE",
+    .map((record) => {
 
-                  url:
-                    source.url
-
-                });
-
-              }
-
-            });
-
-          }
+      const links = [];
 
 
-          /* Single source */
+      /* Multiple sources */
 
-          if (record.source?.url) {
+      if (Array.isArray(record.sources)) {
+
+        record.sources.forEach((source) => {
+
+          if (source?.url) {
 
             links.push({
 
               title:
-                record.source.title ||
-                record.source.type ||
+                source.title ||
+                source.type ||
                 "SOURCE",
 
               url:
-                record.source.url
+                source.url
 
             });
 
           }
 
+        });
 
-          return {
+      }
 
-            sourceType: "history",
 
-            sortDate:
-              getHistorySortDate(record),
+      /* Single source */
 
-            dateDisplay:
-              record.date_display ||
-              record.academic_year ||
-              "DATE UNKNOWN",
+      if (record.source?.url) {
 
-            type:
-              record.type ||
-              "HISTORY",
+        links.push({
 
-            title:
-              record.title,
+          title:
+            record.source.title ||
+            record.source.type ||
+            "SOURCE",
 
-            summary:
-              record.summary || "",
-
-            image:
-              record.image || "",
-
-            links
-
-          };
+          url:
+            record.source.url
 
         });
 
+      }
+
+
+      return {
+
+        sourceType: "history",
+
+        sortDate:
+          getHistorySortDate(record),
+
+        dateDisplay:
+          record.date_display ||
+          record.academic_year ||
+          "DATE UNKNOWN",
+
+        type:
+          record.type ||
+          "HISTORY",
+
+        title:
+          record.title,
+
+        summary:
+          record.summary || "",
+
+        image:
+          record.image,
+
+        links
+
+      };
+
+    });
 
     /* --------------------------------------------------------
        MERGE + SORT
@@ -299,22 +317,14 @@ article.addEventListener("click", (event) => {
 
       /* IMAGE */
 
-      const imageHTML =
-        record.image
-          ? `
-            <img
-              class="timeline-image"
-              src="${escapeHTML(record.image)}"
-              alt=""
-              loading="lazy"
-            >
-          `
-          : `
-            <div
-              class="timeline-image timeline-image-placeholder"
-              aria-hidden="true"
-            ></div>
-          `;
+     const imageHTML = `
+      <img
+        class="timeline-image"
+        src="${escapeHTML(record.image)}"
+        alt="${escapeHTML(record.title || "")}"
+        loading="lazy"
+      >
+    `;
 
 
       /* TILE CONTENT */
