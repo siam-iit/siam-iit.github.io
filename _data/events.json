@@ -31,7 +31,9 @@
       "location": "Man-On-A-Bench Park, 3201 South State Street",
       "description": "New to Illinois Tech? Been here forever? Come eat with us. Meet students and faculty, catch up with familiar faces, and start the semester with the mathematics community.",
       "image": "./images/picnic flyer.png",
-      "image_alt": "Flyer for the Welcome Picnic"
+      "image_alt": "Flyer for the Welcome Picnic",
+      "link_text": "REGISTER \u2197",
+      "link": ""
     }
   ]
 }
