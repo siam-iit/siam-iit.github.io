@@ -10,7 +10,8 @@
 
 document.addEventListener("DOMContentLoaded", async () => {
 
-  const calendar = document.getElementById("events-calendar");
+  const calendar =
+    document.getElementById("events-calendar");
 
   if (!calendar) return;
 
@@ -21,22 +22,32 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   try {
 
-    const response = await fetch("./_data/events.json");
+    const response =
+      await fetch("./_data/events.json");
 
     if (!response.ok) {
-      throw new Error(`Could not load events: ${response.status}`);
+      throw new Error(
+        `Could not load events: ${response.status}`
+      );
     }
 
-    const data = await response.json();
+    const data =
+      await response.json();
 
 
-    if (!data.events || data.events.length === 0) {
+    if (
+      !data.events ||
+      data.events.length === 0
+    ) {
+
       calendar.innerHTML = `
         <p class="calendar-empty">
           NO EVENTS CURRENTLY SCHEDULED.
         </p>
       `;
+
       return;
+
     }
 
 
@@ -44,45 +55,40 @@ document.addEventListener("DOMContentLoaded", async () => {
        SORT EVENTS
        -------------------------------------------------------- */
 
-    const events = [...data.events].sort(
-      (a, b) => new Date(a.date) - new Date(b.date)
-    );
+    const events =
+      [...data.events].sort(
+        (a, b) =>
+          new Date(`${a.date}T12:00:00`) -
+          new Date(`${b.date}T12:00:00`)
+      );
 
 
     /* --------------------------------------------------------
        SEPARATE UPCOMING + PAST EVENTS
        -------------------------------------------------------- */
 
-    const today = new Date();
+    const today =
+      new Date();
 
     today.setHours(0, 0, 0, 0);
 
 
-    const upcomingEvents = events.filter((event) => {
+    const upcomingEvents =
+      events.filter((event) => {
 
-      const eventDate =
-        new Date(`${event.date}T12:00:00`);
+        const eventDate =
+          new Date(`${event.date}T12:00:00`);
 
-      return eventDate >= today;
+        return eventDate >= today;
 
-    });
-
-
-    const pastEvents = events.filter((event) => {
-
-      const eventDate =
-        new Date(`${event.date}T12:00:00`);
-
-      return eventDate < today;
-
-    });
+      });
 
 
     /*
-      pastEvents is intentionally not rendered on this page.
+      Past events remain in _data/events.json.
 
-      It remains available in _data/events.json so that
-      archive.html can display past events automatically.
+      They are intentionally not rendered here so they can
+      be used automatically by the archive / timeline page.
     */
 
 
@@ -99,6 +105,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
 
       return;
+
     }
 
 
@@ -113,6 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       const date =
         new Date(`${event.date}T12:00:00`);
+
 
       const key =
         `${date.getFullYear()}-${String(
@@ -159,12 +167,15 @@ document.addEventListener("DOMContentLoaded", async () => {
           .toUpperCase();
 
 
-      /* MONTH */
+      /* ------------------------------------------------------
+         MONTH
+         ------------------------------------------------------ */
 
       const month =
         document.createElement("section");
 
-      month.className = "event-month";
+      month.className =
+        "event-month";
 
 
       month.innerHTML = `
@@ -211,10 +222,41 @@ document.addEventListener("DOMContentLoaded", async () => {
         const article =
           document.createElement("article");
 
-        article.className = "event-row";
+        article.className =
+          "event-row";
 
 
-        /* OPTIONAL LINK */
+        /* ----------------------------------------------------
+           OPTIONAL IMAGE
+           ---------------------------------------------------- */
+
+        let eventImage = "";
+
+
+        if (event.image) {
+
+          eventImage = `
+            <figure class="event-image">
+
+              <img
+                src="${escapeHTML(event.image)}"
+                alt="${escapeHTML(
+                  event.image_alt ||
+                  event.title ||
+                  "Event image"
+                )}"
+                loading="lazy"
+              >
+
+            </figure>
+          `;
+
+        }
+
+
+        /* ----------------------------------------------------
+           OPTIONAL LINK
+           ---------------------------------------------------- */
 
         let eventLink = "";
 
@@ -230,7 +272,8 @@ document.addEventListener("DOMContentLoaded", async () => {
               href="${escapeHTML(event.link)}"
             >
               ${escapeHTML(
-                event.link_text || "DETAILS ↗"
+                event.link_text ||
+                "DETAILS ↗"
               )}
             </a>
           `;
@@ -238,7 +281,9 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
 
 
-        /* EVENT */
+        /* ----------------------------------------------------
+           EVENT MARKUP
+           ---------------------------------------------------- */
 
         article.innerHTML = `
 
@@ -259,7 +304,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
             <div class="event-type">
               ${escapeHTML(
-                event.type || "EVENT"
+                event.type ||
+                "EVENT"
               )}
             </div>
 
@@ -271,7 +317,9 @@ document.addEventListener("DOMContentLoaded", async () => {
               event.description
                 ? `
                   <p>
-                    ${escapeHTML(event.description)}
+                    ${escapeHTML(
+                      event.description
+                    )}
                   </p>
                 `
                 : ""
@@ -280,13 +328,18 @@ document.addEventListener("DOMContentLoaded", async () => {
           </div>
 
 
+          ${eventImage}
+
+
           <div class="event-meta">
 
             ${
               event.time
                 ? `
                   <span>
-                    ${escapeHTML(event.time)}
+                    ${escapeHTML(
+                      event.time
+                    )}
                   </span>
                 `
                 : ""
@@ -296,7 +349,9 @@ document.addEventListener("DOMContentLoaded", async () => {
               event.location
                 ? `
                   <span>
-                    ${escapeHTML(event.location)}
+                    ${escapeHTML(
+                      event.location
+                    )}
                   </span>
                 `
                 : ""
@@ -321,7 +376,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   } catch (error) {
 
-    console.error(error);
+    console.error(
+      "SIAM IIT calendar error:",
+      error
+    );
+
 
     calendar.innerHTML = `
       <p class="calendar-error">
