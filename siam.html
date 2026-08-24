@@ -55,15 +55,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="site-shell">
 
-<!-- =====================================================
-     GLOBAL SITE HEADER
+<!--
+TEA PAGE COPY OF GLOBAL HEADER
 
-     Shared across the SIAM IIT website.
-
-     TO EDIT NAVIGATION:
-     Edit this file only. Update the tea party copy.
-     Do not copy the header manually into individual pages.
-     ===================================================== -->
+This file exists because tea/index.qmd is nested one directory deeper.
+If the main navigation changes, also update:
+../includes/_header.html
+-->
 
 <header class="topbar">
 
@@ -101,49 +99,13 @@ ul.task-list li input[type="checkbox"] {
       WHAT IS SIAM?
     </a>
 
-    <a class="join-link" href="#join" data-join-open="">
+    <a class="join-link" href="https://docs.google.com/forms/d/e/1FAIpQLScD47HJbHjxMohtARRTHeLEjUBk1rYZu-hYlxpEU_HeSmJIvA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer">
       JOIN ↗
     </a>
 
   </nav>
 
 </header>
-
-
-<!-- =====================================================
-     JOIN MODAL
-     ===================================================== -->
-
-<div class="join-modal" data-join-modal="" hidden="">
-
-  <div class="join-modal-backdrop" data-join-close=""></div>
-
-  <div class="join-modal-panel" role="dialog" aria-modal="true" aria-labelledby="join-modal-title">
-
-    <button class="join-modal-close" type="button" aria-label="Close" data-join-close="">
-      ×
-    </button>
-
-    <div class="fig-label">
-      JOIN / SIAM IIT
-    </div>
-
-    <h2 id="join-modal-title" class="anchored">
-      COME DO MATH WITH US.
-    </h2>
-
-    <p>
-      Start with Dodgson's Tea Party, or send us an email to get involved.
-    </p>
-
-    <a class="join-modal-email" href="mailto:siamiitchapter@gmail.com">
-      SHOOT US AN EMAIL ↗
-    </a>
-
-  </div>
-
-</div>
-
 
 <!-- =====================================================
      HEADER INTERACTIONS
@@ -168,56 +130,6 @@ ul.task-list li input[type="checkbox"] {
 
     navToggle.textContent =
       isOpen ? "CLOSE" : "MENU";
-
-  });
-
-
-  const joinModal =
-    document.querySelector("[data-join-modal]");
-
-  const joinOpen =
-    document.querySelector("[data-join-open]");
-
-  const joinClose =
-    document.querySelectorAll("[data-join-close]");
-
-
-  joinOpen?.addEventListener("click", (event) => {
-
-    event.preventDefault();
-
-    joinModal.hidden = false;
-
-    document.body.classList.add("modal-open");
-
-  });
-
-
-  joinClose.forEach((button) => {
-
-    button.addEventListener("click", () => {
-
-      joinModal.hidden = true;
-
-      document.body.classList.remove("modal-open");
-
-    });
-
-  });
-
-
-  document.addEventListener("keydown", (event) => {
-
-    if (
-      event.key === "Escape" &&
-      !joinModal.hidden
-    ) {
-
-      joinModal.hidden = true;
-
-      document.body.classList.remove("modal-open");
-
-    }
 
   });
 </script>
@@ -443,13 +355,20 @@ ul.task-list li input[type="checkbox"] {
 
     <div class="body-copy">
 
+      <div class="body-copy">
+
       <p>
-        Meet mathematicians. Find research. Build collaborations. See where applied mathematics can take you.
+        Join SIAM IIT and get free student membership in SIAM.
+        Meet mathematicians. Discover research. Attend conferences for less.
+        Access SIAM publications and career resources. Build collaborations and
+        connect what you’re doing at IIT to the wider applied mathematics community.
       </p>
 
-      <a class="text-link" href="https://www.siam.org/" target="_blank" rel="noopener">
-        EXPLORE SIAM ↗
+      <a class="text-link" href="https://www.siam.org/membership/individual-membership/student-membership/" target="_blank" rel="noopener">
+        EXPLORE STUDENT MEMBERSHIP ↗
       </a>
+
+</div>
 
     </div>
 

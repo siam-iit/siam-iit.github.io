@@ -1,0 +1,123 @@
+/* =========================================================
+   FIG. 04 / TOPOLOGY MORPH
+   ========================================================= */
+
+.topology-section {
+  padding: 80px 0 110px;
+
+  border-top: 1px solid var(--ink);
+}
+
+
+.topology-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 18px;
+}
+
+
+.topology-header h2 {
+  margin: 0;
+}
+
+
+.topology-note {
+  padding-bottom: 7px;
+
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+}
+
+.topology-wrap {
+  position: relative;
+
+  width: 100vw;
+  height: 500px;
+
+  margin-top: 55px;
+  margin-left: calc(50% - 50vw);
+
+  overflow: hidden;
+
+  background: transparent;
+
+  border-top: 1px solid var(--ink);
+  border-bottom: 1px solid var(--ink);
+
+  cursor: ew-resize;
+}
+
+#topology-canvas {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+
+.topology-overlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 2;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  padding:
+    0
+    clamp(25px, 4vw, 70px)
+    20px;
+
+  color: var(--ink);
+
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+
+  pointer-events: none;
+}
+
+
+.topology-overlay span:nth-child(2) {
+  text-align: center;
+}
+
+
+.topology-overlay span:last-child {
+  text-align: right;
+}
+
+
+@media (max-width: 900px) {
+
+  .topology-header {
+    display: block;
+  }
+
+  .topology-note {
+    margin-top: 18px;
+  }
+
+  .topology-wrap {
+    height: 390px;
+  }
+
+  .topology-overlay {
+    padding-left: 18px;
+    padding-right: 18px;
+
+    font-size: 0.52rem;
+  }
+}
