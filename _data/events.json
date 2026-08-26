@@ -34,6 +34,15 @@
       "image_alt": "Flyer for the Welcome Picnic",
       "link_text": "REGISTER \u2197",
       "link": ""
+    },
+    {
+      "date": "2026-08-28",
+      "day": "FRI",
+      "time": "11:00 AM - 12:00 PM",
+      "type": "SEMINAR / CMS",
+      "title": "OPTIMIZING OVER DISTRIBUTIONS",
+      "location": "IIT Tower, ITM Meeting Room (14F)",
+      "description": "The Computational Math and Stats Seminar returns with Ahmed Attia from Argonne National Laboratory presenting \"Optimizing Over Distributions: A General Approach to Black-Box Combinatorial Optimization.\""
     }
   ]
 }
