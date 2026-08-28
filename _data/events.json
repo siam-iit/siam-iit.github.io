@@ -5,22 +5,35 @@
       "date": "2026-08-14",
       "day": "FRI",
       "time": "2:00 - 4:00 PM",
-      "type": "OUTREACH / COMMUNITY",
+      "type": "OUTREACH",
       "title": "INVOLVEMENT FAIR",
-      "location": "Man-On-A-Bench Park, 3201 South State Street",
+      "location": "Man-On-A-Bench Park",
       "description": "Leonardo played 100 games of chess. We spread the word about SIAM. New faces stopped by, old friends said hello, and we kicked off another semester of mathematics at Illinois Tech.",
       "image": "./images/involvement-fair.jpeg",
-      "image_alt": "SIAM IIT table at the student involvement fair: Glory, Anders, and Leonardo"    },
+      "image_alt": "SIAM IIT table at the student involvement fair: Glory, Anders, and Leonardo"},
     {
-      "date": "2026-08-24",
-      "day": "TBD- Will begin the week of the 24th",
-      "time": "TBD",
-      "type": "WEEKLY / SOCIAL",
-      "title": "DODGSON'S TEA PARTY",
-      "location": "TBD",
-      "description": "A weekly gathering for snacks, mathematics, conversation, and whatever else comes up. Everyone is welcome.",
-      "link_text": "RECURRING \u2197",
-      "link": "/tea/"
+      "date": "2026-08-26",
+      "day": "WED",
+      "time": "12:45 PM",
+      "type": "EVENT",
+      "title": "PICNIC IN THE PARK",
+      "location": "Man-On-A-Bench Park",
+      "description": "We kicked off the semester with great food, new connections, and plenty of fun at our Welcome Picnic! Thanks to everyone who joined us and made it memorable.",
+      "image": "./images/siam-picnic-1.png",
+      "image_alt": "Shot of the Welcome Picnic taken by Md Mahmudul Hasan",
+      "link_text": "REGISTER \u2197",
+      "link": ""
+    },
+    {
+      "date": "2026-08-14",
+      "day": "FRI",
+      "time": "2:00 - 4:00 PM",
+      "type": "OUTREACH",
+      "title": "INVOLVEMENT FAIR",
+      "location": "Man-On-A-Bench Park",
+      "description": "Leonardo played 100 games of chess. We spread the word about SIAM. New faces stopped by, old friends said hello, and we kicked off another semester of mathematics at Illinois Tech.",
+      "image": "./images/involvement-fair.jpeg",
+      "image_alt": "SIAM IIT table at the student involvement fair: Glory, Anders, and Leonardo"
     },
     {
       "date": "2026-08-26",
@@ -28,11 +41,11 @@
       "time": "12:45 PM",
       "type": "EVENT",
       "title": "PICNIC IN THE PARK",
-      "location": "Man-On-A-Bench Park, 3201 South State Street",
-      "description": "New to Illinois Tech? Been here forever? Come eat with us. Meet students and faculty, catch up with familiar faces, and start the semester with the mathematics community.",
-      "image": "./images/picnic-flyer.png",
-      "image_alt": "Flyer for the Welcome Picnic",
-      "link_text": "REGISTER \u2197",
+      "location": "Man-On-A-Bench Park",
+      "description": "We kicked off the semester with great food, new connections, and plenty of fun at our Welcome Picnic! Thanks to everyone who joined us and made it memorable.",
+      "image": "./images/siam-picnic-1.png",
+      "image_alt": "Welcome Picnic photographed by Md Mahmudul Hasan",
+      "link_text": "REGISTER ↗",
       "link": ""
     },
     {
@@ -42,7 +55,69 @@
       "type": "SEMINAR / CMS",
       "title": "OPTIMIZING OVER DISTRIBUTIONS",
       "location": "IIT Tower, ITM Meeting Room (14F)",
-      "description": "The Computational Math and Stats Seminar returns with Ahmed Attia from Argonne National Laboratory presenting \"Optimizing Over Distributions: A General Approach to Black-Box Combinatorial Optimization.\""
+      "description": "The Computational Mathematics and Statistics Seminar returns with Ahmed Attia of Argonne National Laboratory, presenting “Optimizing Over Distributions: A General Approach to Black-Box Combinatorial Optimization.”"
+    },
+    {
+      "date": "2026-09-02",
+      "day": "TBD",
+      "time": "3:30 PM - 4:45 PM",
+      "type": "WEEKLY",
+      "title": "DODGSON'S TEA PARTY",
+      "location": "John T. Rettaliata Engineering Center — Room TBD",
+      "description": "Join us each week for snacks, mathematics, lively conversation, and whatever else comes up. Everyone is welcome— no preparation required.",
+      "link_text": "RECURRING ↗",
+      "link": "/tea/",
+      "image": "./images/tea-party-flyer.png",
+      "image_alt": "Flyer for Dodgson's Tea Party"
+    },
+    {
+      "date": "2026-09-15",
+      "day": "TUE",
+      "time": "12:45 PM - 1:45 PM",
+      "type": "SEMINAR",
+      "title": "AN INTRODUCTION TO LaTeX WITH TARAN",
+      "location": "TBD",
+      "description": "Taran Mellacheruvu introduces LaTeX, the standard tool for beautifully typesetting mathematics. Learn the basics of mathematical notation, document formatting, figures, images, useful packages, and resources for continuing your LaTeX journey."
+    },
+    {
+      "date": "2026-09-17",
+      "day": "THU",
+      "time": "Evening — Time TBD",
+      "type": "SOCIAL",
+      "title": "GAME NIGHT",
+      "location": "P Club, McCormick Tribune Campus Center (near the Welcome Desk)",
+      "description": "Take a break and join us for an evening of games and good company. We’ll have chess, Catan, Nintendo Switch games, and more—all skill levels are welcome.",
+      "image": "./images/game-night-poster.png",
+      "image_alt": "Flyer for SIAM Game Night"
+    },
+    {
+      "date": "2026-09-24",
+      "day": "THU",
+      "time": "TBD",
+      "type": "SEMINAR",
+      "title": "SEMINAR WITH WOLFRAM RESEARCH FELLOW PHILEAS DAZELEY-GAIST",
+      "location": "TBD",
+      "description": "Join us for a seminar with Phileas Dazeley-Gaist, a research fellow at the Wolfram Institute. Phileas will present remotely while attendees gather in person.",      
+      "link_text": "Dazeley-Gaist ↗",
+      "link": "https://phileasdg.github.io/index.html"
+    },
+    {
+      "date": "2026-10-01",
+      "day": "THU",
+      "time": "TBD",
+      "type": "SOCIAL",
+      "title": "LUNCH WITH A PROFESSOR",
+      "location": "TBD",
+      "description": "Share a meal and an informal conversation with an Illinois Tech professor at one of our favorite SIAM traditions. The featured professor and additional details will be announced soon."
+    },
+    {
+      "date": "2026-10-08",
+      "day": "THU",
+      "time": "TBD",
+      "type": "SEMINAR",
+      "title": "MY FAVORITE THEOREM",
+      "location": "TBD",
+      "description": "An Illinois Tech professor shares a favorite theorem, explaining what makes it beautiful, surprising, or especially useful. The featured speaker and theorem will be announced soon."
     }
   ]
 }

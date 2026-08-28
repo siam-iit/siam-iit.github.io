@@ -12,7 +12,7 @@
   {
     "role": "Vice President",
     "name": "Ishaan Goel",
-    "major": "B.S Applied Mathematics, B.S. Artificial Intelligence, M.S. Artificial Intelligence",
+    "major": "B.S Applied Mathematics, B.S. Data Science, M.S. Artificial Intelligence",
     "bio": "",
     "email": "igoel@hawk.illinoistech.edu",
     "linkedin": "https://www.linkedin.com/in/igoeldc/"
@@ -21,10 +21,18 @@
   {
     "role": "Treasurer",
     "name": "Taran Mellacheruvu",
-    "major": "B.S. Applied Mathematics, B.S Physics",
+    "major": "B.S. Applied Mathematics, M.S Physics",
     "bio": "",
     "email": "tmellacheruvu@hawk.illinoistech.edu",
     "linkedin": "https://www.linkedin.com/in/taran-mellacheruvu/"
+  },
+  {
+    "role": "Secretary",
+    "name": "Julie Park",
+    "major": "B.S. Applied Mathematics",
+    "bio": "",
+    "email": "spark113@hawk.illinoistech.edu",
+    "linkedin": "https://www.linkedin.com/in/sukyoung-park-71678738a/"
   },
   {
     "role": "Marketing Executive",
