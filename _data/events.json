@@ -35,12 +35,12 @@
     },
     {
       "date": "2026-09-02",
-      "day": "TBD",
+      "day": "WED",
       "time": "3:30 PM - 4:45 PM",
       "type": "WEEKLY",
       "title": "DODGSON'S TEA PARTY",
-      "location": "John T. Rettaliata Engineering Center — Room TBD",
-      "description": "Join us each week for snacks, mathematics, lively conversation, and whatever else comes up. Everyone is welcome— no preparation required.",
+      "location": "RE 112",
+      "description": "Join us each week for snacks, mathematics, conversation, and whatever else comes up. Everyone is welcome— no preparation required.",
       "link_text": "RECURRING ↗",
       "link": "/tea/",
       "image": "./images/tea-party-flyer.png",
@@ -52,8 +52,11 @@
       "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
       "title": "AN INTRODUCTION TO LaTeX WITH TARAN",
-      "location": "TBD",
-      "description": "Taran Mellacheruvu introduces LaTeX, the standard tool for beautifully typesetting mathematics. Learn the basics of mathematical notation, document formatting, figures, images, useful packages, and resources for continuing your LaTeX journey."
+      "location": "RE 103",
+      "description": "Taran Mellacheruvu introduces LaTeX, the standard tool for beautifully typesetting mathematics. Learn the basics of mathematical notation, document formatting, figures, images, useful packages, and resources for continuing your LaTeX journey.",
+      "image": "./images/latex-flyer.png",
+      "image_alt": "Flyer for Intro to LaTeX"
+    
     },
     {
       "date": "2026-09-17",
