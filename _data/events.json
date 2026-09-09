@@ -189,13 +189,15 @@
     {
       "date": "2026-09-24",
       "day": "THU",
-      "time": "TBD",
+      "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
-      "title": "SEMINAR WITH WOLFRAM RESEARCH FELLOW PHILEAS DAZELEY-GAIST",
+      "title": "GET STARTED WITH MATHEMATICA",
       "location": "TBD",
       "description": "Join us for a seminar with Phileas Dazeley-Gaist, a research fellow at the Wolfram Institute. Phileas will present remotely while attendees gather in person.",      
-      "link_text": "Dazeley-Gaist ↗",
-      "link": "https://phileasdg.github.io/index.html"
+      "link_text": "DAZELEY-GAIST ↗",
+      "link": "https://phileasdg.github.io/index.html",
+      "image": "./images/mathematica-flyer.png",
+      "image_alt": "Flyer for Mathematica Seminar"
     },
     {
       "date": "2026-10-01",
