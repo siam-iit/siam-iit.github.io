@@ -72,6 +72,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     today.setHours(0, 0, 0, 0);
 
+    // Include tea parties through the same date next month (inclusive).
+    // Clamp to the month's last day when that date does not exist.
+    const teaPartyThrough = new Date(
+      today.getFullYear(), today.getMonth() + 1, 1
+    );
+    const lastDayNextMonth = new Date(
+      today.getFullYear(), today.getMonth() + 2, 0
+    ).getDate();
+    teaPartyThrough.setDate(Math.min(today.getDate(), lastDayNextMonth));
+    teaPartyThrough.setHours(23, 59, 59, 999);
+
 
     const upcomingEvents =
       events.filter((event) => {
@@ -79,7 +90,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         const eventDate =
           new Date(`${event.date}T12:00:00`);
 
-        return eventDate >= today;
+        return eventDate >= today &&
+          (!isTeaPartyEvent(event) || eventDate <= teaPartyThrough);
 
       });
 
@@ -233,7 +245,8 @@ document.addEventListener("DOMContentLoaded", async () => {
         let eventImage = "";
 
 
-        if (event.image) {
+        // Tea-party flyers remain available to the archive timeline.
+        if (event.image && !isTeaPartyEvent(event)) {
 
           eventImage = `
             <figure class="event-image">
@@ -414,4 +427,12 @@ function escapeHTML(value) {
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+}
+
+// Shared by the calendar date filter and flyer display.
+function isTeaPartyEvent(event) {
+  return String(event.title || "")
+    .trim()
+    .replaceAll("’", "'")
+    .toUpperCase() === "DODGSON'S TEA PARTY";
 }
