@@ -2,7 +2,7 @@
   "year": "2026-27",
   "events": [
     {
-      "date": "2026-11-18",
+      "date": "2026-12-02",
       "day": "WED",
       "time": "12:45 PM - 1:45 PM",
       "type": "SOCIAL",
@@ -11,7 +11,7 @@
       "description": "Share a meal and an informal conversation with a professor at one of our favorite SIAM traditions, and our last event of the semester!"
     },
     {
-      "date": "2026-11-11",
+      "date": "2026-11-18",
       "day": "WED",
       "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
@@ -19,13 +19,24 @@
       "location": "TBD"
     },
     {
-      "date": "2026-11-04",
+      "date": "2026-11-11",
       "day": "WED",
       "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
       "title": "MY FAVORITE THEOREM",
       "location": "TBD",
       "description": "A professor shares a favorite theorem, explaining what makes it beautiful, surprising, or especially useful."
+    },
+    {
+      "date": "2026-11-04",
+      "day": "WED",
+      "time": "12:45 PM - 1:45 PM",
+      "type": "SEMINAR",
+      "title": "PUTNAM INFORMATION SESSION",
+      "location": "RE 119",
+      "description": "Learn about the preeminent math competition for undergraduates this side of the globe.",
+      "image": "./images/putnam poster.png",
+      "image_alt": "Putnam Session Flyer"
     },
     {
       "date": "2026-10-28",
