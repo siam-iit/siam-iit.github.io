@@ -16,16 +16,8 @@
       "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
       "title": "ADVANCED LaTeX WORKSHOP",
-      "location": "TBD"
-    },
-    {
-      "date": "2026-11-11",
-      "day": "WED",
-      "time": "12:45 PM - 1:45 PM",
-      "type": "SEMINAR",
-      "title": "MY FAVORITE THEOREM",
       "location": "TBD",
-      "description": "A professor shares a favorite theorem, explaining what makes it beautiful, surprising, or especially useful."
+      "image": "./images/advanced-latex-flyer.png"
     },
     {
       "date": "2026-11-04",
