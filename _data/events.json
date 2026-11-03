@@ -8,7 +8,9 @@
       "type": "SOCIAL",
       "title": "LUNCH WITH A PROFESSOR",
       "location": "TBD",
-      "description": "Share a meal and an informal conversation with a professor at one of our favorite SIAM traditions, and our last event of the semester!"
+      "description": "Share a meal and an informal conversation with a professor at one of our favorite SIAM traditions, and our last event of the semester!",
+      "image": "./images/lwap dec2026.jpg"
+    
     },
     {
       "date": "2026-11-18",
@@ -16,8 +18,8 @@
       "time": "12:45 PM - 1:45 PM",
       "type": "SEMINAR",
       "title": "ADVANCED LaTeX WORKSHOP",
-      "location": "TBD",
-      "image": "./images/advanced-latex-flyer.png"
+      "location": "RE 102",
+      "image": "./images/advanced-latex-flyer-final.jpg"
     },
     {
       "date": "2026-11-04",
