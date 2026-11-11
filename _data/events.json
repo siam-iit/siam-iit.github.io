@@ -29,8 +29,8 @@
       "title": "PUTNAM INFORMATION SESSION",
       "location": "RE 119",
       "description": "Learn about the preeminent math competition for undergraduates this side of the globe.",
-      "image": "./images/putnam poster.png",
-      "image_alt": "Putnam Session Flyer"
+      "image": "./images/putnam session leo.jpg",
+      "image_alt": "Putnam Session"
     },
     {
       "date": "2026-10-28",
@@ -41,7 +41,7 @@
       "location": "RE 119",
       "description": "A SIAM tradition. Come get your mathematical career questions answered.",
       "image": "./images/tea party 10.28.jpg",
-      "image_alt": "Mentorship Session Flyer"
+      "image_alt": "Mentorship Session"
     },
     {
       "date": "2026-10-20",
