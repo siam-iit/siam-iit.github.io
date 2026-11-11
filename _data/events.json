@@ -2,14 +2,14 @@
   "year": "2026-27",
   "events": [
     {
-      "date": "2026-12-02",
-      "day": "WED",
+      "date": "2026-12-03",
+      "day": "THURS",
       "time": "12:45 PM - 1:45 PM",
       "type": "SOCIAL",
       "title": "LUNCH WITH A PROFESSOR",
       "location": "TBD",
-      "description": "Share a meal and an informal conversation with a professor at one of our favorite SIAM traditions, and our last event of the semester!",
-      "image": "./images/lwap dec2026.jpg"
+      "description": "Share a meal and an informal conversation with Dr. Hickernell at one of our favorite SIAM traditions, and our last event of the semester!",
+      "image": "./images/lwap Hickernell.jpg"
     
     },
     {
