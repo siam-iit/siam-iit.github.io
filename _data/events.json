@@ -7,9 +7,9 @@
       "time": "12:45 PM - 1:45 PM",
       "type": "SOCIAL",
       "title": "LUNCH WITH A PROFESSOR",
-      "location": "TBD",
+      "location": "RE 102",
       "description": "Share a meal and an informal conversation with Dr. Hickernell at one of our favorite SIAM traditions, and our last event of the semester!",
-      "image": "./images/lwap Hickernell.jpg"
+      "image": "./images/lwap dec26.jpg"
     
     },
     {
@@ -103,8 +103,8 @@
       "description": "Join us each week for snacks, mathematics, conversation, and whatever else comes up. Everyone is welcome— no preparation required.",
       "link_text": "RECURRING ↗",
       "link": "/tea/",
-      "image": "./images/tea-party-flyer.png",
-      "image_alt": "Flyer for Dodgson's Tea Party"
+      "image": "./images/11.11 tea party.jpg",
+      "image_alt": "Dodgson's Tea Party"
     },
     {
       "date": "2026-11-04",
